@@ -1,0 +1,44 @@
+/* Main.dc.html */
+@keyframes rr-drift{from{transform:translateX(-150px)}to{transform:translateX(430px)}}
+@keyframes rr-twinkle{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes rr-spin{to{transform:rotate(360deg)}}
+@keyframes rr-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+
+/* Rocket.dc.html */
+@keyframes rk-tw{0%,100%{opacity:.95}50%{opacity:.2}}
+@keyframes rk-shoot{0%{transform:translate(380px,70px);opacity:0}2%{opacity:1}9%{transform:translate(220px,134px);opacity:0}100%{transform:translate(220px,134px);opacity:0}}
+@keyframes rk-flame{from{transform:scaleX(.72)}to{transform:scaleX(1.12)}}
+@keyframes rk-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+
+/* Arcade.dc.html */
+@keyframes ar-beat{0%{transform:scale(1)}50%{transform:scale(1.16)}}
+@keyframes ar-blink{0%{opacity:1}50%{opacity:0}}
+
+/* Sunset.dc.html */
+@keyframes ss-tw{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes ss-cloud{from{transform:translateX(-10px)}to{transform:translateX(14px)}}
+@keyframes ss-birds{from{transform:translate(-60px,232px)}to{transform:translate(430px,176px)}}
+@keyframes ss-shim{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* Dandelion.dc.html */
+@keyframes dd-sway{0%,100%{transform:rotate(-0.8deg)}50%{transform:rotate(0.8deg)}}
+@keyframes dd-float-a{0%{transform:translate(-40px,520px) rotate(-30deg);opacity:0}10%{opacity:.5}90%{opacity:.5}100%{transform:translate(420px,120px) rotate(25deg);opacity:0}}
+@keyframes dd-float-b{0%{transform:translate(-40px,380px) rotate(-10deg);opacity:0}10%{opacity:.45}90%{opacity:.45}100%{transform:translate(420px,40px) rotate(40deg);opacity:0}}
+@keyframes dd-float-c{0%{transform:translate(-40px,640px) rotate(-40deg);opacity:0}10%{opacity:.4}90%{opacity:.4}100%{transform:translate(420px,300px) rotate(10deg);opacity:0}}
+@keyframes dd-wind{0%{transform:translateX(-140px);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateX(400px);opacity:0}}
+
+/* Boba.dc.html */
+@keyframes bb-wave{from{transform:translateX(0)}to{transform:translateX(-100px)}}
+@keyframes bb-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes bb-sip{0%{transform:translate(205px,470px);opacity:0}15%{opacity:1}75%{transform:translate(243px,150px);opacity:1}100%{transform:translate(248px,110px);opacity:0}}
+
+/* Classic.dc.html */
+@keyframes cg-pulse{0%,100%{opacity:1}50%{opacity:.55}}
+
+/* SleepNight.dc.html */
+@keyframes st-tw{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes st-z{0%{transform:translate(0,0) scale(.6);opacity:0}20%{opacity:1}100%{transform:translate(28px,-64px) scale(1.15);opacity:0}}
+@keyframes st-breathe{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
+@keyframes st-hop{0%,100%{transform:translateY(0)}35%{transform:translateY(-18px)}55%{transform:translateY(-18px)}}
+@keyframes st-spin{to{transform:rotate(360deg)}}
+@keyframes st-glow{0%,100%{opacity:.7}50%{opacity:1}}
