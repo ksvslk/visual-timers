@@ -31,6 +31,19 @@ body.playing { overflow: hidden; }
 @media (min-width: 600px) {
   .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
+/* A phone on its side: short and wide, so show more, smaller cards per row
+   and keep clear of the notch on either side. */
+@media (orientation: landscape) and (max-height: 520px) {
+  .home {
+    max-width: none;
+    padding-left: calc(env(safe-area-inset-left, 0px) + 24px);
+    padding-right: calc(env(safe-area-inset-right, 0px) + 24px);
+    padding-top: 20px;
+  }
+  .home-head h1 { font-size: 32px; }
+  .grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px 14px; margin-top: 16px; }
+  .settings { max-width: 520px; }
+}
 .card {
   display: flex;
   flex-direction: column;
@@ -113,7 +126,7 @@ body.playing { overflow: hidden; }
   position: fixed;
   inset: 0;
   overflow: hidden;
-  background: linear-gradient(var(--bar-top, #000) 50%, var(--bar-bottom, #000) 50%);
+  background: linear-gradient(var(--bar-dir, 180deg), var(--bar-top, #000) var(--bar-split, 50%), var(--bar-bottom, #000) var(--bar-split, 50%));
   touch-action: manipulation;
   overscroll-behavior: none;
   user-select: none;
@@ -127,6 +140,10 @@ body.playing { overflow: hidden; }
   height: 844px;
   transform: translate(-50%, -50%) scale(var(--s, 1));
   transform-origin: center center;
+}
+.dc-stage.land {
+  width: 844px;
+  height: 390px;
 }
 .thumb-mode .player { background: none; }
 .thumb-mode .dc-stage { left: 0; top: 0; transform: none; }

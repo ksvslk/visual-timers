@@ -1,5 +1,5 @@
 // Offline cache for Visual Timers (generated)
-const CACHE = 'visual-timers-bd7d5c250b';
+const CACHE = 'visual-timers-26040a77f3';
 const ASSETS = [
   "./",
   "app.css",

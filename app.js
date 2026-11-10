@@ -156,12 +156,18 @@ document.addEventListener('visibilitychange', () => {
 /* ---------- player ---------- */
 let current = null;
 let currentTheme = null;
+let currentProps = null;
 let prevVals = null;
 let lastBars = '';
+let land = false;
+
+// Landscape whenever the screen is wider than tall. Thumbnails stay portrait.
+const isLand = () => !thumbMode && window.innerWidth > window.innerHeight;
 
 function propsFor(t, thumb) {
   const p = Object.assign({}, t.defaults);
   if (thumb) return p;
+  p.landscape = land;
   p.speed = prefs.demo ? (t.sleep ? 'Demo (fast-forward)' : 'Demo (1 min = 1 s)') : 'Real time';
   if (t.relative) p.left = 100;
   if (t.sleep) {
@@ -180,15 +186,24 @@ function setBars(t, vals) {
   } else if (t.bars === 'sleep') {
     top = vals.bg;
     bottom = vals.bg;
+  } else if (land && t.lbars) {
+    top = t.lbars[0];
+    bottom = t.lbars[1];
   } else {
     top = t.bars[0];
     bottom = t.bars[1];
   }
-  const key = top + '|' + bottom;
+  // In landscape the letterbox bars sit beside the stage, so they follow the
+  // landscape horizon (or a left/right split) instead of the portrait halves.
+  const dir = land && t.ldir ? t.ldir : '180deg';
+  const split = (land && t.lsplit != null ? t.lsplit : 50) + '%';
+  const key = [top, bottom, dir, split].join('|');
   if (key === lastBars) return;
   lastBars = key;
   player.style.setProperty('--bar-top', top);
   player.style.setProperty('--bar-bottom', bottom);
+  player.style.setProperty('--bar-dir', dir);
+  player.style.setProperty('--bar-split', split);
   if (metaTheme && !thumbMode) metaTheme.setAttribute('content', top);
 }
 
@@ -214,11 +229,31 @@ function addBack(t) {
   header.insertBefore(b, header.firstChild);
 }
 
+function setLand(next) {
+  land = next;
+  player.classList.toggle('land', land);
+  stage.classList.toggle('land', land);
+}
+
 function fit() {
-  const s = Math.min(window.innerWidth / 390, window.innerHeight / 844);
+  const next = isLand();
+  if (next !== land) {
+    setLand(next);
+    lastBars = '';
+    if (current && currentProps && !thumbMode) {
+      // Same timer, new layout: only the landscape prop changes, so the
+      // countdown keeps running where it was.
+      currentProps = Object.assign({}, currentProps, { landscape: land });
+      current.setProps(currentProps);
+    }
+  }
+  const w = land ? 844 : 390;
+  const h = land ? 390 : 844;
+  const s = Math.min(window.innerWidth / w, window.innerHeight / h);
   stage.style.setProperty('--s', String(s));
 }
 addEventListener('resize', fit);
+addEventListener('orientationchange', () => setTimeout(fit, 60));
 
 function closeTheme() {
   if (!current) return;
@@ -238,6 +273,7 @@ function closeTheme() {
   current.destroy();
   current = null;
   currentTheme = null;
+  currentProps = null;
   prevVals = null;
   lastBars = '';
   stage.textContent = '';
@@ -256,7 +292,9 @@ function openTheme(id, thumb) {
   player.hidden = false;
   document.body.classList.add('playing');
   stage.className = 'dc-stage theme-' + t.id;
-  current = mount(stage, t.template, t.Logic, propsFor(t, thumb), { onRender: onRender });
+  setLand(isLand());
+  currentProps = propsFor(t, thumb);
+  current = mount(stage, t.template, t.Logic, currentProps, { onRender: onRender });
   if (!thumb) {
     if (t.sleep) {
       const s = prefs.sleep;
