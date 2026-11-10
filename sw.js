@@ -1,5 +1,6 @@
 // Offline cache for Visual Timers (generated)
-const CACHE = 'visual-timers-723cd0e8c3';
+const VERSION = 'e188629e10';
+const CACHE = 'visual-timers-' + VERSION;
 const ASSETS = [
   "./",
   "app.css",
@@ -42,7 +43,18 @@ const ASSETS = [
 ];
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(ASSETS)).then(() => self.skipWaiting()));
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE);
+    // Fetch each file with this release's version in the URL so the CDN
+    // cannot hand back a copy from the previous release, then store it
+    // under its plain name.
+    await Promise.all(ASSETS.map(async (a) => {
+      const res = await fetch(new Request(a + '?v=' + VERSION, { cache: 'reload' }));
+      if (!res.ok) throw new Error('precache failed: ' + a + ' ' + res.status);
+      await cache.put(a, res);
+    }));
+    await self.skipWaiting();
+  })());
 });
 
 self.addEventListener('activate', (event) => {

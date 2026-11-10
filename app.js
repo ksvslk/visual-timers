@@ -1,5 +1,5 @@
-import { mount, registerComponents } from './dc-runtime.js';
-import { THEMES, COMPONENTS } from './themes.js';
+import { mount, registerComponents } from './dc-runtime.js?v=e188629e10';
+import { THEMES, COMPONENTS } from './themes.js?v=e188629e10';
 
 registerComponents(COMPONENTS);
 
