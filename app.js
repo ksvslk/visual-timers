@@ -1,5 +1,5 @@
-import { mount, registerComponents } from './dc-runtime.js?v=588e77a734';
-import { THEMES, COMPONENTS } from './themes.js?v=588e77a734';
+import { mount, registerComponents } from './dc-runtime.js?v=c5c22e0900';
+import { THEMES, COMPONENTS } from './themes.js?v=c5c22e0900';
 
 registerComponents(COMPONENTS);
 
@@ -167,7 +167,14 @@ const isLand = () => !thumbMode && window.innerWidth > window.innerHeight;
 function propsFor(t, thumb) {
   const p = Object.assign({}, t.defaults);
   if (thumb) return p;
+  // Scenes run past the stage to every screen edge (thumbnails are exact).
+  p.bleed = true;
   p.landscape = land;
+  // How far the screen reaches past the stage on each side, in stage pixels,
+  // for pieces that sit against the screen edge (Pizza's board).
+  const e = edges();
+  p.edgeX = e.edgeX;
+  p.edgeY = e.edgeY;
   p.speed = prefs.demo ? (t.sleep ? 'Demo (fast-forward)' : 'Demo (1 min = 1 s)') : 'Real time';
   if (t.relative) p.left = 100;
   if (t.sleep) {
@@ -251,22 +258,32 @@ function setLand(next) {
   stage.classList.toggle('land', land);
 }
 
+function edges() {
+  const w = land ? 844 : 390;
+  const h = land ? 390 : 844;
+  const s = Math.min(window.innerWidth / w, window.innerHeight / h);
+  return {
+    s: s,
+    edgeX: Math.max(0, Math.round((window.innerWidth / s - w) / 2)),
+    edgeY: Math.max(0, Math.round((window.innerHeight / s - h) / 2))
+  };
+}
+
 function fit() {
   const next = isLand();
   if (next !== land) {
     setLand(next);
     lastBars = '';
-    if (current && currentProps && !thumbMode) {
-      // Same timer, new layout: only the landscape prop changes, so the
-      // countdown keeps running where it was.
-      currentProps = Object.assign({}, currentProps, { landscape: land });
-      current.setProps(currentProps);
-    }
   }
-  const w = land ? 844 : 390;
-  const h = land ? 390 : 844;
-  const s = Math.min(window.innerWidth / w, window.innerHeight / h);
-  stage.style.setProperty('--s', String(s));
+  const e = edges();
+  stage.style.setProperty('--s', String(e.s));
+  if (current && currentProps && !thumbMode &&
+      (currentProps.landscape !== land || currentProps.edgeX !== e.edgeX || currentProps.edgeY !== e.edgeY)) {
+    // Same timer, new layout: only these props change, so the countdown
+    // keeps running where it was.
+    currentProps = Object.assign({}, currentProps, { landscape: land, edgeX: e.edgeX, edgeY: e.edgeY });
+    current.setProps(currentProps);
+  }
   applyBars();
 }
 addEventListener('resize', fit);
