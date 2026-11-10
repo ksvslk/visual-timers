@@ -193,17 +193,19 @@ function setBars(t, vals) {
     top = t.bars[0];
     bottom = t.bars[1];
   }
-  // In landscape the letterbox bars sit beside the stage, so they follow the
-  // landscape horizon (or a left/right split) instead of the portrait halves.
+  // In landscape the letterbox bars follow the landscape horizon (or a
+  // left/right split for Pizza's board) instead of the portrait halves.
   const dir = land && t.ldir ? t.ldir : '180deg';
-  const split = (land && t.lsplit != null ? t.lsplit : 50) + '%';
-  const key = [top, bottom, dir, split].join('|');
+  const frac = (land ? (t.lsplit != null ? t.lsplit : 50) : (t.psplit != null ? t.psplit : 50)) / 100;
+  const key = [top, bottom, dir, frac].join('|');
   if (key === lastBars) return;
   lastBars = key;
+  barDir = dir;
+  barFrac = frac;
   player.style.setProperty('--bar-top', top);
   player.style.setProperty('--bar-bottom', bottom);
   player.style.setProperty('--bar-dir', dir);
-  player.style.setProperty('--bar-split', split);
+  applyBars();
   if (metaTheme && !thumbMode) metaTheme.setAttribute('content', top);
 }
 
@@ -229,6 +231,20 @@ function addBack(t) {
   header.insertBefore(b, header.firstChild);
 }
 
+let barDir = '180deg';
+let barFrac = 0.5;
+// The colour split sits at the same point of the stage, measured on screen,
+// so bars beside the stage and bars above and below it both match it.
+function applyBars() {
+  const w = land ? 844 : 390;
+  const h = land ? 390 : 844;
+  const s = Math.min(window.innerWidth / w, window.innerHeight / h);
+  const px = barDir === '90deg'
+    ? (window.innerWidth - w * s) / 2 + barFrac * w * s
+    : (window.innerHeight - h * s) / 2 + barFrac * h * s;
+  player.style.setProperty('--bar-split', px.toFixed(1) + 'px');
+}
+
 function setLand(next) {
   land = next;
   player.classList.toggle('land', land);
@@ -251,6 +267,7 @@ function fit() {
   const h = land ? 390 : 844;
   const s = Math.min(window.innerWidth / w, window.innerHeight / h);
   stage.style.setProperty('--s', String(s));
+  applyBars();
 }
 addEventListener('resize', fit);
 addEventListener('orientationchange', () => setTimeout(fit, 60));
