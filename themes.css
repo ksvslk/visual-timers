@@ -8,7 +8,7 @@
 /* Rocket.dc.html */
 @keyframes rk-tw{0%,100%{opacity:.95}50%{opacity:.2}}
 @keyframes rk-shoot{0%{transform:translate(380px,70px);opacity:0}2%{opacity:1}9%{transform:translate(220px,134px);opacity:0}100%{transform:translate(220px,134px);opacity:0}}
-@keyframes rk-shoot-l{0%{transform:translate(300px,30px);opacity:0}2%{opacity:1}9%{transform:translate(140px,94px);opacity:0}100%{transform:translate(140px,94px);opacity:0}}
+@keyframes rk-shoot-l{0%{transform:translate(470px,22px);opacity:0}2%{opacity:1}9%{transform:translate(330px,78px);opacity:0}100%{transform:translate(330px,78px);opacity:0}}
 @keyframes rk-flame{from{transform:scaleX(.72)}to{transform:scaleX(1.12)}}
 @keyframes rk-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 
