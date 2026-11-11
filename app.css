@@ -169,3 +169,13 @@ body.playing { overflow: hidden; }
 .theme-hearts header h1 { white-space: nowrap; font-size: 19px !important; }
 .dc-stage [data-wheel]::-webkit-scrollbar { display: none; }
 .dc-stage [data-wheel]:focus-visible { outline: 3px solid #FFB547; outline-offset: -3px; border-radius: 14px; }
+/* Time picker: show what a mouse or TV pointer is over, and where the keys are. */
+.dc-stage [data-step]:hover,
+.dc-stage [data-pick-btn]:hover { box-shadow: inset 0 0 0 999px rgba(127, 127, 127, 0.16); }
+.dc-stage [data-step]:active { box-shadow: inset 0 0 0 999px rgba(127, 127, 127, 0.28); }
+.dc-stage [data-step]:focus-visible,
+.dc-stage [data-pick-btn]:focus-visible { outline: 3px solid #FFB547; outline-offset: 2px; }
+@media (hover: none) {
+  .dc-stage [data-step]:hover,
+  .dc-stage [data-pick-btn]:hover { box-shadow: none; }
+}

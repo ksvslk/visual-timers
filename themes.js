@@ -1,4 +1,4 @@
-import { DCLogic } from './dc-runtime.js?v=c5c22e0900';
+import { DCLogic } from './dc-runtime.js?v=f5fc4d6ee0';
 
 export const THEMES = [
   Object.assign({"id":"rainbow","name":"Rainbow","tagline":"Each color is 10 minutes","relative":false,"sleep":false,"bars":["#CFE8FF","#62C584"],"lbars":null,"ldir":null,"lsplit":80,"psplit":62,"back":"light","defaults":{"minutes":55,"speed":"Demo (1 min = 1 s)","bleed":false,"landscape":false},"template":"<div style=\"width: {{ L.w }}px; height: {{ L.h }}px; position: relative; overflow: {{ L.ov }}; background: #CFE8FF; font-family: 'Fredoka', 'Arial Rounded MT Bold', system-ui, sans-serif; color: #1E2A4A\">\n<div aria-hidden=\"true\" style=\"position: absolute; left: -1200px; top: -1200px; right: -1200px; bottom: -1200px; pointer-events: none; display: {{ L.bD }}; background: #CFE8FF\"></div>\n<svg width=\"{{ L.w }}\" height=\"{{ L.h }}\" viewBox=\"{{ L.vb }}\" role=\"img\" aria-label=\"{{ ariaLabel }}\" style=\"position: absolute; left: 0; top: 0; display: block; overflow: {{ L.ov }}\">\n<g display=\"{{ L.lD }}\">\n<g style=\"animation: rr-drift-l 74s linear -30s infinite\">\n<g fill=\"#FFFFFF\" opacity=\"0.9\">\n<circle cx=\"34\" cy=\"70\" r=\"15\"></circle>\n<circle cx=\"56\" cy=\"61\" r=\"20\"></circle>\n<circle cx=\"80\" cy=\"70\" r=\"14\"></circle>\n<rect x=\"19\" y=\"68\" width=\"76\" height=\"16\" rx=\"8\"></rect>\n</g>\n</g>\n<g style=\"animation: rr-drift-l 98s linear -74s infinite\">\n<g fill=\"#FFFFFF\" opacity=\"0.75\">\n<circle cx=\"26\" cy=\"128\" r=\"11\"></circle>\n<circle cx=\"42\" cy=\"121\" r=\"15\"></circle>\n<circle cx=\"60\" cy=\"128\" r=\"10\"></circle>\n<rect x=\"15\" y=\"127\" width=\"56\" height=\"12\" rx=\"6\"></rect>\n</g>\n</g>\n<path d=\"M-1200 318L-300 318C-120 318 -48 309 0 300C96 282 196 284 290 300C380 315 450 300 520 268C600 232 720 224 844 238C968 252 1100 262 1300 262L2044 262L2044 1590L-1200 1590Z\" fill=\"#9ADFA9\"></path>\n<path d=\"M-1200 360L-300 360C-120 360 -55 350 0 338C110 314 222 314 330 330C420 344 470 330 540 300C620 266 730 262 844 274C958 286 1100 296 1300 296L2044 296L2044 1590L-1200 1590Z\" fill=\"#62C584\"></path>\n</g>\n<g display=\"{{ L.pD }}\">\n<g style=\"animation: rr-drift 54s linear -20s infinite\">\n<g fill=\"#FFFFFF\" opacity=\"0.9\">\n<circle cx=\"34\" cy=\"178\" r=\"15\"></circle>\n<circle cx=\"56\" cy=\"169\" r=\"20\"></circle>\n<circle cx=\"80\" cy=\"178\" r=\"14\"></circle>\n<rect x=\"19\" y=\"176\" width=\"76\" height=\"16\" rx=\"8\"></rect>\n</g>\n</g>\n<g style=\"animation: rr-drift 72s linear -50s infinite\">\n<g fill=\"#FFFFFF\" opacity=\"0.75\">\n<circle cx=\"26\" cy=\"232\" r=\"11\"></circle>\n<circle cx=\"42\" cy=\"225\" r=\"15\"></circle>\n<circle cx=\"60\" cy=\"232\" r=\"10\"></circle>\n<rect x=\"15\" y=\"231\" width=\"56\" height=\"12\" rx=\"6\"></rect>\n</g>\n</g>\n</g>\n<g transform=\"{{ L.gT }}\">\n<g opacity=\"{{ sunOpacity }}\" style=\"transition: opacity 0.9s ease\">\n<g style=\"transform-box: fill-box; transform-origin: center; animation: rr-spin 28s linear infinite\">\n<path d=\"M255 352L271 352M246.96 382L260.82 390M225 403.96L233 417.82M195 412L195 428M165 403.96L157 417.82M143.04 382L129.18 390M135 352L119 352M143.04 322L129.18 314M165 300.04L157 286.18M195 292L195 276M225 300.04L233 286.18M246.96 322L260.82 314\" fill=\"none\" stroke=\"#FFC233\" stroke-width=\"10\" stroke-linecap=\"round\"></path>\n</g>\n<circle cx=\"195\" cy=\"352\" r=\"48\" fill=\"#FFD23F\"></circle>\n<circle cx=\"195\" cy=\"352\" r=\"36\" fill=\"#FFE27A\"></circle>\n</g>\n<g fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.5\" stroke-width=\"20\" stroke-linecap=\"round\">\n<path d=\"M25 432A170 170 0 0 1 365 432\"></path>\n<path d=\"M48 432A147 147 0 0 1 342 432\"></path>\n<path d=\"M71 432A124 124 0 0 1 319 432\"></path>\n<path d=\"M94 432A101 101 0 0 1 296 432\"></path>\n<path d=\"M117 432A78 78 0 0 1 273 432\"></path>\n<path d=\"M140 432A55 55 0 0 1 250 432\"></path>\n</g>\n<g fill=\"none\" stroke-width=\"20\" stroke-linecap=\"round\">\n<path d=\"{{ b0 }}\" stroke=\"#FF5D5D\"></path>\n<path d=\"{{ b1 }}\" stroke=\"#FF9F43\"></path>\n<path d=\"{{ b2 }}\" stroke=\"#FFD43B\"></path>\n<path d=\"{{ b3 }}\" stroke=\"#4CCB7A\"></path>\n<path d=\"{{ b4 }}\" stroke=\"#4D96FF\"></path>\n<path d=\"{{ b5 }}\" stroke=\"#9B6BFF\"></path>\n</g>\n<g transform=\"translate({{ tipX }} {{ tipY }})\" opacity=\"{{ tipOpacity }}\">\n<path d=\"M0 -11C1.6 -3 3 -1.6 11 0C3 1.6 1.6 3 0 11C-1.6 3 -3 1.6 -11 0C-3 -1.6 -1.6 -3 0 -11Z\" fill=\"#FFFFFF\" style=\"animation: rr-twinkle 1.1s ease-in-out infinite\"></path>\n</g>\n<g fill=\"#1E2A4A\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\">\n<text x=\"25\" y=\"462\">{{ F.a }}</text>\n<text x=\"48\" y=\"462\">{{ F.b }}</text>\n<text x=\"71\" y=\"462\">{{ F.c }}</text>\n<text x=\"94\" y=\"462\">{{ F.d }}</text>\n<text x=\"117\" y=\"462\">{{ F.e }}</text>\n<text x=\"140\" y=\"462\">{{ F.f }}</text>\n</g>\n<g style=\"animation: rr-bob 3.4s ease-in-out infinite\">\n<g fill=\"#B4D3F2\">\n<rect x=\"226\" y=\"423\" width=\"172\" height=\"48\" rx=\"24\"></rect>\n<circle cx=\"258\" cy=\"427\" r=\"30\"></circle>\n<circle cx=\"300\" cy=\"409\" r=\"40\"></circle>\n<circle cx=\"346\" cy=\"411\" r=\"36\"></circle>\n<circle cx=\"380\" cy=\"431\" r=\"28\"></circle>\n</g>\n<g fill=\"#FFFFFF\">\n<rect x=\"226\" y=\"416\" width=\"172\" height=\"48\" rx=\"24\"></rect>\n<circle cx=\"258\" cy=\"420\" r=\"30\"></circle>\n<circle cx=\"300\" cy=\"402\" r=\"40\"></circle>\n<circle cx=\"346\" cy=\"404\" r=\"36\"></circle>\n<circle cx=\"380\" cy=\"424\" r=\"28\"></circle>\n</g>\n<circle cx=\"292\" cy=\"414\" r=\"3.4\" fill=\"#1E2A4A\"></circle>\n<circle cx=\"318\" cy=\"414\" r=\"3.4\" fill=\"#1E2A4A\"></circle>\n<path d=\"M299 421Q305 426.5 311 421\" fill=\"none\" stroke=\"#1E2A4A\" stroke-width=\"2.4\" stroke-linecap=\"round\"></path>\n<ellipse cx=\"281\" cy=\"423\" rx=\"6\" ry=\"3.6\" fill=\"#FFB5C5\"></ellipse>\n<ellipse cx=\"329\" cy=\"423\" rx=\"6\" ry=\"3.6\" fill=\"#FFB5C5\"></ellipse>\n</g>\n</g>\n<g display=\"{{ L.pD }}\">\n<path d=\"M-1200 540L-400 540C-200 540 -36 514 0 500C72 472 152 470 222 488C282 503 342 499 390 480C438 461 560 452 760 452L1590 452L1590 2044L-1200 2044Z\" fill=\"#9ADFA9\"></path>\n<path d=\"M-1200 590L-400 590C-200 590 -46 569 0 552C92 518 182 514 262 530C322 542 362 538 390 528C418 518 560 506 760 506L1590 506L1590 2044L-1200 2044Z\" fill=\"#62C584\"></path>\n</g>\n</svg>\n<header style=\"position: absolute; left: {{ L.hL }}px; right: {{ L.hR }}px; top: {{ L.hT }}px; height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 12px\">\n<h1 style=\"margin: 0; font-size: 28px; font-weight: 700; line-height: 1.1; letter-spacing: -0.01em\">Playtime</h1>\n</header>\n<div style=\"position: absolute; left: {{ L.pL }}px; right: {{ L.pR }}px; top: {{ L.rT }}px; transform: {{ L.mid }}; display: flex; flex-direction: column; align-items: center\">\n<sc-if value=\"{{ notDone }}\" hint-placeholder-val=\"{{ true }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 10px\">\n<div style=\"font-size: 80px; font-weight: 700; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums\">{{ time }}</div>\n<div style=\"display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 600\">\n<div style=\"display: flex; align-items: center; gap: 5px\" aria-hidden=\"true\">\n<span style=\"width: 11px; height: 11px; border-radius: 99px; background: #FF5D5D; box-shadow: 0 0 0 2px #FFFFFF\"></span>\n<span style=\"width: 11px; height: 11px; border-radius: 99px; background: #FF9F43; box-shadow: 0 0 0 2px #FFFFFF\"></span>\n<span style=\"width: 11px; height: 11px; border-radius: 99px; background: #FFD43B; box-shadow: 0 0 0 2px #FFFFFF\"></span>\n<span style=\"width: 11px; height: 11px; border-radius: 99px; background: #4CCB7A; box-shadow: 0 0 0 2px #FFFFFF\"></span>\n<span style=\"width: 11px; height: 11px; border-radius: 99px; background: #4D96FF; box-shadow: 0 0 0 2px #FFFFFF\"></span>\n<span style=\"width: 11px; height: 11px; border-radius: 99px; background: #9B6BFF; box-shadow: 0 0 0 2px #FFFFFF\"></span>\n</div>\n<span>{{ colorLabel }}</span>\n</div>\n</div>\n</sc-if>\n<sc-if value=\"{{ done }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 10px\">\n<div style=\"font-size: 62px; font-weight: 700; line-height: 1\">All done!</div>\n<div style=\"font-size: 18px; font-weight: 600\">The rainbow went home</div>\n</div>\n</sc-if>\n</div>\n<div style=\"position: absolute; left: {{ L.pL }}px; right: {{ L.pR }}px; top: {{ L.kT }}px; transform: {{ L.mid }}; display: flex; align-items: center; justify-content: center; gap: 30px\">\n<button type=\"button\" onClick=\"{{ setTime }}\" aria-label=\"Set the time\" style=\"width: 62px; height: 62px; padding: 0; border: none; border-radius: 999px; background: #FFFFFF; color: #1E2A4A; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 0 #3F9E62\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M10 2h4M12 14l3-3\"></path><circle cx=\"12\" cy=\"14\" r=\"8\"></circle></svg></button>\n<button type=\"button\" onClick=\"{{ toggle }}\" aria-label=\"{{ toggleLabel }}\" style=\"width: 90px; height: 90px; padding: 0; border: none; border-radius: 999px; background: #1E2A4A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 0 #101935\">\n<sc-if value=\"{{ showPlay }}\" hint-placeholder-val=\"{{ true }}\"><svg width=\"38\" height=\"38\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block; margin-left: 3px\"><path d=\"M8 5.14v13.72a1 1 0 0 0 1.52.85l10.79-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14z\" fill=\"currentColor\"></path></svg></sc-if>\n<sc-if value=\"{{ running }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block\"><rect x=\"6\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect><rect x=\"13.5\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect></svg></sc-if>\n<sc-if value=\"{{ showReplay }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></sc-if>\n</button>\n<button type=\"button\" onClick=\"{{ reset }}\" aria-label=\"Reset timer\" style=\"width: 62px; height: 62px; padding: 0; border: none; border-radius: 999px; background: #FFFFFF; color: #1E2A4A; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 0 #3F9E62\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></button>\n</div>\n<sc-if value=\"{{ picking }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"position: absolute; left: 0; top: 0; width: {{ L.w }}px; height: {{ L.h }}px; z-index: 20\">\n<dc-import name=\"TimePicker\" value=\"{{ pickValue }}\" mode=\"duration\" heading=\"Set time\" accent=\"#1E2A4A\" accent-ink=\"#FFFFFF\" dark=\"{{ false }}\" landscape=\"{{ L.land }}\" bleed=\"{{ L.B }}\" on-set=\"{{ applyTime }}\" on-cancel=\"{{ cancelPick }}\" hint-size=\"390px,844px\"></dc-import>\n</div>\n</sc-if>\n</div>"}, { Logic: (function () {
@@ -1709,7 +1709,7 @@ class Component extends DCLogic {
 }
 return Component;
 })() }),
-  Object.assign({"id":"sleep","name":"Sleep trainer","tagline":"Red, amber, green. Clock or nap minutes","relative":false,"sleep":true,"bars":"sleep","lbars":null,"ldir":null,"lsplit":null,"psplit":null,"back":"auto","defaults":{"wakeBy":"Clock time","preview":"Sleeping","speed":"Demo (fast-forward)","bleed":false,"landscape":false},"template":"<div style=\"width: {{ L.w }}px; height: {{ L.h }}px; position: relative; overflow: {{ L.ov }}; background: {{ bg }}; transition: background-color 1.2s ease; font-family: 'Baloo 2', 'Arial Rounded MT Bold', system-ui, sans-serif; color: {{ ink }}\">\n<div aria-hidden=\"true\" style=\"position: absolute; left: -1200px; top: -1200px; right: -1200px; bottom: -1200px; pointer-events: none; display: {{ L.bD }}; background: {{ bg }}; transition: background-color 1.2s ease\"></div>\n<div aria-hidden=\"true\" style=\"position: absolute; left: -1200px; top: -1200px; right: -1200px; bottom: -1200px; pointer-events: none; display: {{ L.bD }}; opacity: {{ skyOp }}; transition: opacity 1.2s ease; background-image: radial-gradient(circle at 28px 44px, #FFFFFF 0 1.2px, transparent 1.9px), radial-gradient(circle at 112px 18px, #FFFFFF 0 0.9px, transparent 1.6px), radial-gradient(circle at 196px 90px, #FFFFFF 0 1.4px, transparent 2.1px), radial-gradient(circle at 300px 40px, #FFFFFF 0 1.0px, transparent 1.7px), radial-gradient(circle at 62px 170px, #FFFFFF 0 1.0px, transparent 1.7px), radial-gradient(circle at 160px 214px, #FFFFFF 0 1.3px, transparent 2.0px), radial-gradient(circle at 262px 180px, #FFFFFF 0 0.9px, transparent 1.6px), radial-gradient(circle at 338px 262px, #FFFFFF 0 1.2px, transparent 1.9px), radial-gradient(circle at 90px 300px, #FFFFFF 0 1.1px, transparent 1.8px), radial-gradient(circle at 220px 330px, #FFFFFF 0 1.0px, transparent 1.7px), radial-gradient(circle at 330px 140px, #FFFFFF 0 0.8px, transparent 1.5px), radial-gradient(circle at 14px 250px, #FFFFFF 0 0.9px, transparent 1.6px); background-size: 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px\"></div>\n<div aria-hidden=\"true\" style=\"position: absolute; left: 0; top: 0; width: {{ L.w }}px; height: {{ L.h }}px; pointer-events: none; display: {{ L.bD }}; background: {{ bg }}; transition: background-color 1.2s ease\"></div>\n<svg width=\"{{ L.w }}\" height=\"{{ L.h }}\" viewBox=\"{{ L.vb }}\" role=\"img\" aria-label=\"{{ ariaLabel }}\" style=\"position: absolute; left: 0; top: 0; display: block\">\n<g fill=\"#FFFFFF\" opacity=\"{{ skyOp }}\" style=\"transition: opacity 1.2s ease\" display=\"{{ L.pD }}\">\n<g style=\"animation: st-tw 3.4s ease-in-out infinite\">\n<circle cx=\"30\" cy=\"140\" r=\"1.4\"></circle>\n<circle cx=\"122\" cy=\"112\" r=\"1\"></circle>\n<circle cx=\"348\" cy=\"90\" r=\"1.3\"></circle>\n<circle cx=\"22\" cy=\"300\" r=\"1.1\"></circle>\n<circle cx=\"360\" cy=\"440\" r=\"1.3\"></circle>\n<circle cx=\"60\" cy=\"520\" r=\"1\"></circle>\n<circle cx=\"370\" cy=\"640\" r=\"1.2\"></circle>\n</g>\n<g style=\"animation: st-tw 4.6s ease-in-out -2s infinite\">\n<circle cx=\"62\" cy=\"96\" r=\"1.1\"></circle>\n<circle cx=\"292\" cy=\"112\" r=\"1.2\"></circle>\n<circle cx=\"372\" cy=\"150\" r=\"1\"></circle>\n<circle cx=\"370\" cy=\"318\" r=\"1.4\"></circle>\n<circle cx=\"34\" cy=\"420\" r=\"1.2\"></circle>\n<circle cx=\"336\" cy=\"530\" r=\"1\"></circle>\n<circle cx=\"24\" cy=\"620\" r=\"1.3\"></circle>\n</g>\n</g>\n<g fill=\"#FFFFFF\" opacity=\"{{ skyOp }}\" style=\"transition: opacity 1.2s ease\" display=\"{{ L.lD }}\">\n<g style=\"animation: st-tw 3.4s ease-in-out infinite\">\n<circle cx=\"339\" cy=\"85\" r=\"1.3\"></circle>\n<circle cx=\"674\" cy=\"32\" r=\"1\"></circle>\n<circle cx=\"556\" cy=\"56\" r=\"1.2\"></circle>\n<circle cx=\"604\" cy=\"37\" r=\"1.4\"></circle>\n<circle cx=\"227\" cy=\"27\" r=\"1\"></circle>\n<circle cx=\"452\" cy=\"222\" r=\"1\"></circle>\n<circle cx=\"572\" cy=\"225\" r=\"1\"></circle>\n<circle cx=\"236\" cy=\"330\" r=\"1.5\"></circle>\n<circle cx=\"598\" cy=\"307\" r=\"1.3\"></circle>\n<circle cx=\"58\" cy=\"121\" r=\"1\"></circle>\n<circle cx=\"304\" cy=\"222\" r=\"1.1\"></circle>\n<circle cx=\"592\" cy=\"165\" r=\"1.4\"></circle>\n</g>\n<g style=\"animation: st-tw 4.6s ease-in-out -2s infinite\">\n<circle cx=\"516\" cy=\"356\" r=\"1.4\"></circle>\n<circle cx=\"445\" cy=\"168\" r=\"1.3\"></circle>\n<circle cx=\"607\" cy=\"240\" r=\"1.2\"></circle>\n<circle cx=\"314\" cy=\"135\" r=\"1.6\"></circle>\n<circle cx=\"192\" cy=\"365\" r=\"1.6\"></circle>\n<circle cx=\"257\" cy=\"49\" r=\"1.4\"></circle>\n<circle cx=\"315\" cy=\"276\" r=\"1.3\"></circle>\n<circle cx=\"359\" cy=\"381\" r=\"1.3\"></circle>\n<circle cx=\"302\" cy=\"319\" r=\"1\"></circle>\n<circle cx=\"128\" cy=\"270\" r=\"1.3\"></circle>\n<circle cx=\"176\" cy=\"183\" r=\"1.1\"></circle>\n<circle cx=\"508\" cy=\"223\" r=\"1\"></circle>\n</g>\n</g>\n<g transform=\"{{ L.gT }}\">\n<g opacity=\"{{ raysOp }}\" style=\"transition: opacity 1.2s ease\">\n<g style=\"transform-box: fill-box; transform-origin: center; animation: st-spin 40s linear infinite\">\n<path d=\"{{ rays }}\" fill=\"#FFE98A\" opacity=\"0.7\"></path>\n</g>\n</g>\n<g style=\"animation: st-glow 4s ease-in-out infinite\">\n<circle cx=\"195\" cy=\"292\" r=\"150\" opacity=\"0.1\" style=\"fill: {{ orb }}; transition: fill 1s ease\"></circle>\n<circle cx=\"195\" cy=\"292\" r=\"126\" opacity=\"0.2\" style=\"fill: {{ orb }}; transition: fill 1s ease\"></circle>\n</g>\n<circle cx=\"195\" cy=\"292\" r=\"104\" style=\"fill: {{ orb }}; transition: fill 1s ease\"></circle>\n<path d=\"{{ dots }}\" fill=\"#2B1E47\" opacity=\"0.3\"></path>\n</g>\n<g transform=\"{{ L.bunnyT }}\">\n<g style=\"animation: {{ bunnyAnim }}\">\n<ellipse cx=\"0\" cy=\"36\" rx=\"108\" ry=\"34\" fill=\"#F2EAFF\" stroke=\"#2B1E47\" stroke-width=\"4\"></ellipse>\n<g style=\"transform-box: fill-box; transform-origin: 50% 100%; transform: rotate({{ earL }}deg); transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)\">\n<ellipse cx=\"-26\" cy=\"-80\" rx=\"17\" ry=\"44\" fill=\"#FFF6EC\" stroke=\"#2B1E47\" stroke-width=\"4\"></ellipse>\n<ellipse cx=\"-26\" cy=\"-76\" rx=\"8\" ry=\"30\" fill=\"#FFB3C6\"></ellipse>\n</g>\n<g style=\"transform-box: fill-box; transform-origin: 50% 100%; transform: rotate({{ earR }}deg); transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)\">\n<ellipse cx=\"26\" cy=\"-80\" rx=\"17\" ry=\"44\" fill=\"#FFF6EC\" stroke=\"#2B1E47\" stroke-width=\"4\"></ellipse>\n<ellipse cx=\"26\" cy=\"-76\" rx=\"8\" ry=\"30\" fill=\"#FFB3C6\"></ellipse>\n</g>\n<ellipse cx=\"0\" cy=\"0\" rx=\"64\" ry=\"56\" fill=\"#FFF6EC\" stroke=\"#2B1E47\" stroke-width=\"4\"></ellipse>\n<ellipse cx=\"-38\" cy=\"20\" rx=\"11\" ry=\"7\" fill=\"#FFB3C6\" opacity=\"0.85\"></ellipse>\n<ellipse cx=\"38\" cy=\"20\" rx=\"11\" ry=\"7\" fill=\"#FFB3C6\" opacity=\"0.85\"></ellipse>\n<g opacity=\"{{ closedOp }}\" fill=\"none\" stroke=\"#2B1E47\" stroke-width=\"4\" stroke-linecap=\"round\" style=\"transition: opacity 0.5s ease\">\n<path d=\"M-34 2Q-24 11 -14 2\"></path>\n<path d=\"M14 2Q24 11 34 2\"></path>\n<path d=\"M-8 27Q-4 32 0 27Q4 32 8 27\" stroke-width=\"3\"></path>\n</g>\n<g opacity=\"{{ openOp }}\" style=\"transition: opacity 0.5s ease\">\n<circle cx=\"-24\" cy=\"2\" r=\"8.5\" fill=\"#2B1E47\"></circle>\n<circle cx=\"24\" cy=\"2\" r=\"8.5\" fill=\"#2B1E47\"></circle>\n<circle cx=\"-26.5\" cy=\"-1\" r=\"3\" fill=\"#FFFFFF\"></circle>\n<circle cx=\"21.5\" cy=\"-1\" r=\"3\" fill=\"#FFFFFF\"></circle>\n<path d=\"M-11 26Q0 42 11 26Z\" fill=\"#E25C7A\" stroke=\"#2B1E47\" stroke-width=\"3\" stroke-linejoin=\"round\"></path>\n</g>\n<path d=\"M-6 14L6 14L0 21Z\" fill=\"#FF8FA8\" stroke=\"#FF8FA8\" stroke-width=\"3\" stroke-linejoin=\"round\"></path>\n<path d=\"M-132 70C-110 52 -80 50 -50 58C-20 66 20 66 50 58C80 50 110 52 132 70L132 120C132 142 114 158 92 158L-92 158C-114 158 -132 142 -132 120Z\" fill=\"#7E6BE6\" stroke=\"#2B1E47\" stroke-width=\"4\" stroke-linejoin=\"round\"></path>\n<path d=\"M-120 84C-90 72 -60 72 -40 78\" fill=\"none\" stroke=\"#A99BFF\" stroke-width=\"3\" stroke-linecap=\"round\"></path>\n<g fill=\"#B7ABFF\">\n<path d=\"M0 -6L1.8 -1.9L6.2 -1.9L2.7 0.8L4 5.2L0 2.6L-4 5.2L-2.7 0.8L-6.2 -1.9L-1.8 -1.9Z\" transform=\"translate(-96 112)\"></path>\n<path d=\"M0 -6L1.8 -1.9L6.2 -1.9L2.7 0.8L4 5.2L0 2.6L-4 5.2L-2.7 0.8L-6.2 -1.9L-1.8 -1.9Z\" transform=\"translate(-52 138)\"></path>\n<path d=\"M0 -6L1.8 -1.9L6.2 -1.9L2.7 0.8L4 5.2L0 2.6L-4 5.2L-2.7 0.8L-6.2 -1.9L-1.8 -1.9Z\" transform=\"translate(-8 104)\"></path>\n<path d=\"M0 -6L1.8 -1.9L6.2 -1.9L2.7 0.8L4 5.2L0 2.6L-4 5.2L-2.7 0.8L-6.2 -1.9L-1.8 -1.9Z\" transform=\"translate(38 134)\"></path>\n<path d=\"M0 -6L1.8 -1.9L6.2 -1.9L2.7 0.8L4 5.2L0 2.6L-4 5.2L-2.7 0.8L-6.2 -1.9L-1.8 -1.9Z\" transform=\"translate(84 106)\"></path>\n<path d=\"M0 -6L1.8 -1.9L6.2 -1.9L2.7 0.8L4 5.2L0 2.6L-4 5.2L-2.7 0.8L-6.2 -1.9L-1.8 -1.9Z\" transform=\"translate(110 140)\"></path>\n</g>\n<g style=\"transform: translate({{ pawLX }}px, {{ pawY }}px); transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)\">\n<circle cx=\"-44\" cy=\"64\" r=\"14\" fill=\"#FFF6EC\" stroke=\"#2B1E47\" stroke-width=\"4\"></circle>\n</g>\n<g style=\"transform: translate({{ pawRX }}px, {{ pawY }}px); transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)\">\n<circle cx=\"44\" cy=\"64\" r=\"14\" fill=\"#FFF6EC\" stroke=\"#2B1E47\" stroke-width=\"4\"></circle>\n</g>\n</g>\n<g opacity=\"{{ zzzOp }}\" fill=\"#CFC3FF\" font-weight=\"800\" style=\"transition: opacity 0.8s ease\">\n<text x=\"64\" y=\"-60\" font-size=\"24\" style=\"transform-box: fill-box; transform-origin: center; animation: st-z 3.6s ease-out infinite\">z</text>\n<text x=\"64\" y=\"-60\" font-size=\"19\" style=\"transform-box: fill-box; transform-origin: center; animation: st-z 3.6s ease-out -1.2s infinite\">z</text>\n<text x=\"64\" y=\"-60\" font-size=\"15\" style=\"transform-box: fill-box; transform-origin: center; animation: st-z 3.6s ease-out -2.4s infinite\">z</text>\n</g>\n</g>\n</svg>\n<div style=\"position: absolute; left: 0; top: 0; width: 390px; height: 844px; pointer-events: none; transform-origin: 0 0; transform: {{ L.cT }}\">\n<sc-for list=\"{{ stars }}\" as=\"s\" hint-placeholder-count=\"6\">\n<div style=\"position: absolute; left: {{ s.x }}px; top: {{ s.y }}px; width: 34px; height: 34px\">\n<svg width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"position: absolute; left: 0; top: 0; display: block; overflow: visible\">\n<path d=\"M12 2.6l2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.1l-5.7 3 1.1-6.3-4.6-4.5 6.4-.9z\" fill=\"none\" stroke=\"{{ s.ghost }}\" stroke-width=\"1.6\" stroke-linejoin=\"round\"></path>\n</svg>\n<svg width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"position: absolute; left: 0; top: 0; display: block; overflow: visible; opacity: {{ s.op }}; transform: scale({{ s.sc }}); transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1); filter: drop-shadow(0 0 7px rgba(255, 214, 102, 0.8))\">\n<path d=\"M12 2.6l2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.1l-5.7 3 1.1-6.3-4.6-4.5 6.4-.9z\" fill=\"#FFD666\" stroke=\"#FFD666\" stroke-width=\"1.6\" stroke-linejoin=\"round\"></path>\n</svg>\n</div>\n</sc-for>\n<div style=\"position: absolute; left: 95px; top: 192px; width: 200px; height: 200px; display: flex; align-items: center; justify-content: center\">\n<div style=\"font-size: {{ displaySize }}px; font-weight: 800; line-height: 1; color: #2B1E47; font-variant-numeric: tabular-nums; letter-spacing: -0.01em\">{{ display }}</div>\n</div>\n</div>\n<div style=\"position: absolute; left: {{ L.tL }}px; right: {{ L.tR }}px; top: {{ L.tT }}px; transform: {{ L.mid }}; display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center\">\n<div style=\"font-size: 28px; font-weight: 800; line-height: 1.15\">{{ title }}</div>\n<div style=\"font-size: 16px; font-weight: 600; line-height: 1.35; color: {{ sub }}\">{{ subtitle }}</div>\n</div>\n<div aria-hidden=\"true\" style=\"position: absolute; left: {{ L.bI }}px; top: {{ L.bI }}px; right: {{ L.bI }}px; bottom: {{ L.bI }}px; pointer-events: none; background: #000000; opacity: {{ dimOp }}; transition: opacity 0.5s ease\"></div>\n<header style=\"position: absolute; left: {{ L.hL }}px; right: {{ L.hR }}px; top: {{ L.hT }}px; height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 12px\">\n<div role=\"group\" aria-label=\"Wake up by\" style=\"display: flex; gap: 4px; padding: 3px; border-radius: 999px; background: {{ segBg }}\">\n<button type=\"button\" onClick=\"{{ useClock }}\" aria-pressed=\"{{ isClock }}\" style=\"height: 44px; padding: 0 14px; border: none; border-radius: 999px; background: {{ segClockBg }}; color: {{ segClockFg }}; display: flex; align-items: center; gap: 6px; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer; white-space: nowrap\">\n<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M17 18a5 5 0 0 0-10 0\"></path><path d=\"M12 2v7M4.2 10.2l1.4 1.4M1 18h2M21 18h2M18.4 11.6l1.4-1.4M23 22H1M8 6l4-4 4 4\"></path></svg>\n<span>{{ wakeLabel }}</span>\n</button>\n<button type=\"button\" onClick=\"{{ useMinutes }}\" aria-pressed=\"{{ isMinutes }}\" style=\"height: 44px; padding: 0 14px; border: none; border-radius: 999px; background: {{ segNapBg }}; color: {{ segNapFg }}; display: flex; align-items: center; gap: 6px; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer; white-space: nowrap\">\n<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M10 2h4M12 14l3-3\"></path><circle cx=\"12\" cy=\"14\" r=\"8\"></circle></svg>\n<span>{{ napLabel }}</span>\n</button>\n</div>\n</header>\n<div style=\"position: absolute; left: {{ L.pL }}px; right: {{ L.pR }}px; top: {{ L.kT }}px; transform: {{ L.mid }}; display: flex; align-items: center; justify-content: center; gap: 30px\">\n<button type=\"button\" onClick=\"{{ setTime }}\" aria-label=\"{{ setAria }}\" style=\"width: 58px; height: 58px; padding: 0; border: none; border-radius: 999px; background: {{ segBg }}; color: {{ ink }}; display: flex; align-items: center; justify-content: center; cursor: pointer\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M10 2h4M12 14l3-3\"></path><circle cx=\"12\" cy=\"14\" r=\"8\"></circle></svg></button>\n<button type=\"button\" onClick=\"{{ toggle }}\" aria-label=\"{{ toggleLabel }}\" style=\"width: 72px; height: 72px; padding: 0; border: none; border-radius: 999px; background: {{ orb }}; color: #2B1E47; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background-color 1s ease\">\n<sc-if value=\"{{ showPlay }}\" hint-placeholder-val=\"{{ true }}\"><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block; margin-left: 3px\"><path d=\"M8 5.14v13.72a1 1 0 0 0 1.52.85l10.79-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14z\" fill=\"currentColor\"></path></svg></sc-if>\n<sc-if value=\"{{ running }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block\"><rect x=\"6\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect><rect x=\"13.5\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect></svg></sc-if>\n<sc-if value=\"{{ showReplay }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></sc-if>\n</button>\n<button type=\"button\" onClick=\"{{ cycleDim }}\" aria-label=\"{{ dimLabel }}\" style=\"width: 58px; height: 58px; padding: 0; border: none; border-radius: 999px; background: {{ segBg }}; color: {{ ink }}; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; cursor: pointer\">\n<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z\"></path></svg>\n<span aria-hidden=\"true\" style=\"display: flex; gap: 3px\">\n<span style=\"width: 4px; height: 4px; border-radius: 99px; background: currentColor; opacity: {{ d1 }}\"></span>\n<span style=\"width: 4px; height: 4px; border-radius: 99px; background: currentColor; opacity: {{ d2 }}\"></span>\n<span style=\"width: 4px; height: 4px; border-radius: 99px; background: currentColor; opacity: {{ d3 }}\"></span>\n</span>\n</button>\n</div>\n<sc-if value=\"{{ picking }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"position: absolute; left: 0; top: 0; width: {{ L.w }}px; height: {{ L.h }}px; z-index: 20\">\n<dc-import name=\"TimePicker\" value=\"{{ pickValue }}\" mode=\"{{ pickMode }}\" heading=\"{{ pickHeading }}\" accent=\"{{ orb }}\" accent-ink=\"#2B1E47\" dark=\"{{ pickDark }}\" landscape=\"{{ L.land }}\" bleed=\"{{ L.B }}\" on-set=\"{{ applyTime }}\" on-cancel=\"{{ cancelPick }}\" hint-size=\"390px,844px\"></dc-import>\n</div>\n</sc-if>\n</div>"}, { Logic: (function () {
+  Object.assign({"id":"sleep","name":"Sleep trainer","tagline":"Red, amber, green. Clock or nap minutes","relative":false,"sleep":true,"bars":"sleep","lbars":null,"ldir":null,"lsplit":null,"psplit":null,"back":"auto","defaults":{"wakeBy":"Clock time","preview":"Sleeping","speed":"Demo (fast-forward)","bleed":false,"landscape":false},"template":"<div style=\"width: {{ L.w }}px; height: {{ L.h }}px; position: relative; overflow: {{ L.ov }}; background: {{ bg }}; transition: background-color 1.2s ease; font-family: 'Baloo 2', 'Arial Rounded MT Bold', system-ui, sans-serif; color: {{ ink }}\">\n<div aria-hidden=\"true\" style=\"position: absolute; left: -1200px; top: -1200px; right: -1200px; bottom: -1200px; pointer-events: none; display: {{ L.bD }}; background: {{ bg }}; transition: background-color 1.2s ease\"></div>\n<div aria-hidden=\"true\" style=\"position: absolute; left: -1200px; top: -1200px; right: -1200px; bottom: -1200px; pointer-events: none; display: {{ L.bD }}; opacity: {{ skyOp }}; transition: opacity 1.2s ease; background-image: radial-gradient(circle at 28px 44px, #FFFFFF 0 1.2px, transparent 1.9px), radial-gradient(circle at 112px 18px, #FFFFFF 0 0.9px, transparent 1.6px), radial-gradient(circle at 196px 90px, #FFFFFF 0 1.4px, transparent 2.1px), radial-gradient(circle at 300px 40px, #FFFFFF 0 1.0px, transparent 1.7px), radial-gradient(circle at 62px 170px, #FFFFFF 0 1.0px, transparent 1.7px), radial-gradient(circle at 160px 214px, #FFFFFF 0 1.3px, transparent 2.0px), radial-gradient(circle at 262px 180px, #FFFFFF 0 0.9px, transparent 1.6px), radial-gradient(circle at 338px 262px, #FFFFFF 0 1.2px, transparent 1.9px), radial-gradient(circle at 90px 300px, #FFFFFF 0 1.1px, transparent 1.8px), radial-gradient(circle at 220px 330px, #FFFFFF 0 1.0px, transparent 1.7px), radial-gradient(circle at 330px 140px, #FFFFFF 0 0.8px, transparent 1.5px), radial-gradient(circle at 14px 250px, #FFFFFF 0 0.9px, transparent 1.6px); background-size: 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px, 360px 360px\"></div>\n<div aria-hidden=\"true\" style=\"position: absolute; left: 0; top: 0; width: {{ L.w }}px; height: {{ L.h }}px; pointer-events: none; display: {{ L.bD }}; background: {{ bg }}; transition: background-color 1.2s ease\"></div>\n<svg width=\"{{ L.w }}\" height=\"{{ L.h }}\" viewBox=\"{{ L.vb }}\" role=\"img\" aria-label=\"{{ ariaLabel }}\" style=\"position: absolute; left: 0; top: 0; display: block\">\n<g fill=\"#FFFFFF\" opacity=\"{{ skyOp }}\" style=\"transition: opacity 1.2s ease\" display=\"{{ L.pD }}\">\n<g style=\"animation: st-tw 3.4s ease-in-out infinite\">\n<circle cx=\"30\" cy=\"140\" r=\"1.4\"></circle>\n<circle cx=\"122\" cy=\"112\" r=\"1\"></circle>\n<circle cx=\"348\" cy=\"90\" r=\"1.3\"></circle>\n<circle cx=\"22\" cy=\"300\" r=\"1.1\"></circle>\n<circle cx=\"360\" cy=\"440\" r=\"1.3\"></circle>\n<circle cx=\"60\" cy=\"520\" r=\"1\"></circle>\n<circle cx=\"370\" cy=\"640\" r=\"1.2\"></circle>\n</g>\n<g style=\"animation: st-tw 4.6s ease-in-out -2s infinite\">\n<circle cx=\"62\" cy=\"96\" r=\"1.1\"></circle>\n<circle cx=\"292\" cy=\"112\" r=\"1.2\"></circle>\n<circle cx=\"372\" cy=\"150\" r=\"1\"></circle>\n<circle cx=\"370\" cy=\"318\" r=\"1.4\"></circle>\n<circle cx=\"34\" cy=\"420\" r=\"1.2\"></circle>\n<circle cx=\"336\" cy=\"530\" r=\"1\"></circle>\n<circle cx=\"24\" cy=\"620\" r=\"1.3\"></circle>\n</g>\n</g>\n<g fill=\"#FFFFFF\" opacity=\"{{ skyOp }}\" style=\"transition: opacity 1.2s ease\" display=\"{{ L.lD }}\">\n<g style=\"animation: st-tw 3.4s ease-in-out infinite\">\n<circle cx=\"339\" cy=\"85\" r=\"1.3\"></circle>\n<circle cx=\"674\" cy=\"32\" r=\"1\"></circle>\n<circle cx=\"556\" cy=\"56\" r=\"1.2\"></circle>\n<circle cx=\"604\" cy=\"37\" r=\"1.4\"></circle>\n<circle cx=\"227\" cy=\"27\" r=\"1\"></circle>\n<circle cx=\"452\" cy=\"222\" r=\"1\"></circle>\n<circle cx=\"572\" cy=\"225\" r=\"1\"></circle>\n<circle cx=\"236\" cy=\"330\" r=\"1.5\"></circle>\n<circle cx=\"598\" cy=\"307\" r=\"1.3\"></circle>\n<circle cx=\"58\" cy=\"121\" r=\"1\"></circle>\n<circle cx=\"304\" cy=\"222\" r=\"1.1\"></circle>\n<circle cx=\"592\" cy=\"165\" r=\"1.4\"></circle>\n</g>\n<g style=\"animation: st-tw 4.6s ease-in-out -2s infinite\">\n<circle cx=\"516\" cy=\"356\" r=\"1.4\"></circle>\n<circle cx=\"445\" cy=\"168\" r=\"1.3\"></circle>\n<circle cx=\"607\" cy=\"240\" r=\"1.2\"></circle>\n<circle cx=\"314\" cy=\"135\" r=\"1.6\"></circle>\n<circle cx=\"192\" cy=\"365\" r=\"1.6\"></circle>\n<circle cx=\"257\" cy=\"49\" r=\"1.4\"></circle>\n<circle cx=\"315\" cy=\"276\" r=\"1.3\"></circle>\n<circle cx=\"359\" cy=\"381\" r=\"1.3\"></circle>\n<circle cx=\"302\" cy=\"319\" r=\"1\"></circle>\n<circle cx=\"128\" cy=\"270\" r=\"1.3\"></circle>\n<circle cx=\"176\" cy=\"183\" r=\"1.1\"></circle>\n<circle cx=\"508\" cy=\"223\" r=\"1\"></circle>\n</g>\n</g>\n<g transform=\"{{ L.gT }}\">\n<g opacity=\"{{ raysOp }}\" style=\"transition: opacity 1.2s ease\">\n<g style=\"transform-box: fill-box; transform-origin: center; animation: st-spin 40s linear infinite\">\n<path d=\"{{ rays }}\" fill=\"#FFE98A\" opacity=\"0.7\"></path>\n</g>\n</g>\n<g style=\"animation: st-glow 4s ease-in-out infinite\">\n<circle cx=\"195\" cy=\"292\" r=\"150\" opacity=\"0.1\" style=\"fill: {{ orb }}; transition: fill 1s ease\"></circle>\n<circle cx=\"195\" cy=\"292\" r=\"126\" opacity=\"0.2\" style=\"fill: {{ orb }}; transition: fill 1s ease\"></circle>\n</g>\n<circle cx=\"195\" cy=\"292\" r=\"104\" style=\"fill: {{ orb }}; transition: fill 1s ease\"></circle>\n<path d=\"{{ dots }}\" fill=\"#2B1E47\" opacity=\"0.3\"></path>\n</g>\n<g transform=\"{{ L.bunnyT }}\">\n<g style=\"animation: {{ bunnyAnim }}\">\n<ellipse cx=\"0\" cy=\"36\" rx=\"108\" ry=\"34\" fill=\"#F2EAFF\" stroke=\"#2B1E47\" stroke-width=\"4\"></ellipse>\n<g style=\"transform-box: fill-box; transform-origin: 50% 100%; transform: rotate({{ earL }}deg); transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)\">\n<ellipse cx=\"-26\" cy=\"-80\" rx=\"17\" ry=\"44\" fill=\"#FFF6EC\" stroke=\"#2B1E47\" stroke-width=\"4\"></ellipse>\n<ellipse cx=\"-26\" cy=\"-76\" rx=\"8\" ry=\"30\" fill=\"#FFB3C6\"></ellipse>\n</g>\n<g style=\"transform-box: fill-box; transform-origin: 50% 100%; transform: rotate({{ earR }}deg); transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)\">\n<ellipse cx=\"26\" cy=\"-80\" rx=\"17\" ry=\"44\" fill=\"#FFF6EC\" stroke=\"#2B1E47\" stroke-width=\"4\"></ellipse>\n<ellipse cx=\"26\" cy=\"-76\" rx=\"8\" ry=\"30\" fill=\"#FFB3C6\"></ellipse>\n</g>\n<ellipse cx=\"0\" cy=\"0\" rx=\"64\" ry=\"56\" fill=\"#FFF6EC\" stroke=\"#2B1E47\" stroke-width=\"4\"></ellipse>\n<ellipse cx=\"-38\" cy=\"20\" rx=\"11\" ry=\"7\" fill=\"#FFB3C6\" opacity=\"0.85\"></ellipse>\n<ellipse cx=\"38\" cy=\"20\" rx=\"11\" ry=\"7\" fill=\"#FFB3C6\" opacity=\"0.85\"></ellipse>\n<g opacity=\"{{ closedOp }}\" fill=\"none\" stroke=\"#2B1E47\" stroke-width=\"4\" stroke-linecap=\"round\" style=\"transition: opacity 0.5s ease\">\n<path d=\"M-34 2Q-24 11 -14 2\"></path>\n<path d=\"M14 2Q24 11 34 2\"></path>\n<path d=\"M-8 27Q-4 32 0 27Q4 32 8 27\" stroke-width=\"3\"></path>\n</g>\n<g opacity=\"{{ openOp }}\" style=\"transition: opacity 0.5s ease\">\n<circle cx=\"-24\" cy=\"2\" r=\"8.5\" fill=\"#2B1E47\"></circle>\n<circle cx=\"24\" cy=\"2\" r=\"8.5\" fill=\"#2B1E47\"></circle>\n<circle cx=\"-26.5\" cy=\"-1\" r=\"3\" fill=\"#FFFFFF\"></circle>\n<circle cx=\"21.5\" cy=\"-1\" r=\"3\" fill=\"#FFFFFF\"></circle>\n<path d=\"M-11 26Q0 42 11 26Z\" fill=\"#E25C7A\" stroke=\"#2B1E47\" stroke-width=\"3\" stroke-linejoin=\"round\"></path>\n</g>\n<path d=\"M-6 14L6 14L0 21Z\" fill=\"#FF8FA8\" stroke=\"#FF8FA8\" stroke-width=\"3\" stroke-linejoin=\"round\"></path>\n<path d=\"M-132 70C-110 52 -80 50 -50 58C-20 66 20 66 50 58C80 50 110 52 132 70L132 120C132 142 114 158 92 158L-92 158C-114 158 -132 142 -132 120Z\" fill=\"#7E6BE6\" stroke=\"#2B1E47\" stroke-width=\"4\" stroke-linejoin=\"round\"></path>\n<path d=\"M-120 84C-90 72 -60 72 -40 78\" fill=\"none\" stroke=\"#A99BFF\" stroke-width=\"3\" stroke-linecap=\"round\"></path>\n<g fill=\"#B7ABFF\">\n<path d=\"M0 -6L1.8 -1.9L6.2 -1.9L2.7 0.8L4 5.2L0 2.6L-4 5.2L-2.7 0.8L-6.2 -1.9L-1.8 -1.9Z\" transform=\"translate(-96 112)\"></path>\n<path d=\"M0 -6L1.8 -1.9L6.2 -1.9L2.7 0.8L4 5.2L0 2.6L-4 5.2L-2.7 0.8L-6.2 -1.9L-1.8 -1.9Z\" transform=\"translate(-52 138)\"></path>\n<path d=\"M0 -6L1.8 -1.9L6.2 -1.9L2.7 0.8L4 5.2L0 2.6L-4 5.2L-2.7 0.8L-6.2 -1.9L-1.8 -1.9Z\" transform=\"translate(-8 104)\"></path>\n<path d=\"M0 -6L1.8 -1.9L6.2 -1.9L2.7 0.8L4 5.2L0 2.6L-4 5.2L-2.7 0.8L-6.2 -1.9L-1.8 -1.9Z\" transform=\"translate(38 134)\"></path>\n<path d=\"M0 -6L1.8 -1.9L6.2 -1.9L2.7 0.8L4 5.2L0 2.6L-4 5.2L-2.7 0.8L-6.2 -1.9L-1.8 -1.9Z\" transform=\"translate(84 106)\"></path>\n<path d=\"M0 -6L1.8 -1.9L6.2 -1.9L2.7 0.8L4 5.2L0 2.6L-4 5.2L-2.7 0.8L-6.2 -1.9L-1.8 -1.9Z\" transform=\"translate(110 140)\"></path>\n</g>\n<g style=\"transform: translate({{ pawLX }}px, {{ pawY }}px); transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)\">\n<circle cx=\"-44\" cy=\"64\" r=\"14\" fill=\"#FFF6EC\" stroke=\"#2B1E47\" stroke-width=\"4\"></circle>\n</g>\n<g style=\"transform: translate({{ pawRX }}px, {{ pawY }}px); transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)\">\n<circle cx=\"44\" cy=\"64\" r=\"14\" fill=\"#FFF6EC\" stroke=\"#2B1E47\" stroke-width=\"4\"></circle>\n</g>\n</g>\n<g opacity=\"{{ zzzOp }}\" fill=\"#CFC3FF\" font-weight=\"800\" style=\"transition: opacity 0.8s ease\">\n<text x=\"64\" y=\"-60\" font-size=\"24\" style=\"transform-box: fill-box; transform-origin: center; animation: st-z 3.6s ease-out infinite\">z</text>\n<text x=\"64\" y=\"-60\" font-size=\"19\" style=\"transform-box: fill-box; transform-origin: center; animation: st-z 3.6s ease-out -1.2s infinite\">z</text>\n<text x=\"64\" y=\"-60\" font-size=\"15\" style=\"transform-box: fill-box; transform-origin: center; animation: st-z 3.6s ease-out -2.4s infinite\">z</text>\n</g>\n</g>\n</svg>\n<div style=\"position: absolute; left: 0; top: 0; width: 390px; height: 844px; pointer-events: none; transform-origin: 0 0; transform: {{ L.cT }}\">\n<sc-for list=\"{{ stars }}\" as=\"s\" hint-placeholder-count=\"6\">\n<div style=\"position: absolute; left: {{ s.x }}px; top: {{ s.y }}px; width: 34px; height: 34px\">\n<svg width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"position: absolute; left: 0; top: 0; display: block; overflow: visible\">\n<path d=\"M12 2.6l2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.1l-5.7 3 1.1-6.3-4.6-4.5 6.4-.9z\" fill=\"none\" stroke=\"{{ s.ghost }}\" stroke-width=\"1.6\" stroke-linejoin=\"round\"></path>\n</svg>\n<svg width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"position: absolute; left: 0; top: 0; display: block; overflow: visible; opacity: {{ s.op }}; transform: scale({{ s.sc }}); transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1); filter: drop-shadow(0 0 7px rgba(255, 214, 102, 0.8))\">\n<path d=\"M12 2.6l2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.1l-5.7 3 1.1-6.3-4.6-4.5 6.4-.9z\" fill=\"#FFD666\" stroke=\"#FFD666\" stroke-width=\"1.6\" stroke-linejoin=\"round\"></path>\n</svg>\n</div>\n</sc-for>\n<div style=\"position: absolute; left: 95px; top: 192px; width: 200px; height: 200px; display: flex; align-items: center; justify-content: center\">\n<div style=\"font-size: {{ displaySize }}px; font-weight: 800; line-height: 1; color: #2B1E47; font-variant-numeric: tabular-nums; letter-spacing: -0.01em\">{{ display }}</div>\n</div>\n</div>\n<div style=\"position: absolute; left: {{ L.tL }}px; right: {{ L.tR }}px; top: {{ L.tT }}px; transform: {{ L.mid }}; display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center\">\n<div style=\"font-size: 28px; font-weight: 800; line-height: 1.15\">{{ title }}</div>\n<div style=\"font-size: 16px; font-weight: 600; line-height: 1.35; color: {{ sub }}\">{{ subtitle }}</div>\n</div>\n<div aria-hidden=\"true\" style=\"position: absolute; left: {{ L.bI }}px; top: {{ L.bI }}px; right: {{ L.bI }}px; bottom: {{ L.bI }}px; pointer-events: none; background: #000000; opacity: {{ dimOp }}; transition: opacity 0.5s ease\"></div>\n<header style=\"position: absolute; left: {{ L.hL }}px; right: {{ L.hR }}px; top: {{ L.hT }}px; height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 12px\">\n<div role=\"group\" aria-label=\"Wake up by\" style=\"display: flex; gap: 4px; padding: 3px; border-radius: 999px; background: {{ segBg }}\">\n<button type=\"button\" onClick=\"{{ useClock }}\" aria-pressed=\"{{ isClock }}\" style=\"height: 44px; padding: 0 14px; border: none; border-radius: 999px; background: {{ segClockBg }}; color: {{ segClockFg }}; display: flex; align-items: center; gap: 6px; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer; white-space: nowrap\">\n<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M17 18a5 5 0 0 0-10 0\"></path><path d=\"M12 2v7M4.2 10.2l1.4 1.4M1 18h2M21 18h2M18.4 11.6l1.4-1.4M23 22H1M8 6l4-4 4 4\"></path></svg>\n<span>{{ wakeLabel }}</span>\n</button>\n<button type=\"button\" onClick=\"{{ useMinutes }}\" aria-pressed=\"{{ isMinutes }}\" style=\"height: 44px; padding: 0 14px; border: none; border-radius: 999px; background: {{ segNapBg }}; color: {{ segNapFg }}; display: flex; align-items: center; gap: 6px; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer; white-space: nowrap\">\n<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M10 2h4M12 14l3-3\"></path><circle cx=\"12\" cy=\"14\" r=\"8\"></circle></svg>\n<span>{{ napLabel }}</span>\n</button>\n</div>\n</header>\n<div style=\"position: absolute; left: {{ L.pL }}px; right: {{ L.pR }}px; top: {{ L.kT }}px; transform: {{ L.mid }}; display: flex; align-items: center; justify-content: center; gap: 30px\">\n<button type=\"button\" onClick=\"{{ setTime }}\" aria-label=\"{{ setAria }}\" style=\"width: 58px; height: 58px; padding: 0; border: none; border-radius: 999px; background: {{ segBg }}; color: {{ ink }}; display: flex; align-items: center; justify-content: center; cursor: pointer\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M10 2h4M12 14l3-3\"></path><circle cx=\"12\" cy=\"14\" r=\"8\"></circle></svg></button>\n<button type=\"button\" onClick=\"{{ toggle }}\" aria-label=\"{{ toggleLabel }}\" style=\"width: 72px; height: 72px; padding: 0; border: none; border-radius: 999px; background: {{ orb }}; color: #2B1E47; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background-color 1s ease\">\n<sc-if value=\"{{ showPlay }}\" hint-placeholder-val=\"{{ true }}\"><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block; margin-left: 3px\"><path d=\"M8 5.14v13.72a1 1 0 0 0 1.52.85l10.79-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14z\" fill=\"currentColor\"></path></svg></sc-if>\n<sc-if value=\"{{ running }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block\"><rect x=\"6\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect><rect x=\"13.5\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect></svg></sc-if>\n<sc-if value=\"{{ showReplay }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></sc-if>\n</button>\n<button type=\"button\" onClick=\"{{ cycleDim }}\" aria-label=\"{{ dimLabel }}\" style=\"width: 58px; height: 58px; padding: 0; border: none; border-radius: 999px; background: {{ segBg }}; color: {{ ink }}; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; cursor: pointer\">\n<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z\"></path></svg>\n<span aria-hidden=\"true\" style=\"display: flex; gap: 3px\">\n<span style=\"width: 4px; height: 4px; border-radius: 99px; background: currentColor; opacity: {{ d1 }}\"></span>\n<span style=\"width: 4px; height: 4px; border-radius: 99px; background: currentColor; opacity: {{ d2 }}\"></span>\n<span style=\"width: 4px; height: 4px; border-radius: 99px; background: currentColor; opacity: {{ d3 }}\"></span>\n</span>\n</button>\n</div>\n<sc-if value=\"{{ picking }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"position: absolute; left: 0; top: 0; width: {{ L.w }}px; height: {{ L.h }}px; z-index: 20\">\n<dc-import name=\"TimePicker\" value=\"{{ pickValue }}\" mode=\"{{ pickMode }}\" heading=\"{{ pickHeading }}\" accent=\"{{ orb }}\" accent-ink=\"#2B1E47\" dark=\"{{ pickDark }}\" presets=\"{{ pickPresets }}\" landscape=\"{{ L.land }}\" bleed=\"{{ L.B }}\" on-set=\"{{ applyTime }}\" on-cancel=\"{{ cancelPick }}\" hint-size=\"390px,844px\"></dc-import>\n</div>\n</sc-if>\n</div>"}, { Logic: (function () {
 class Component extends DCLogic {
   defaults() {
     return { wakeBy: 'Clock time', preview: 'Sleeping' };
@@ -2007,6 +2007,8 @@ class Component extends DCLogic {
       picking: !!s.picking,
       pickValue: clock ? W : Math.round(N * 60),
       pickMode: clock ? 'clock' : 'duration',
+      // Quick picks: the picker's own wake-up times, or common nap lengths.
+      pickPresets: clock ? null : [900, 1200, 1800, 2700, 3600, 5400],
       pickHeading: clock ? 'Wake-up time' : 'Nap length',
       pickDark: night,
       done: phase === 'wake',
@@ -2030,10 +2032,21 @@ return Component;
 ];
 
 export const COMPONENTS = {
-  "TimePicker": Object.assign({"defaults":{"value":1500,"mode":"duration","dark":false,"accent":"#FF5A3C","heading":"Set time","accentInk":"#111215","bleed":false,"landscape":false},"template":"<div style=\"position: relative; width: {{ W }}px; height: {{ H }}px; overflow: {{ ov }}; font-family: 'Inter', system-ui, sans-serif; color: {{ ink }}\">\n<button type=\"button\" onClick=\"{{ cancel }}\" aria-label=\"Close without changing the time\" style=\"position: absolute; left: {{ bI }}px; top: {{ bI }}px; width: {{ bW }}px; height: {{ bH }}px; padding: 0; border: none; background: rgba(10, 8, 20, 0.55); cursor: pointer\"></button>\n<div role=\"dialog\" aria-label=\"{{ heading }}\" style=\"position: absolute; left: {{ sheetX }}px; right: {{ sheetX }}px; bottom: {{ sheetB }}px; box-sizing: border-box; padding: {{ sheetPad }}; border-radius: 28px 28px 0 0; background: {{ sheet }}; box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.25); display: flex; flex-direction: column; gap: 10px\">\n<div style=\"display: flex; align-items: center; justify-content: space-between; gap: 12px\">\n<button type=\"button\" onClick=\"{{ cancel }}\" style=\"min-width: 72px; height: 44px; padding: 0 4px; border: none; background: transparent; color: {{ muted }}; font-family: inherit; font-size: 16px; font-weight: 600; text-align: left; cursor: pointer\">Cancel</button>\n<div style=\"font-size: 17px; font-weight: 700; line-height: 1.2\">{{ heading }}</div>\n<button type=\"button\" onClick=\"{{ set }}\" style=\"min-width: 72px; height: 44px; padding: 0 18px; border: none; border-radius: 999px; background: {{ accent }}; color: {{ accentInk }}; font-family: inherit; font-size: 16px; font-weight: 700; cursor: pointer; opacity: {{ setOp }}\">Set</button>\n</div>\n<div style=\"position: relative; height: 264px; display: flex; justify-content: center; gap: 10px\">\n<div aria-hidden=\"true\" style=\"position: absolute; left: 0; right: 0; top: 120px; height: 48px; border-radius: 14px; background: {{ band }}\"></div>\n<sc-for list=\"{{ cols }}\" as=\"c\" hint-placeholder-count=\"3\">\n<div style=\"position: relative; width: 96px; display: flex; flex-direction: column; align-items: center\">\n<div style=\"height: 24px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; line-height: 24px; color: {{ c.muted }}\">{{ c.label }}</div>\n<div data-wheel=\"1\" ref=\"{{ c.ref }}\" onScroll=\"{{ c.onScroll }}\" tabindex=\"0\" aria-label=\"{{ c.label }}\" style=\"position: relative; width: 96px; height: 240px; box-sizing: border-box; padding: 96px 0; overflow-y: scroll; overscroll-behavior: contain; scroll-snap-type: y mandatory; scrollbar-width: none; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000000 30%, #000000 70%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, #000000 30%, #000000 70%, transparent 100%)\">\n<sc-for list=\"{{ c.items }}\" as=\"it\" hint-placeholder-count=\"5\">\n<div style=\"height: 48px; scroll-snap-align: center; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: {{ it.w }}; color: {{ it.color }}; font-variant-numeric: tabular-nums\">{{ it.text }}</div>\n</sc-for>\n</div>\n</div>\n</sc-for>\n</div>\n</div>\n</div>"}, { Logic: (function () {
+  "TimePicker": Object.assign({"defaults":{"value":1500,"mode":"duration","dark":false,"accent":"#FF5A3C","heading":"Set time","accentInk":"#111215","bleed":false,"landscape":false},"template":"<div style=\"position: relative; width: {{ W }}px; height: {{ H }}px; overflow: {{ ov }}; font-family: 'Inter', system-ui, sans-serif; color: {{ ink }}\">\n<button type=\"button\" onClick=\"{{ cancel }}\" aria-label=\"Close without changing the time\" style=\"position: absolute; left: {{ bI }}px; top: {{ bI }}px; width: {{ bW }}px; height: {{ bH }}px; padding: 0; border: none; background: rgba(10, 8, 20, 0.55); cursor: pointer\"></button>\n<div role=\"dialog\" aria-label=\"{{ heading }}\" onKeyDown=\"{{ dialogKey }}\" style=\"position: absolute; left: {{ sheetX }}px; right: {{ sheetX }}px; bottom: {{ sheetB }}px; box-sizing: border-box; padding: {{ sheetPad }}; border-radius: 28px 28px 0 0; background: {{ sheet }}; box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.25); display: flex; flex-direction: column; gap: {{ gap }}px\">\n<div style=\"display: flex; align-items: center; justify-content: space-between; gap: 12px\">\n<button type=\"button\" data-pick-btn=\"1\" onClick=\"{{ cancel }}\" style=\"min-width: 72px; height: 44px; padding: 0 10px; border: none; border-radius: 999px; background: transparent; color: {{ muted }}; font-family: inherit; font-size: 16px; font-weight: 600; text-align: left; cursor: pointer\">Cancel</button>\n<div style=\"font-size: 17px; font-weight: 700; line-height: 1.2\">{{ heading }}</div>\n<button type=\"button\" data-pick-btn=\"1\" ref=\"{{ setRef }}\" onClick=\"{{ set }}\" onKeyDown=\"{{ setKey }}\" style=\"min-width: 72px; height: 44px; padding: 0 18px; border: none; border-radius: 999px; background: {{ accent }}; color: {{ accentInk }}; font-family: inherit; font-size: 16px; font-weight: 700; cursor: pointer; opacity: {{ setOp }}\">Set</button>\n</div>\n<div role=\"group\" aria-label=\"Quick picks\" style=\"display: flex; justify-content: center; gap: 6px\">\n<sc-for list=\"{{ presets }}\" as=\"p\" hint-placeholder-count=\"7\">\n<button type=\"button\" data-pick-btn=\"1\" onClick=\"{{ p.pick }}\" aria-pressed=\"{{ p.on }}\" aria-label=\"{{ p.aria }}\" style=\"height: 36px; min-width: 44px; padding: 0 9px; box-sizing: border-box; border-radius: 999px; border: 1.5px solid {{ p.border }}; background: {{ p.bg }}; color: {{ p.color }}; font-family: inherit; font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; cursor: pointer\">{{ p.label }}</button>\n</sc-for>\n</div>\n<div style=\"position: relative; height: {{ boxH }}px; display: flex; justify-content: center; gap: 10px\">\n<div aria-hidden=\"true\" style=\"position: absolute; left: 0; right: 0; top: {{ bandTop }}px; height: 48px; border-radius: 14px; background: {{ band }}\"></div>\n<sc-for list=\"{{ cols }}\" as=\"c\" hint-placeholder-count=\"3\">\n<div style=\"position: relative; width: 96px; display: flex; flex-direction: column; align-items: center\">\n<div style=\"height: {{ labelH }}px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; line-height: {{ labelH }}px; color: {{ c.muted }}\">{{ c.label }}</div>\n<button type=\"button\" data-step=\"1\" onClick=\"{{ c.up.click }}\" onPointerDown=\"{{ c.up.down }}\" onPointerUp=\"{{ c.up.stop }}\" onPointerLeave=\"{{ c.up.stop }}\" onPointerCancel=\"{{ c.up.stop }}\" aria-label=\"{{ c.upLabel }}\" style=\"width: 96px; height: {{ stepH }}px; padding: 0; border: none; border-radius: 12px; background: transparent; color: {{ c.muted }}; display: flex; align-items: center; justify-content: center; cursor: pointer; touch-action: manipulation\">\n<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 15l6-6 6 6\"></path></svg>\n</button>\n<div data-wheel=\"1\" ref=\"{{ c.ref }}\" onScroll=\"{{ c.onScroll }}\" onClick=\"{{ c.onPick }}\" onKeyDown=\"{{ c.onKey }}\" tabindex=\"0\" role=\"spinbutton\" aria-label=\"{{ c.label }}\" aria-valuemin=\"0\" aria-valuemax=\"{{ c.max }}\" aria-valuenow=\"{{ c.now }}\" style=\"position: relative; width: 96px; height: {{ wheelH }}px; box-sizing: border-box; padding: {{ wheelPad }}px 0; overflow-y: scroll; overscroll-behavior: contain; scroll-snap-type: y mandatory; scrollbar-width: none; cursor: pointer; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000000 30%, #000000 70%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, #000000 30%, #000000 70%, transparent 100%)\">\n<sc-for list=\"{{ c.items }}\" as=\"it\" hint-placeholder-count=\"5\">\n<div style=\"height: 48px; scroll-snap-align: center; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: {{ it.w }}; color: {{ it.color }}; font-variant-numeric: tabular-nums\">{{ it.text }}</div>\n</sc-for>\n</div>\n<button type=\"button\" data-step=\"1\" onClick=\"{{ c.dn.click }}\" onPointerDown=\"{{ c.dn.down }}\" onPointerUp=\"{{ c.dn.stop }}\" onPointerLeave=\"{{ c.dn.stop }}\" onPointerCancel=\"{{ c.dn.stop }}\" aria-label=\"{{ c.dnLabel }}\" style=\"width: 96px; height: {{ stepH }}px; padding: 0; border: none; border-radius: 12px; background: transparent; color: {{ c.muted }}; display: flex; align-items: center; justify-content: center; cursor: pointer; touch-action: manipulation\">\n<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\"></path></svg>\n</button>\n</div>\n</sc-for>\n</div>\n</div>\n</div>"}, { Logic: (function () {
 class Component extends DCLogic {
+  // One picker for every way of pointing: swipe or tap the wheels, click or
+  // hold the arrows, use the arrow keys and digits, or pick a quick time.
   isClock() {
     return this.props.mode === 'clock';
+  }
+  keys() {
+    return this.isClock() ? ['h', 'm'] : ['h', 'm', 's'];
+  }
+  maxFor(key) {
+    return key === 'h' ? 23 : 59;
+  }
+  pad() {
+    return this.props.landscape ? 48 : 96;
   }
   init() {
     const v = Math.max(0, Math.round(Number(this.props.value ?? 1500)) || 0);
@@ -2052,20 +2065,37 @@ class Component extends DCLogic {
     this._refs = this._refs || {};
     if (!this._refs[key]) {
       this._refs[key] = (el) => {
-        if (!el || el.__dcWheel) return;
+        if (!el) return;
+        this._wheels = this._wheels || {};
+        this._wheels[key] = el;
+        if (el.__dcWheel) return;
         el.__dcWheel = true;
         el.scrollTop = this.val(key) * 48;
+        // Keyboards and remotes can start typing straight away.
+        if (key === 'h' && typeof el.focus === 'function') {
+          try {
+            el.focus({ preventScroll: true });
+          } catch (err) {
+            el.focus();
+          }
+        }
       };
     }
     return this._refs[key];
   }
-  scrollFor(key, max) {
+  scrollFor(key) {
     this._scroll = this._scroll || {};
     if (!this._scroll[key]) {
       this._scroll[key] = (e) => {
         const el = e && e.currentTarget;
         if (!el) return;
-        const idx = Math.max(0, Math.min(max, Math.round(el.scrollTop / 48)));
+        const idx = Math.max(0, Math.min(this.maxFor(key), Math.round(el.scrollTop / 48)));
+        const t = this._target && this._target[key];
+        if (t != null) {
+          // A button or key moved this wheel: wait for it to arrive.
+          if (idx !== t) return;
+          delete this._target[key];
+        }
         if (idx !== this.val(key)) {
           const patch = {};
           patch[key] = idx;
@@ -2074,6 +2104,160 @@ class Component extends DCLogic {
       };
     }
     return this._scroll[key];
+  }
+  goTo(key, v, smooth) {
+    const n = this.maxFor(key) + 1;
+    v = ((Math.round(v) % n) + n) % n;
+    const patch = {};
+    patch[key] = v;
+    this.setState(patch);
+    const el = this._wheels && this._wheels[key];
+    if (!el) return;
+    const top = v * 48;
+    this._target = this._target || {};
+    this._tt = this._tt || {};
+    clearTimeout(this._tt[key]);
+    if (Math.abs(el.scrollTop - top) < 1) {
+      delete this._target[key];
+      return;
+    }
+    this._target[key] = v;
+    this._tt[key] = setTimeout(() => {
+      if (this._target) delete this._target[key];
+    }, 700);
+    if (smooth && typeof el.scrollTo === 'function') el.scrollTo({ top: top, behavior: 'smooth' });
+    else el.scrollTop = top;
+  }
+  step(key, d) {
+    const t = this._target && this._target[key];
+    const cur = t != null ? t : this.val(key);
+    const next = cur + d;
+    // Wrapping round (59 to 00) jumps instead of scrolling the whole wheel.
+    this.goTo(key, next, next >= 0 && next <= this.maxFor(key));
+  }
+  holdFor(key, d) {
+    this._hold = this._hold || {};
+    const id = key + d;
+    if (!this._hold[id]) {
+      this._hold[id] = {
+        // Press and hold repeats, faster after a moment.
+        down: (e) => {
+          if (e && e.button != null && e.button !== 0) return;
+          this.stopHold();
+          let n = 0;
+          const tick = () => {
+            this.step(key, d);
+            this._heldAt = Date.now();
+            n += 1;
+            this._holdT = setTimeout(tick, n < 6 ? 150 : 70);
+          };
+          this._holdT = setTimeout(tick, 420);
+        },
+        // A tap or a key press steps once; a hold has already stepped.
+        click: () => {
+          if (this._heldAt && Date.now() - this._heldAt < 500) return;
+          this.step(key, d);
+        },
+        stop: () => this.stopHold()
+      };
+    }
+    return this._hold[id];
+  }
+  stopHold() {
+    clearTimeout(this._holdT);
+    this._holdT = null;
+  }
+  pickFor(key) {
+    this._pick = this._pick || {};
+    if (!this._pick[key]) {
+      this._pick[key] = (e) => {
+        const el = e && e.currentTarget;
+        if (!el || typeof el.getBoundingClientRect !== 'function') return;
+        const r = el.getBoundingClientRect();
+        const k = r.height / (el.offsetHeight || r.height) || 1;
+        const y = (e.clientY - r.top) / k + el.scrollTop - this.pad();
+        const idx = Math.floor(y / 48);
+        if (idx >= 0 && idx <= this.maxFor(key) && idx !== this.val(key)) this.goTo(key, idx, true);
+      };
+    }
+    return this._pick[key];
+  }
+  typeDigit(key, d) {
+    const now = Date.now();
+    let v = d;
+    if (this._typeKey === key && now - (this._typeAt || 0) < 1300) {
+      const two = this._typeVal * 10 + d;
+      if (two <= this.maxFor(key)) v = two;
+    }
+    this._typeKey = key;
+    this._typeAt = now;
+    this._typeVal = v;
+    this.goTo(key, v, true);
+  }
+  focusCol(i) {
+    const ks = this.keys();
+    if (i >= ks.length) {
+      if (this._setEl && typeof this._setEl.focus === 'function') this._setEl.focus();
+      return;
+    }
+    const el = this._wheels && this._wheels[ks[Math.max(0, i)]];
+    if (el && typeof el.focus === 'function') el.focus();
+  }
+  keyFor(key) {
+    this._key = this._key || {};
+    if (!this._key[key]) {
+      this._key[key] = (e) => {
+        const k = e.key;
+        const i = this.keys().indexOf(key);
+        let handled = true;
+        if (k === 'ArrowUp' || k === 'Up') this.step(key, 1);
+        else if (k === 'ArrowDown' || k === 'Down') this.step(key, -1);
+        else if (k === 'PageUp') this.step(key, 10);
+        else if (k === 'PageDown') this.step(key, -10);
+        else if (k === 'Home') this.goTo(key, 0, true);
+        else if (k === 'End') this.goTo(key, this.maxFor(key), true);
+        else if (k === 'ArrowLeft' || k === 'Left') this.focusCol(i - 1);
+        else if (k === 'ArrowRight' || k === 'Right') this.focusCol(i + 1);
+        else if (k === 'Enter' || k === ' ' || k === 'Spacebar') this.set();
+        else if (/^[0-9]$/.test(k)) this.typeDigit(key, Number(k));
+        else handled = false;
+        if (handled) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      };
+    }
+    return this._key[key];
+  }
+  presetValues() {
+    const p = this.props.presets;
+    if (Array.isArray(p) && p.length) return p;
+    // Clock: minutes after midnight. Duration: seconds.
+    return this.isClock() ? [360, 390, 420, 450, 480] : [60, 300, 600, 900, 1200, 1800, 3600];
+  }
+  presetLabel(v) {
+    const two = (n) => (n < 10 ? '0' : '') + n;
+    if (this.isClock()) return Math.floor(v / 60) + ':' + two(v % 60);
+    if (v < 60) return v + 's';
+    if (v < 3600) return Math.round(v / 60) + 'm';
+    const h = Math.floor(v / 3600);
+    const m = Math.round((v % 3600) / 60);
+    return m ? h + 'h' + two(m) : h + 'h';
+  }
+  applyPreset(v) {
+    if (this.isClock()) {
+      this.goTo('h', Math.floor(v / 60) % 24, true);
+      this.goTo('m', v % 60, true);
+      return;
+    }
+    this.goTo('h', Math.floor(v / 3600), true);
+    this.goTo('m', Math.floor((v % 3600) / 60), true);
+    this.goTo('s', v % 60, true);
+  }
+  presetFor(v) {
+    this._preset = this._preset || {};
+    if (!this._preset[v]) this._preset[v] = () => this.applyPreset(v);
+    return this._preset[v];
   }
   total() {
     const h = this.val('h');
@@ -2087,32 +2271,71 @@ class Component extends DCLogic {
     if (typeof this.props.onSet === 'function') this.props.onSet(t);
   }
   cancel() {
+    this.stopHold();
     if (typeof this.props.onCancel === 'function') this.props.onCancel();
+  }
+  componentWillUnmount() {
+    this.stopHold();
   }
   renderVals() {
     const dark = !!this.props.dark;
     const ink = dark ? '#F4F2FA' : '#15121F';
     const muted = dark ? '#A8A3BD' : '#625D74';
     const faint = dark ? '#7C778F' : '#9F9AB0';
+    const accent = this.props.accent ?? '#FF5A3C';
+    const accentInk = this.props.accentInk ?? '#111215';
     const pad = (n) => (n < 10 ? '0' : '') + n;
-    const col = (key, label, count) => {
+    const names = { h: ['hour', 'hours'], m: ['minute', 'minutes'], s: ['second', 'seconds'] };
+    const col = (key, label) => {
       const cur = this.val(key);
+      const max = this.maxFor(key);
       const items = [];
-      for (let i = 0; i < count; i++) {
+      for (let i = 0; i <= max; i++) {
         items.push({ text: pad(i), w: i === cur ? 700 : 500, color: i === cur ? ink : faint });
       }
-      return { key: key, label: label, items: items, ref: this.refFor(key), onScroll: this.scrollFor(key, count - 1), muted: muted };
+      return {
+        key: key,
+        label: label,
+        items: items,
+        max: max,
+        now: cur,
+        ref: this.refFor(key),
+        onScroll: this.scrollFor(key),
+        onPick: this.pickFor(key),
+        onKey: this.keyFor(key),
+        up: this.holdFor(key, 1),
+        dn: this.holdFor(key, -1),
+        upLabel: 'One more ' + names[key][0],
+        dnLabel: 'One ' + names[key][0] + ' less',
+        muted: muted
+      };
     };
     const cols = this.isClock()
-      ? [col('h', 'Hour', 24), col('m', 'Minute', 60)]
-      : [col('h', 'Hours', 24), col('m', 'Minutes', 60), col('s', 'Seconds', 60)];
+      ? [col('h', 'Hour'), col('m', 'Minute')]
+      : [col('h', 'Hours'), col('m', 'Minutes'), col('s', 'Seconds')];
     const t = this.total();
+    const presets = this.presetValues().map((v) => {
+      const on = v === t;
+      return {
+        label: this.presetLabel(v),
+        aria: (this.isClock() ? 'Wake at ' : 'Set ') + this.presetLabel(v),
+        on: on ? 'true' : 'false',
+        pick: this.presetFor(v),
+        bg: on ? accent : 'transparent',
+        color: on ? accentInk : muted,
+        border: on ? accent : dark ? 'rgba(255, 255, 255, 0.18)' : '#DEDAE8'
+      };
+    });
     const land = !!this.props.landscape;
     // In the app the backdrop reaches every screen edge and the sheet runs
     // down to the bottom of the screen.
     const bl = !!this.props.bleed;
     const W = land ? 844 : 390;
     const H = land ? 390 : 844;
+    // Landscape shows three rows per wheel so the sheet fits the short screen.
+    const rows = land ? 3 : 5;
+    const labelH = land ? 20 : 24;
+    const stepH = land ? 34 : 40;
     return {
       W: W,
       H: H,
@@ -2122,16 +2345,41 @@ class Component extends DCLogic {
       bH: H + (bl ? 2400 : 0),
       sheetX: land ? 192 : 0,
       sheetB: bl ? -1200 : 0,
-      sheetPad: land ? '10px 20px ' + (bl ? 1212 : 12) + 'px' : '16px 20px ' + (bl ? 1236 : 36) + 'px',
+      sheetPad: land ? '10px 20px ' + (bl ? 1212 : 12) + 'px' : '16px 20px ' + (bl ? 1236 : 32) + 'px',
+      gap: land ? 8 : 10,
+      labelH: labelH,
+      stepH: stepH,
+      wheelH: rows * 48,
+      wheelPad: ((rows - 1) / 2) * 48,
+      boxH: labelH + stepH * 2 + rows * 48,
+      bandTop: labelH + stepH + ((rows - 1) / 2) * 48,
       ink: ink,
       muted: muted,
       sheet: dark ? '#1C1A26' : '#FFFFFF',
       band: dark ? 'rgba(255, 255, 255, 0.08)' : '#F1EFF6',
       heading: this.props.heading ?? 'Set time',
-      accent: this.props.accent ?? '#FF5A3C',
-      accentInk: this.props.accentInk ?? '#111215',
+      accent: accent,
+      accentInk: accentInk,
       setOp: !this.isClock() && t <= 0 ? 0.4 : 1,
+      presets: presets,
       cols: cols,
+      setRef: (el) => {
+        this._setEl = el;
+      },
+      setKey: (e) => {
+        if (e.key === 'ArrowLeft' || e.key === 'Left') {
+          e.preventDefault();
+          this.focusCol(this.keys().length - 1);
+        }
+      },
+      dialogKey: (e) => {
+        const k = e.key;
+        // Esc on keyboards; Back on TV remotes (named, or by key code).
+        if (k === 'Escape' || k === 'Esc' || k === 'GoBack' || k === 'BrowserBack' || e.keyCode === 461 || e.keyCode === 10009) {
+          e.preventDefault();
+          this.cancel();
+        }
+      },
       set: () => this.set(),
       cancel: () => this.cancel()
     };

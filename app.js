@@ -1,5 +1,5 @@
-import { mount, registerComponents } from './dc-runtime.js?v=c5c22e0900';
-import { THEMES, COMPONENTS } from './themes.js?v=c5c22e0900';
+import { mount, registerComponents } from './dc-runtime.js?v=f5fc4d6ee0';
+import { THEMES, COMPONENTS } from './themes.js?v=f5fc4d6ee0';
 
 registerComponents(COMPONENTS);
 
@@ -287,6 +287,34 @@ function fit() {
   applyBars();
 }
 addEventListener('resize', fit);
+
+// Keys on a timer, for keyboards and TV remotes that send them: Space (or a
+// remote's play/pause) starts and pauses, T opens the time picker, R resets,
+// Esc or Back returns to the list. The time picker and focused buttons keep
+// their own keys.
+const TOGGLE = ['Start', 'Pause', 'Start again', 'Play again', 'Preview the night']
+  .map((l) => "button[aria-label='" + l + "']").join(', ');
+addEventListener('keydown', (e) => {
+  if (!current || thumbMode || e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) return;
+  if (stage.querySelector('[role=dialog]')) return;
+  const t = e.target;
+  const onControl = !!(t && t.closest && t.closest('button, input, select, textarea, a[href], [tabindex]'));
+  const k = e.key;
+  const press = (sel) => {
+    const b = stage.querySelector(sel);
+    if (!b) return;
+    e.preventDefault();
+    b.click();
+  };
+  if (k === 'MediaPlayPause' || e.keyCode === 179 || e.keyCode === 415 || e.keyCode === 19) press(TOGGLE);
+  else if ((k === ' ' || k === 'Spacebar') && !onControl) press(TOGGLE);
+  else if ((k === 't' || k === 'T') && !onControl) press("button[aria-label^='Set']");
+  else if ((k === 'r' || k === 'R') && !onControl) press("button[aria-label^='Reset']");
+  else if (k === 'Escape' || k === 'Esc' || k === 'GoBack' || k === 'BrowserBack' || e.keyCode === 461 || e.keyCode === 10009 ||
+           (k === 'Backspace' && !(t && t.closest && t.closest('input, textarea')))) {
+    press('.dc-back');
+  }
+});
 addEventListener('orientationchange', () => setTimeout(fit, 60));
 
 function closeTheme() {
