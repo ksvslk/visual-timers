@@ -1,5 +1,5 @@
 // Offline cache for Visual Timers (generated)
-const VERSION = '951db2664f';
+const VERSION = 'd74be1f67f';
 const CACHE = 'visual-timers-' + VERSION;
 const ASSETS = [
   "./",
@@ -74,6 +74,10 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(fetch(req).catch(() => caches.match('./index.html')));
     return;
   }
+  // A file stamped for another release (a newer page that loaded before this
+  // worker was replaced) comes from the network, never from this cache.
+  const v = url.searchParams.get('v');
+  if (url.pathname.endsWith('/sw.js') || (v && v !== VERSION)) return;
   event.respondWith(
     caches.match(req, { ignoreSearch: true }).then((hit) => hit || fetch(req).then((res) => {
       if (res.ok) {
