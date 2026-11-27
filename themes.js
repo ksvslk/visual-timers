@@ -1,4 +1,4 @@
-import { DCLogic } from './dc-runtime.js?v=f5fc4d6ee0';
+import { DCLogic } from './dc-runtime.js?v=bda92d4bde';
 
 export const THEMES = [
   Object.assign({"id":"rainbow","name":"Rainbow","tagline":"Each color is 10 minutes","relative":false,"sleep":false,"bars":["#CFE8FF","#62C584"],"lbars":null,"ldir":null,"lsplit":80,"psplit":62,"back":"light","defaults":{"minutes":55,"speed":"Demo (1 min = 1 s)","bleed":false,"landscape":false},"template":"<div style=\"width: {{ L.w }}px; height: {{ L.h }}px; position: relative; overflow: {{ L.ov }}; background: #CFE8FF; font-family: 'Fredoka', 'Arial Rounded MT Bold', system-ui, sans-serif; color: #1E2A4A\">\n<div aria-hidden=\"true\" style=\"position: absolute; left: -1200px; top: -1200px; right: -1200px; bottom: -1200px; pointer-events: none; display: {{ L.bD }}; background: #CFE8FF\"></div>\n<svg width=\"{{ L.w }}\" height=\"{{ L.h }}\" viewBox=\"{{ L.vb }}\" role=\"img\" aria-label=\"{{ ariaLabel }}\" style=\"position: absolute; left: 0; top: 0; display: block; overflow: {{ L.ov }}\">\n<g display=\"{{ L.lD }}\">\n<g style=\"animation: rr-drift-l 74s linear -30s infinite\">\n<g fill=\"#FFFFFF\" opacity=\"0.9\">\n<circle cx=\"34\" cy=\"70\" r=\"15\"></circle>\n<circle cx=\"56\" cy=\"61\" r=\"20\"></circle>\n<circle cx=\"80\" cy=\"70\" r=\"14\"></circle>\n<rect x=\"19\" y=\"68\" width=\"76\" height=\"16\" rx=\"8\"></rect>\n</g>\n</g>\n<g style=\"animation: rr-drift-l 98s linear -74s infinite\">\n<g fill=\"#FFFFFF\" opacity=\"0.75\">\n<circle cx=\"26\" cy=\"128\" r=\"11\"></circle>\n<circle cx=\"42\" cy=\"121\" r=\"15\"></circle>\n<circle cx=\"60\" cy=\"128\" r=\"10\"></circle>\n<rect x=\"15\" y=\"127\" width=\"56\" height=\"12\" rx=\"6\"></rect>\n</g>\n</g>\n<path d=\"M-1200 318L-300 318C-120 318 -48 309 0 300C96 282 196 284 290 300C380 315 450 300 520 268C600 232 720 224 844 238C968 252 1100 262 1300 262L2044 262L2044 1590L-1200 1590Z\" fill=\"#9ADFA9\"></path>\n<path d=\"M-1200 360L-300 360C-120 360 -55 350 0 338C110 314 222 314 330 330C420 344 470 330 540 300C620 266 730 262 844 274C958 286 1100 296 1300 296L2044 296L2044 1590L-1200 1590Z\" fill=\"#62C584\"></path>\n</g>\n<g display=\"{{ L.pD }}\">\n<g style=\"animation: rr-drift 54s linear -20s infinite\">\n<g fill=\"#FFFFFF\" opacity=\"0.9\">\n<circle cx=\"34\" cy=\"178\" r=\"15\"></circle>\n<circle cx=\"56\" cy=\"169\" r=\"20\"></circle>\n<circle cx=\"80\" cy=\"178\" r=\"14\"></circle>\n<rect x=\"19\" y=\"176\" width=\"76\" height=\"16\" rx=\"8\"></rect>\n</g>\n</g>\n<g style=\"animation: rr-drift 72s linear -50s infinite\">\n<g fill=\"#FFFFFF\" opacity=\"0.75\">\n<circle cx=\"26\" cy=\"232\" r=\"11\"></circle>\n<circle cx=\"42\" cy=\"225\" r=\"15\"></circle>\n<circle cx=\"60\" cy=\"232\" r=\"10\"></circle>\n<rect x=\"15\" y=\"231\" width=\"56\" height=\"12\" rx=\"6\"></rect>\n</g>\n</g>\n</g>\n<g transform=\"{{ L.gT }}\">\n<g opacity=\"{{ sunOpacity }}\" style=\"transition: opacity 0.9s ease\">\n<g style=\"transform-box: fill-box; transform-origin: center; animation: rr-spin 28s linear infinite\">\n<path d=\"M255 352L271 352M246.96 382L260.82 390M225 403.96L233 417.82M195 412L195 428M165 403.96L157 417.82M143.04 382L129.18 390M135 352L119 352M143.04 322L129.18 314M165 300.04L157 286.18M195 292L195 276M225 300.04L233 286.18M246.96 322L260.82 314\" fill=\"none\" stroke=\"#FFC233\" stroke-width=\"10\" stroke-linecap=\"round\"></path>\n</g>\n<circle cx=\"195\" cy=\"352\" r=\"48\" fill=\"#FFD23F\"></circle>\n<circle cx=\"195\" cy=\"352\" r=\"36\" fill=\"#FFE27A\"></circle>\n</g>\n<g fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.5\" stroke-width=\"20\" stroke-linecap=\"round\">\n<path d=\"M25 432A170 170 0 0 1 365 432\"></path>\n<path d=\"M48 432A147 147 0 0 1 342 432\"></path>\n<path d=\"M71 432A124 124 0 0 1 319 432\"></path>\n<path d=\"M94 432A101 101 0 0 1 296 432\"></path>\n<path d=\"M117 432A78 78 0 0 1 273 432\"></path>\n<path d=\"M140 432A55 55 0 0 1 250 432\"></path>\n</g>\n<g fill=\"none\" stroke-width=\"20\" stroke-linecap=\"round\">\n<path d=\"{{ b0 }}\" stroke=\"#FF5D5D\"></path>\n<path d=\"{{ b1 }}\" stroke=\"#FF9F43\"></path>\n<path d=\"{{ b2 }}\" stroke=\"#FFD43B\"></path>\n<path d=\"{{ b3 }}\" stroke=\"#4CCB7A\"></path>\n<path d=\"{{ b4 }}\" stroke=\"#4D96FF\"></path>\n<path d=\"{{ b5 }}\" stroke=\"#9B6BFF\"></path>\n</g>\n<g transform=\"translate({{ tipX }} {{ tipY }})\" opacity=\"{{ tipOpacity }}\">\n<path d=\"M0 -11C1.6 -3 3 -1.6 11 0C3 1.6 1.6 3 0 11C-1.6 3 -3 1.6 -11 0C-3 -1.6 -1.6 -3 0 -11Z\" fill=\"#FFFFFF\" style=\"animation: rr-twinkle 1.1s ease-in-out infinite\"></path>\n</g>\n<g fill=\"#1E2A4A\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\">\n<text x=\"25\" y=\"462\">{{ F.a }}</text>\n<text x=\"48\" y=\"462\">{{ F.b }}</text>\n<text x=\"71\" y=\"462\">{{ F.c }}</text>\n<text x=\"94\" y=\"462\">{{ F.d }}</text>\n<text x=\"117\" y=\"462\">{{ F.e }}</text>\n<text x=\"140\" y=\"462\">{{ F.f }}</text>\n</g>\n<g style=\"animation: rr-bob 3.4s ease-in-out infinite\">\n<g fill=\"#B4D3F2\">\n<rect x=\"226\" y=\"423\" width=\"172\" height=\"48\" rx=\"24\"></rect>\n<circle cx=\"258\" cy=\"427\" r=\"30\"></circle>\n<circle cx=\"300\" cy=\"409\" r=\"40\"></circle>\n<circle cx=\"346\" cy=\"411\" r=\"36\"></circle>\n<circle cx=\"380\" cy=\"431\" r=\"28\"></circle>\n</g>\n<g fill=\"#FFFFFF\">\n<rect x=\"226\" y=\"416\" width=\"172\" height=\"48\" rx=\"24\"></rect>\n<circle cx=\"258\" cy=\"420\" r=\"30\"></circle>\n<circle cx=\"300\" cy=\"402\" r=\"40\"></circle>\n<circle cx=\"346\" cy=\"404\" r=\"36\"></circle>\n<circle cx=\"380\" cy=\"424\" r=\"28\"></circle>\n</g>\n<circle cx=\"292\" cy=\"414\" r=\"3.4\" fill=\"#1E2A4A\"></circle>\n<circle cx=\"318\" cy=\"414\" r=\"3.4\" fill=\"#1E2A4A\"></circle>\n<path d=\"M299 421Q305 426.5 311 421\" fill=\"none\" stroke=\"#1E2A4A\" stroke-width=\"2.4\" stroke-linecap=\"round\"></path>\n<ellipse cx=\"281\" cy=\"423\" rx=\"6\" ry=\"3.6\" fill=\"#FFB5C5\"></ellipse>\n<ellipse cx=\"329\" cy=\"423\" rx=\"6\" ry=\"3.6\" fill=\"#FFB5C5\"></ellipse>\n</g>\n</g>\n<g display=\"{{ L.pD }}\">\n<path d=\"M-1200 540L-400 540C-200 540 -36 514 0 500C72 472 152 470 222 488C282 503 342 499 390 480C438 461 560 452 760 452L1590 452L1590 2044L-1200 2044Z\" fill=\"#9ADFA9\"></path>\n<path d=\"M-1200 590L-400 590C-200 590 -46 569 0 552C92 518 182 514 262 530C322 542 362 538 390 528C418 518 560 506 760 506L1590 506L1590 2044L-1200 2044Z\" fill=\"#62C584\"></path>\n</g>\n</svg>\n<header style=\"position: absolute; left: {{ L.hL }}px; right: {{ L.hR }}px; top: {{ L.hT }}px; height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 12px\">\n<h1 style=\"margin: 0; font-size: 28px; font-weight: 700; line-height: 1.1; letter-spacing: -0.01em\">Playtime</h1>\n</header>\n<div style=\"position: absolute; left: {{ L.pL }}px; right: {{ L.pR }}px; top: {{ L.rT }}px; transform: {{ L.mid }}; display: flex; flex-direction: column; align-items: center\">\n<sc-if value=\"{{ notDone }}\" hint-placeholder-val=\"{{ true }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 10px\">\n<div style=\"font-size: 80px; font-weight: 700; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums\">{{ time }}</div>\n<div style=\"display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 600\">\n<div style=\"display: flex; align-items: center; gap: 5px\" aria-hidden=\"true\">\n<span style=\"width: 11px; height: 11px; border-radius: 99px; background: #FF5D5D; box-shadow: 0 0 0 2px #FFFFFF\"></span>\n<span style=\"width: 11px; height: 11px; border-radius: 99px; background: #FF9F43; box-shadow: 0 0 0 2px #FFFFFF\"></span>\n<span style=\"width: 11px; height: 11px; border-radius: 99px; background: #FFD43B; box-shadow: 0 0 0 2px #FFFFFF\"></span>\n<span style=\"width: 11px; height: 11px; border-radius: 99px; background: #4CCB7A; box-shadow: 0 0 0 2px #FFFFFF\"></span>\n<span style=\"width: 11px; height: 11px; border-radius: 99px; background: #4D96FF; box-shadow: 0 0 0 2px #FFFFFF\"></span>\n<span style=\"width: 11px; height: 11px; border-radius: 99px; background: #9B6BFF; box-shadow: 0 0 0 2px #FFFFFF\"></span>\n</div>\n<span>{{ colorLabel }}</span>\n</div>\n</div>\n</sc-if>\n<sc-if value=\"{{ done }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 10px\">\n<div style=\"font-size: 62px; font-weight: 700; line-height: 1\">All done!</div>\n<div style=\"font-size: 18px; font-weight: 600\">The rainbow went home</div>\n</div>\n</sc-if>\n</div>\n<div style=\"position: absolute; left: {{ L.pL }}px; right: {{ L.pR }}px; top: {{ L.kT }}px; transform: {{ L.mid }}; display: flex; align-items: center; justify-content: center; gap: 30px\">\n<button type=\"button\" onClick=\"{{ setTime }}\" aria-label=\"Set the time\" style=\"width: 62px; height: 62px; padding: 0; border: none; border-radius: 999px; background: #FFFFFF; color: #1E2A4A; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 0 #3F9E62\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M10 2h4M12 14l3-3\"></path><circle cx=\"12\" cy=\"14\" r=\"8\"></circle></svg></button>\n<button type=\"button\" onClick=\"{{ toggle }}\" aria-label=\"{{ toggleLabel }}\" style=\"width: 90px; height: 90px; padding: 0; border: none; border-radius: 999px; background: #1E2A4A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 0 #101935\">\n<sc-if value=\"{{ showPlay }}\" hint-placeholder-val=\"{{ true }}\"><svg width=\"38\" height=\"38\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block; margin-left: 3px\"><path d=\"M8 5.14v13.72a1 1 0 0 0 1.52.85l10.79-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14z\" fill=\"currentColor\"></path></svg></sc-if>\n<sc-if value=\"{{ running }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block\"><rect x=\"6\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect><rect x=\"13.5\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect></svg></sc-if>\n<sc-if value=\"{{ showReplay }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></sc-if>\n</button>\n<button type=\"button\" onClick=\"{{ reset }}\" aria-label=\"Reset timer\" style=\"width: 62px; height: 62px; padding: 0; border: none; border-radius: 999px; background: #FFFFFF; color: #1E2A4A; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 0 #3F9E62\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></button>\n</div>\n<sc-if value=\"{{ picking }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"position: absolute; left: 0; top: 0; width: {{ L.w }}px; height: {{ L.h }}px; z-index: 20\">\n<dc-import name=\"TimePicker\" value=\"{{ pickValue }}\" mode=\"duration\" heading=\"Set time\" accent=\"#1E2A4A\" accent-ink=\"#FFFFFF\" dark=\"{{ false }}\" landscape=\"{{ L.land }}\" bleed=\"{{ L.B }}\" on-set=\"{{ applyTime }}\" on-cancel=\"{{ cancelPick }}\" hint-size=\"390px,844px\"></dc-import>\n</div>\n</sc-if>\n</div>"}, { Logic: (function () {
@@ -117,35 +117,56 @@ class Component extends DCLogic {
       kT: land ? 292 : 700
     };
   }
-  scale(total) {
-    // The picture's full size: the smallest of 1 minute, 12 minutes, 1 hour,
-    // 2 hours and 12 hours that holds the time that was set. Each keeps whole
-    // numbers on the labels; n() turns seconds into the labels' unit.
-    const C = [60, 720, 3600, 7200, 43200].find((x) => total <= x) || 43200;
-    const u = C === 60 ? 1 : C === 43200 ? 3600 : 60;
-    return { C: C, n: (sec) => sec / u };
-  }
-  unitName(v, short) {
-    if (v < 60) return short ? v + ' sec' : v === 1 ? 'second' : v + ' seconds';
-    if (v < 3600) {
-      const m = v / 60;
-      return short ? m + ' min' : m === 1 ? 'minute' : m + ' minutes';
+  parts(total, maxN) {
+    // The picture always starts full: split the set time into at most maxN
+    // equal parts of the shortest round length that fits (5 seconds,
+    // 1 minute, 5 minutes...). An odd time is split into maxN equal parts.
+    const nice = [1, 2, 5, 10, 15, 20, 30, 60, 120, 180, 300, 600, 900, 1200, 1800, 3600, 7200, 10800];
+    const t = Math.max(1, total);
+    for (let i = 0; i < nice.length; i++) {
+      const n = t / nice[i];
+      if (n <= maxN + 1e-9 && Math.abs(n - Math.round(n)) < 1e-9) return { n: Math.max(1, Math.round(n)), u: nice[i], round: true };
     }
-    const h = v / 3600;
-    return short ? (h === 1 ? '1 hour' : h + ' hours') : h === 1 ? 'hour' : h + ' hours';
+    return { n: maxN, u: t / maxN, round: false };
+  }
+  span(v) {
+    // A length of time in words: 5 sec, 7.5 sec, 1 min, 2 hours, 4 min 10 sec.
+    if (v < 60 && Math.abs(v - Math.round(v)) >= 0.05) return Math.round(v * 10) / 10 + ' sec';
+    v = Math.round(v);
+    const h = Math.floor(v / 3600);
+    const m = Math.floor((v % 3600) / 60);
+    const s = v % 60;
+    const out = [];
+    if (h) out.push(h === 1 ? '1 hour' : h + ' hours');
+    if (m) out.push(m + ' min');
+    if (s || !out.length) out.push(s + ' sec');
+    return out.join(' ');
+  }
+  mark(v, u, total) {
+    // A number on the face for v seconds, in the unit the marks step in.
+    if (v === 0) return '0';
+    if (u % 3600 === 0) return String(v / 3600);
+    if (u % 60 === 0) return total > 3600 ? Math.floor(v / 3600) + ':' + String((v % 3600) / 60).padStart(2, '0') : String(v / 60);
+    if (total <= 60) return String(v);
+    return Math.floor(v / 60) + ':' + String(v % 60).padStart(2, '0');
   }
   renderVals() {
     const c = this.cur();
-    const S = this.scale(c.total);
-    const remMin = c.rem / S.C * 60;
-    const nums = [6, 5, 4, 3, 2, 1].map((k) => k * S.n(S.C / 6));
+    // The six colors always share the whole set time.
+    const total = c.total;
+    const remMin = c.rem / total * 60;
+    const u = total / 6;
+    const unitDiv = u % 3600 === 0 ? 3600 : u % 60 === 0 ? 60 : Number.isInteger(u) && total <= 60 ? 1 : 0;
+    let nums = [6, 5, 4, 3, 2, 1].map((k) => (unitDiv ? String((k * u) / unitDiv) : ''));
+    // Numbers only when they come out whole and fit under the arcs.
+    if (nums.some((x) => x.length > 2)) nums = ['', '', '', '', '', ''];
     const b = [0, 1, 2, 3, 4, 5].map((i) => this.band(i, remMin));
     const tip = b.find((x) => x.f > 0);
     const done = c.rem <= 0;
     const time = this.fmt(c.rem);
     return {
       L: this.lay(),
-      colorLabel: 'Each color is ' + this.unitName(S.C / 6, false),
+      colorLabel: 'Each color is ' + this.span(u),
       F: { a: nums[0], b: nums[1], c: nums[2], d: nums[3], e: nums[4], f: nums[5] },
       b0: b[0].d, b1: b[1].d, b2: b[2].d, b3: b[3].d, b4: b[4].d, b5: b[5].d,
       tipX: tip ? tip.x.toFixed(1) : '-60',
@@ -172,7 +193,7 @@ class Component extends DCLogic {
 }
 return Component;
 })() }),
-  Object.assign({"id":"pizza","name":"Pizza Party","tagline":"One slice is 5 minutes","relative":false,"sleep":false,"bars":["#F4C9BE","#D9A262"],"lbars":null,"ldir":"90deg","lsplit":56.6,"psplit":70,"back":"light","defaults":{"minutes":35,"speed":"Demo (1 min = 1 s)","bleed":false,"edgeX":0,"edgeY":0,"landscape":false},"template":"<div style=\"width: {{ L.w }}px; height: {{ L.h }}px; position: relative; overflow: {{ L.ov }}; background-color: #FFF3E3; background-image: linear-gradient(90deg, rgba(222, 60, 60, 0.42) 50%, transparent 50%), linear-gradient(rgba(222, 60, 60, 0.42) 50%, transparent 50%); background-size: 46px 46px; font-family: 'Rubik', 'Helvetica Neue', system-ui, sans-serif; color: #3B1F12\">\n<div aria-hidden=\"true\" style=\"position: absolute; left: -1200px; top: -1200px; right: -1200px; bottom: -1200px; pointer-events: none; display: {{ L.bD }}; background-color: #FFF3E3; background-image: linear-gradient(90deg, rgba(222, 60, 60, 0.42) 50%, transparent 50%), linear-gradient(rgba(222, 60, 60, 0.42) 50%, transparent 50%); background-size: 46px 46px; background-position: 1200px 1200px\"></div>\n<svg width=\"390\" height=\"600\" viewBox=\"0 0 390 600\" role=\"img\" aria-label=\"{{ ariaLabel }}\" style=\"position: absolute; left: 0; top: 0; display: block; transform-origin: 0 0; transform: {{ L.cT }}\">\n<defs>\n<clipPath id=\"pz-left-clip\"><path d=\"{{ wedge }}\"></path></clipPath>\n</defs>\n<circle cx=\"195\" cy=\"365\" r=\"170\" fill=\"#5A1414\" opacity=\"0.22\"></circle>\n<circle cx=\"195\" cy=\"355\" r=\"170\" fill=\"#FFFFFF\"></circle>\n<circle cx=\"195\" cy=\"355\" r=\"146\" fill=\"#F5EDE1\" stroke=\"#E6DACA\" stroke-width=\"2\"></circle>\n<g fill=\"#6E4E36\" font-size=\"13\" font-weight=\"700\" text-anchor=\"middle\" dominant-baseline=\"central\">\n<text x=\"195\" y=\"197\">{{ F.n0 }}</text>\n<text x=\"274\" y=\"218.2\">{{ F.n1 }}</text>\n<text x=\"331.8\" y=\"276\">{{ F.n2 }}</text>\n<text x=\"353\" y=\"355\">{{ F.n3 }}</text>\n<text x=\"331.8\" y=\"434\">{{ F.n4 }}</text>\n<text x=\"274\" y=\"491.8\">{{ F.n5 }}</text>\n<text x=\"195\" y=\"513\">{{ F.n6 }}</text>\n<text x=\"116\" y=\"491.8\">{{ F.n7 }}</text>\n<text x=\"58.2\" y=\"434\">{{ F.n8 }}</text>\n<text x=\"37\" y=\"355\">{{ F.n9 }}</text>\n<text x=\"58.2\" y=\"276\">{{ F.n10 }}</text>\n<text x=\"116\" y=\"218.2\">{{ F.n11 }}</text>\n</g>\n<path d=\"M150 314C176 298 214 306 242 336\" fill=\"none\" stroke=\"#D9481F\" stroke-opacity=\"0.16\" stroke-width=\"8\" stroke-linecap=\"round\"></path>\n<path d=\"M118 402C140 422 168 430 190 426\" fill=\"none\" stroke=\"#D9481F\" stroke-opacity=\"0.12\" stroke-width=\"6\" stroke-linecap=\"round\"></path>\n<g fill=\"#D29343\">\n<circle cx=\"232\" cy=\"286\" r=\"2.6\"></circle>\n<circle cx=\"300\" cy=\"352\" r=\"3\"></circle>\n<circle cx=\"288\" cy=\"428\" r=\"1.8\"></circle>\n<circle cx=\"204\" cy=\"478\" r=\"2\"></circle>\n<circle cx=\"122\" cy=\"438\" r=\"2.2\"></circle>\n<circle cx=\"82\" cy=\"338\" r=\"2\"></circle>\n<circle cx=\"150\" cy=\"262\" r=\"2\"></circle>\n<circle cx=\"216\" cy=\"340\" r=\"1.8\"></circle>\n</g>\n<g fill=\"#B9772E\">\n<circle cx=\"271\" cy=\"312\" r=\"2\"></circle>\n<circle cx=\"262\" cy=\"392\" r=\"2.2\"></circle>\n<circle cx=\"232\" cy=\"452\" r=\"2.6\"></circle>\n<circle cx=\"160\" cy=\"462\" r=\"3\"></circle>\n<circle cx=\"96\" cy=\"388\" r=\"2.6\"></circle>\n<circle cx=\"112\" cy=\"298\" r=\"2.8\"></circle>\n<circle cx=\"190\" cy=\"244\" r=\"2.4\"></circle>\n<circle cx=\"170\" cy=\"392\" r=\"2.2\"></circle>\n</g>\n<g clip-path=\"url(#pz-left-clip)\">\n<circle cx=\"195\" cy=\"355\" r=\"140\" fill=\"#D98E37\"></circle>\n<circle cx=\"195\" cy=\"355\" r=\"136\" fill=\"#EBAE58\"></circle>\n<circle cx=\"195\" cy=\"355\" r=\"124\" fill=\"#D9481F\"></circle>\n<circle cx=\"195\" cy=\"355\" r=\"120\" fill=\"#FFCF5E\"></circle>\n<g fill=\"#C27526\" opacity=\"0.55\">\n<ellipse cx=\"228.9\" cy=\"228.5\" rx=\"6\" ry=\"3\"></ellipse>\n<ellipse cx=\"295.3\" cy=\"270.8\" rx=\"6\" ry=\"3\"></ellipse>\n<ellipse cx=\"325.5\" cy=\"366.4\" rx=\"3\" ry=\"6\"></ellipse>\n<ellipse cx=\"279.2\" cy=\"455.3\" rx=\"6\" ry=\"3\"></ellipse>\n<ellipse cx=\"172.3\" cy=\"484\" rx=\"6\" ry=\"3\"></ellipse>\n<ellipse cx=\"94.7\" cy=\"439.2\" rx=\"6\" ry=\"3\"></ellipse>\n<ellipse cx=\"66\" cy=\"332.3\" rx=\"3\" ry=\"6\"></ellipse>\n<ellipse cx=\"110.8\" cy=\"254.7\" rx=\"6\" ry=\"3\"></ellipse>\n<ellipse cx=\"183.6\" cy=\"224.5\" rx=\"6\" ry=\"3\"></ellipse>\n</g>\n<g fill=\"#FFE29A\">\n<ellipse cx=\"180\" cy=\"302\" rx=\"16\" ry=\"9\"></ellipse>\n<ellipse cx=\"252\" cy=\"392\" rx=\"15\" ry=\"8\"></ellipse>\n<ellipse cx=\"122\" cy=\"410\" rx=\"12\" ry=\"7\"></ellipse>\n<ellipse cx=\"232\" cy=\"262\" rx=\"11\" ry=\"6\"></ellipse>\n<ellipse cx=\"304\" cy=\"350\" rx=\"12\" ry=\"7\"></ellipse>\n<ellipse cx=\"150\" cy=\"436\" rx=\"11\" ry=\"6\"></ellipse>\n<ellipse cx=\"210\" cy=\"430\" rx=\"13\" ry=\"7\"></ellipse>\n<ellipse cx=\"110\" cy=\"330\" rx=\"10\" ry=\"6\"></ellipse>\n<ellipse cx=\"276\" cy=\"280\" rx=\"9\" ry=\"5\"></ellipse>\n</g>\n<g fill=\"#F2B23F\" opacity=\"0.55\">\n<ellipse cx=\"200\" cy=\"280\" rx=\"6\" ry=\"4\"></ellipse>\n<ellipse cx=\"290\" cy=\"400\" rx=\"7\" ry=\"4\"></ellipse>\n<ellipse cx=\"140\" cy=\"380\" rx=\"6\" ry=\"3.5\"></ellipse>\n<ellipse cx=\"240\" cy=\"460\" rx=\"6\" ry=\"3.5\"></ellipse>\n<ellipse cx=\"95\" cy=\"300\" rx=\"5\" ry=\"3\"></ellipse>\n<ellipse cx=\"230\" cy=\"372\" rx=\"5\" ry=\"3\"></ellipse>\n</g>\n<g transform=\"translate(218.9 289.2)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-5\" cy=\"-3\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"4\" cy=\"-5\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"2\" cy=\"5\" r=\"1.8\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(285.6 312.7)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-4\" cy=\"4\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"5\" cy=\"-2\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"-2\" cy=\"-6\" r=\"1.6\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(239.8 358.9)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-5\" cy=\"-3\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"4\" cy=\"-5\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"2\" cy=\"5\" r=\"1.8\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(265.5 414.1)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-4\" cy=\"4\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"5\" cy=\"-2\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"-2\" cy=\"-6\" r=\"1.6\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(210.5 413)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-5\" cy=\"-3\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"4\" cy=\"-5\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"2\" cy=\"5\" r=\"1.8\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(161.5 447.1)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-4\" cy=\"4\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"5\" cy=\"-2\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"-2\" cy=\"-6\" r=\"1.6\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(152.4 384.8)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-5\" cy=\"-3\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"4\" cy=\"-5\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"2\" cy=\"5\" r=\"1.8\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(96 368.9)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-4\" cy=\"4\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"5\" cy=\"-2\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"-2\" cy=\"-6\" r=\"1.6\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(132.6 319)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-5\" cy=\"-3\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"4\" cy=\"-5\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"2\" cy=\"5\" r=\"1.8\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(156.8 260.4)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-4\" cy=\"4\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"5\" cy=\"-2\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"-2\" cy=\"-6\" r=\"1.6\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(207.9 339.7)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-5\" cy=\"-3\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"4\" cy=\"-5\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"2\" cy=\"5\" r=\"1.8\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(262.6 336.9) rotate(30)\"><ellipse rx=\"10\" ry=\"5.5\" fill=\"#2F8F4E\"></ellipse><path d=\"M-8 0L8 0\" stroke=\"#1E6B37\" stroke-width=\"1.2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(298.4 392.6) rotate(-40)\"><ellipse rx=\"10\" ry=\"5.5\" fill=\"#2F8F4E\"></ellipse><path d=\"M-8 0L8 0\" stroke=\"#1E6B37\" stroke-width=\"1.2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(185.2 466.6) rotate(15)\"><ellipse rx=\"10\" ry=\"5.5\" fill=\"#2F8F4E\"></ellipse><path d=\"M-8 0L8 0\" stroke=\"#1E6B37\" stroke-width=\"1.2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(155.6 348) rotate(70)\"><ellipse rx=\"10\" ry=\"5.5\" fill=\"#2F8F4E\"></ellipse><path d=\"M-8 0L8 0\" stroke=\"#1E6B37\" stroke-width=\"1.2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(124.8 277) rotate(-20)\"><ellipse rx=\"10\" ry=\"5.5\" fill=\"#2F8F4E\"></ellipse><path d=\"M-8 0L8 0\" stroke=\"#1E6B37\" stroke-width=\"1.2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(210.3 246.1) rotate(50)\"><ellipse rx=\"10\" ry=\"5.5\" fill=\"#2F8F4E\"></ellipse><path d=\"M-8 0L8 0\" stroke=\"#1E6B37\" stroke-width=\"1.2\" stroke-linecap=\"round\"></path></g>\n<path d=\"M195 355L195 215M195 355L265 233.76M195 355L316.24 285M195 355L335 355M195 355L316.24 425M195 355L265 476.24M195 355L195 495M195 355L125 476.24M195 355L73.76 425M195 355L55 355M195 355L73.76 285M195 355L125 233.76\" fill=\"none\" stroke=\"#C98A2C\" stroke-width=\"2\" stroke-opacity=\"0.45\"></path>\n</g>\n<path d=\"{{ edge }}\" fill=\"none\" stroke=\"#A9651C\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.55\"></path>\n</svg>\n<header style=\"position: absolute; z-index: 2; left: {{ L.hL }}px; right: {{ L.hR }}px; top: {{ L.hT }}px; height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 12px\">\n<h1 style=\"margin: 0; padding: 10px 18px; border-radius: 999px; background: #FFFFFF; font-family: 'Bungee', 'Arial Black', sans-serif; font-weight: 400; font-size: 19px; line-height: 1.2; color: #3B1F12; box-shadow: 0 3px 0 rgba(90, 20, 20, 0.28)\">Lunch time</h1>\n</header>\n<section style=\"position: absolute; left: {{ L.sL }}px; right: {{ L.sR }}px; top: {{ L.sT }}px; bottom: {{ L.sB }}px; box-sizing: border-box; padding: {{ L.sPad }}; display: flex; flex-direction: column; align-items: center; justify-content: {{ L.sJ }}; gap: 22px; background-color: #D9A262; background-image: radial-gradient(rgba(110, 62, 24, 0.16) 1px, transparent 1.6px); background-size: 9px 9px; border-radius: {{ L.sRad }}; box-shadow: {{ L.sSh }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center\">\n<sc-if value=\"{{ notDone }}\" hint-placeholder-val=\"{{ true }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 6px\">\n<div style=\"font-family: 'Bungee', 'Arial Black', sans-serif; font-size: 60px; line-height: 1; font-variant-numeric: tabular-nums\">{{ time }}</div>\n<div style=\"font-size: 16px; font-weight: 600\">{{ slicesLabel }}</div>\n</div>\n</sc-if>\n<sc-if value=\"{{ done }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 8px\">\n<div style=\"font-family: 'Bungee', 'Arial Black', sans-serif; font-size: {{ L.doneSize }}px; line-height: 1.05\">All gone!</div>\n<div style=\"font-size: 16px; font-weight: 600\">Lunch is over. Nice eating!</div>\n</div>\n</sc-if>\n</div>\n<div style=\"display: flex; align-items: center; justify-content: center; gap: 30px\">\n<button type=\"button\" onClick=\"{{ setTime }}\" aria-label=\"Set the time\" style=\"width: 62px; height: 62px; padding: 0; border: none; border-radius: 999px; background: #FFFFFF; color: #3B1F12; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 0 #A8743C\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M10 2h4M12 14l3-3\"></path><circle cx=\"12\" cy=\"14\" r=\"8\"></circle></svg></button>\n<button type=\"button\" onClick=\"{{ toggle }}\" aria-label=\"{{ toggleLabel }}\" style=\"width: 86px; height: 86px; padding: 0; border: none; border-radius: 999px; background: #D23A2F; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 5px 0 #8E2119\">\n<sc-if value=\"{{ showPlay }}\" hint-placeholder-val=\"{{ true }}\"><svg width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block; margin-left: 3px\"><path d=\"M8 5.14v13.72a1 1 0 0 0 1.52.85l10.79-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14z\" fill=\"currentColor\"></path></svg></sc-if>\n<sc-if value=\"{{ running }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block\"><rect x=\"6\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect><rect x=\"13.5\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect></svg></sc-if>\n<sc-if value=\"{{ showReplay }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></sc-if>\n</button>\n<button type=\"button\" onClick=\"{{ reset }}\" aria-label=\"Reset timer\" style=\"width: 62px; height: 62px; padding: 0; border: none; border-radius: 999px; background: #FFFFFF; color: #3B1F12; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 0 #A8743C\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></button>\n</div>\n</section>\n<sc-if value=\"{{ picking }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"position: absolute; left: 0; top: 0; width: {{ L.w }}px; height: {{ L.h }}px; z-index: 20\">\n<dc-import name=\"TimePicker\" value=\"{{ pickValue }}\" mode=\"duration\" heading=\"Set time\" accent=\"#D23A2F\" accent-ink=\"#FFFFFF\" dark=\"{{ false }}\" landscape=\"{{ L.land }}\" bleed=\"{{ L.B }}\" on-set=\"{{ applyTime }}\" on-cancel=\"{{ cancelPick }}\" hint-size=\"390px,844px\"></dc-import>\n</div>\n</sc-if>\n</div>"}, { Logic: (function () {
+  Object.assign({"id":"pizza","name":"Pizza Party","tagline":"One slice is 5 minutes","relative":false,"sleep":false,"bars":["#F4C9BE","#D9A262"],"lbars":null,"ldir":"90deg","lsplit":56.6,"psplit":70,"back":"light","defaults":{"minutes":35,"speed":"Demo (1 min = 1 s)","bleed":false,"edgeX":0,"edgeY":0,"landscape":false},"template":"<div style=\"width: {{ L.w }}px; height: {{ L.h }}px; position: relative; overflow: {{ L.ov }}; background-color: #FFF3E3; background-image: linear-gradient(90deg, rgba(222, 60, 60, 0.42) 50%, transparent 50%), linear-gradient(rgba(222, 60, 60, 0.42) 50%, transparent 50%); background-size: 46px 46px; font-family: 'Rubik', 'Helvetica Neue', system-ui, sans-serif; color: #3B1F12\">\n<div aria-hidden=\"true\" style=\"position: absolute; left: -1200px; top: -1200px; right: -1200px; bottom: -1200px; pointer-events: none; display: {{ L.bD }}; background-color: #FFF3E3; background-image: linear-gradient(90deg, rgba(222, 60, 60, 0.42) 50%, transparent 50%), linear-gradient(rgba(222, 60, 60, 0.42) 50%, transparent 50%); background-size: 46px 46px; background-position: 1200px 1200px\"></div>\n<svg width=\"390\" height=\"600\" viewBox=\"0 0 390 600\" role=\"img\" aria-label=\"{{ ariaLabel }}\" style=\"position: absolute; left: 0; top: 0; display: block; transform-origin: 0 0; transform: {{ L.cT }}\">\n<defs>\n<clipPath id=\"pz-left-clip\"><path d=\"{{ wedge }}\"></path></clipPath>\n</defs>\n<circle cx=\"195\" cy=\"365\" r=\"170\" fill=\"#5A1414\" opacity=\"0.22\"></circle>\n<circle cx=\"195\" cy=\"355\" r=\"170\" fill=\"#FFFFFF\"></circle>\n<circle cx=\"195\" cy=\"355\" r=\"146\" fill=\"#F5EDE1\" stroke=\"#E6DACA\" stroke-width=\"2\"></circle>\n<g fill=\"#6E4E36\" font-size=\"13\" font-weight=\"700\" text-anchor=\"middle\" dominant-baseline=\"central\">\n<text x=\"{{ F.x0 }}\" y=\"{{ F.y0 }}\">{{ F.n0 }}</text>\n<text x=\"{{ F.x1 }}\" y=\"{{ F.y1 }}\">{{ F.n1 }}</text>\n<text x=\"{{ F.x2 }}\" y=\"{{ F.y2 }}\">{{ F.n2 }}</text>\n<text x=\"{{ F.x3 }}\" y=\"{{ F.y3 }}\">{{ F.n3 }}</text>\n<text x=\"{{ F.x4 }}\" y=\"{{ F.y4 }}\">{{ F.n4 }}</text>\n<text x=\"{{ F.x5 }}\" y=\"{{ F.y5 }}\">{{ F.n5 }}</text>\n<text x=\"{{ F.x6 }}\" y=\"{{ F.y6 }}\">{{ F.n6 }}</text>\n<text x=\"{{ F.x7 }}\" y=\"{{ F.y7 }}\">{{ F.n7 }}</text>\n<text x=\"{{ F.x8 }}\" y=\"{{ F.y8 }}\">{{ F.n8 }}</text>\n<text x=\"{{ F.x9 }}\" y=\"{{ F.y9 }}\">{{ F.n9 }}</text>\n<text x=\"{{ F.x10 }}\" y=\"{{ F.y10 }}\">{{ F.n10 }}</text>\n<text x=\"{{ F.x11 }}\" y=\"{{ F.y11 }}\">{{ F.n11 }}</text>\n</g>\n<path d=\"M150 314C176 298 214 306 242 336\" fill=\"none\" stroke=\"#D9481F\" stroke-opacity=\"0.16\" stroke-width=\"8\" stroke-linecap=\"round\"></path>\n<path d=\"M118 402C140 422 168 430 190 426\" fill=\"none\" stroke=\"#D9481F\" stroke-opacity=\"0.12\" stroke-width=\"6\" stroke-linecap=\"round\"></path>\n<g fill=\"#D29343\">\n<circle cx=\"232\" cy=\"286\" r=\"2.6\"></circle>\n<circle cx=\"300\" cy=\"352\" r=\"3\"></circle>\n<circle cx=\"288\" cy=\"428\" r=\"1.8\"></circle>\n<circle cx=\"204\" cy=\"478\" r=\"2\"></circle>\n<circle cx=\"122\" cy=\"438\" r=\"2.2\"></circle>\n<circle cx=\"82\" cy=\"338\" r=\"2\"></circle>\n<circle cx=\"150\" cy=\"262\" r=\"2\"></circle>\n<circle cx=\"216\" cy=\"340\" r=\"1.8\"></circle>\n</g>\n<g fill=\"#B9772E\">\n<circle cx=\"271\" cy=\"312\" r=\"2\"></circle>\n<circle cx=\"262\" cy=\"392\" r=\"2.2\"></circle>\n<circle cx=\"232\" cy=\"452\" r=\"2.6\"></circle>\n<circle cx=\"160\" cy=\"462\" r=\"3\"></circle>\n<circle cx=\"96\" cy=\"388\" r=\"2.6\"></circle>\n<circle cx=\"112\" cy=\"298\" r=\"2.8\"></circle>\n<circle cx=\"190\" cy=\"244\" r=\"2.4\"></circle>\n<circle cx=\"170\" cy=\"392\" r=\"2.2\"></circle>\n</g>\n<g clip-path=\"url(#pz-left-clip)\">\n<circle cx=\"195\" cy=\"355\" r=\"140\" fill=\"#D98E37\"></circle>\n<circle cx=\"195\" cy=\"355\" r=\"136\" fill=\"#EBAE58\"></circle>\n<circle cx=\"195\" cy=\"355\" r=\"124\" fill=\"#D9481F\"></circle>\n<circle cx=\"195\" cy=\"355\" r=\"120\" fill=\"#FFCF5E\"></circle>\n<g fill=\"#C27526\" opacity=\"0.55\">\n<ellipse cx=\"228.9\" cy=\"228.5\" rx=\"6\" ry=\"3\"></ellipse>\n<ellipse cx=\"295.3\" cy=\"270.8\" rx=\"6\" ry=\"3\"></ellipse>\n<ellipse cx=\"325.5\" cy=\"366.4\" rx=\"3\" ry=\"6\"></ellipse>\n<ellipse cx=\"279.2\" cy=\"455.3\" rx=\"6\" ry=\"3\"></ellipse>\n<ellipse cx=\"172.3\" cy=\"484\" rx=\"6\" ry=\"3\"></ellipse>\n<ellipse cx=\"94.7\" cy=\"439.2\" rx=\"6\" ry=\"3\"></ellipse>\n<ellipse cx=\"66\" cy=\"332.3\" rx=\"3\" ry=\"6\"></ellipse>\n<ellipse cx=\"110.8\" cy=\"254.7\" rx=\"6\" ry=\"3\"></ellipse>\n<ellipse cx=\"183.6\" cy=\"224.5\" rx=\"6\" ry=\"3\"></ellipse>\n</g>\n<g fill=\"#FFE29A\">\n<ellipse cx=\"180\" cy=\"302\" rx=\"16\" ry=\"9\"></ellipse>\n<ellipse cx=\"252\" cy=\"392\" rx=\"15\" ry=\"8\"></ellipse>\n<ellipse cx=\"122\" cy=\"410\" rx=\"12\" ry=\"7\"></ellipse>\n<ellipse cx=\"232\" cy=\"262\" rx=\"11\" ry=\"6\"></ellipse>\n<ellipse cx=\"304\" cy=\"350\" rx=\"12\" ry=\"7\"></ellipse>\n<ellipse cx=\"150\" cy=\"436\" rx=\"11\" ry=\"6\"></ellipse>\n<ellipse cx=\"210\" cy=\"430\" rx=\"13\" ry=\"7\"></ellipse>\n<ellipse cx=\"110\" cy=\"330\" rx=\"10\" ry=\"6\"></ellipse>\n<ellipse cx=\"276\" cy=\"280\" rx=\"9\" ry=\"5\"></ellipse>\n</g>\n<g fill=\"#F2B23F\" opacity=\"0.55\">\n<ellipse cx=\"200\" cy=\"280\" rx=\"6\" ry=\"4\"></ellipse>\n<ellipse cx=\"290\" cy=\"400\" rx=\"7\" ry=\"4\"></ellipse>\n<ellipse cx=\"140\" cy=\"380\" rx=\"6\" ry=\"3.5\"></ellipse>\n<ellipse cx=\"240\" cy=\"460\" rx=\"6\" ry=\"3.5\"></ellipse>\n<ellipse cx=\"95\" cy=\"300\" rx=\"5\" ry=\"3\"></ellipse>\n<ellipse cx=\"230\" cy=\"372\" rx=\"5\" ry=\"3\"></ellipse>\n</g>\n<g transform=\"translate(218.9 289.2)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-5\" cy=\"-3\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"4\" cy=\"-5\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"2\" cy=\"5\" r=\"1.8\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(285.6 312.7)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-4\" cy=\"4\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"5\" cy=\"-2\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"-2\" cy=\"-6\" r=\"1.6\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(239.8 358.9)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-5\" cy=\"-3\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"4\" cy=\"-5\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"2\" cy=\"5\" r=\"1.8\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(265.5 414.1)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-4\" cy=\"4\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"5\" cy=\"-2\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"-2\" cy=\"-6\" r=\"1.6\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(210.5 413)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-5\" cy=\"-3\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"4\" cy=\"-5\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"2\" cy=\"5\" r=\"1.8\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(161.5 447.1)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-4\" cy=\"4\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"5\" cy=\"-2\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"-2\" cy=\"-6\" r=\"1.6\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(152.4 384.8)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-5\" cy=\"-3\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"4\" cy=\"-5\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"2\" cy=\"5\" r=\"1.8\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(96 368.9)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-4\" cy=\"4\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"5\" cy=\"-2\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"-2\" cy=\"-6\" r=\"1.6\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(132.6 319)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-5\" cy=\"-3\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"4\" cy=\"-5\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"2\" cy=\"5\" r=\"1.8\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(156.8 260.4)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-4\" cy=\"4\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"5\" cy=\"-2\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"-2\" cy=\"-6\" r=\"1.6\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(207.9 339.7)\"><circle r=\"15\" fill=\"#B02B26\"></circle><circle r=\"12.5\" fill=\"#D2433A\"></circle><circle cx=\"-5\" cy=\"-3\" r=\"1.7\" fill=\"#9A2420\"></circle><circle cx=\"4\" cy=\"-5\" r=\"1.5\" fill=\"#9A2420\"></circle><circle cx=\"2\" cy=\"5\" r=\"1.8\" fill=\"#9A2420\"></circle><path d=\"M-8 -6A10 10 0 0 1 2 -10\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.35\" stroke-width=\"2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(262.6 336.9) rotate(30)\"><ellipse rx=\"10\" ry=\"5.5\" fill=\"#2F8F4E\"></ellipse><path d=\"M-8 0L8 0\" stroke=\"#1E6B37\" stroke-width=\"1.2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(298.4 392.6) rotate(-40)\"><ellipse rx=\"10\" ry=\"5.5\" fill=\"#2F8F4E\"></ellipse><path d=\"M-8 0L8 0\" stroke=\"#1E6B37\" stroke-width=\"1.2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(185.2 466.6) rotate(15)\"><ellipse rx=\"10\" ry=\"5.5\" fill=\"#2F8F4E\"></ellipse><path d=\"M-8 0L8 0\" stroke=\"#1E6B37\" stroke-width=\"1.2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(155.6 348) rotate(70)\"><ellipse rx=\"10\" ry=\"5.5\" fill=\"#2F8F4E\"></ellipse><path d=\"M-8 0L8 0\" stroke=\"#1E6B37\" stroke-width=\"1.2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(124.8 277) rotate(-20)\"><ellipse rx=\"10\" ry=\"5.5\" fill=\"#2F8F4E\"></ellipse><path d=\"M-8 0L8 0\" stroke=\"#1E6B37\" stroke-width=\"1.2\" stroke-linecap=\"round\"></path></g>\n<g transform=\"translate(210.3 246.1) rotate(50)\"><ellipse rx=\"10\" ry=\"5.5\" fill=\"#2F8F4E\"></ellipse><path d=\"M-8 0L8 0\" stroke=\"#1E6B37\" stroke-width=\"1.2\" stroke-linecap=\"round\"></path></g>\n<path d=\"{{ cuts }}\" fill=\"none\" stroke=\"#C98A2C\" stroke-width=\"2\" stroke-opacity=\"0.45\"></path>\n</g>\n<path d=\"{{ edge }}\" fill=\"none\" stroke=\"#A9651C\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" opacity=\"0.55\"></path>\n</svg>\n<header style=\"position: absolute; z-index: 2; left: {{ L.hL }}px; right: {{ L.hR }}px; top: {{ L.hT }}px; height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 12px\">\n<h1 style=\"margin: 0; padding: 10px 18px; border-radius: 999px; background: #FFFFFF; font-family: 'Bungee', 'Arial Black', sans-serif; font-weight: 400; font-size: 19px; line-height: 1.2; color: #3B1F12; box-shadow: 0 3px 0 rgba(90, 20, 20, 0.28)\">Lunch time</h1>\n</header>\n<section style=\"position: absolute; left: {{ L.sL }}px; right: {{ L.sR }}px; top: {{ L.sT }}px; bottom: {{ L.sB }}px; box-sizing: border-box; padding: {{ L.sPad }}; display: flex; flex-direction: column; align-items: center; justify-content: {{ L.sJ }}; gap: 22px; background-color: #D9A262; background-image: radial-gradient(rgba(110, 62, 24, 0.16) 1px, transparent 1.6px); background-size: 9px 9px; border-radius: {{ L.sRad }}; box-shadow: {{ L.sSh }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center\">\n<sc-if value=\"{{ notDone }}\" hint-placeholder-val=\"{{ true }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 6px\">\n<div style=\"font-family: 'Bungee', 'Arial Black', sans-serif; font-size: 60px; line-height: 1; font-variant-numeric: tabular-nums\">{{ time }}</div>\n<div style=\"font-size: 16px; font-weight: 600\">{{ slicesLabel }}</div>\n</div>\n</sc-if>\n<sc-if value=\"{{ done }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 8px\">\n<div style=\"font-family: 'Bungee', 'Arial Black', sans-serif; font-size: {{ L.doneSize }}px; line-height: 1.05\">All gone!</div>\n<div style=\"font-size: 16px; font-weight: 600\">Lunch is over. Nice eating!</div>\n</div>\n</sc-if>\n</div>\n<div style=\"display: flex; align-items: center; justify-content: center; gap: 30px\">\n<button type=\"button\" onClick=\"{{ setTime }}\" aria-label=\"Set the time\" style=\"width: 62px; height: 62px; padding: 0; border: none; border-radius: 999px; background: #FFFFFF; color: #3B1F12; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 0 #A8743C\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M10 2h4M12 14l3-3\"></path><circle cx=\"12\" cy=\"14\" r=\"8\"></circle></svg></button>\n<button type=\"button\" onClick=\"{{ toggle }}\" aria-label=\"{{ toggleLabel }}\" style=\"width: 86px; height: 86px; padding: 0; border: none; border-radius: 999px; background: #D23A2F; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 5px 0 #8E2119\">\n<sc-if value=\"{{ showPlay }}\" hint-placeholder-val=\"{{ true }}\"><svg width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block; margin-left: 3px\"><path d=\"M8 5.14v13.72a1 1 0 0 0 1.52.85l10.79-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14z\" fill=\"currentColor\"></path></svg></sc-if>\n<sc-if value=\"{{ running }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block\"><rect x=\"6\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect><rect x=\"13.5\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect></svg></sc-if>\n<sc-if value=\"{{ showReplay }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></sc-if>\n</button>\n<button type=\"button\" onClick=\"{{ reset }}\" aria-label=\"Reset timer\" style=\"width: 62px; height: 62px; padding: 0; border: none; border-radius: 999px; background: #FFFFFF; color: #3B1F12; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 0 #A8743C\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></button>\n</div>\n</section>\n<sc-if value=\"{{ picking }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"position: absolute; left: 0; top: 0; width: {{ L.w }}px; height: {{ L.h }}px; z-index: 20\">\n<dc-import name=\"TimePicker\" value=\"{{ pickValue }}\" mode=\"duration\" heading=\"Set time\" accent=\"#D23A2F\" accent-ink=\"#FFFFFF\" dark=\"{{ false }}\" landscape=\"{{ L.land }}\" bleed=\"{{ L.B }}\" on-set=\"{{ applyTime }}\" on-cancel=\"{{ cancelPick }}\" hint-size=\"390px,844px\"></dc-import>\n</div>\n</sc-if>\n</div>"}, { Logic: (function () {
 class Component extends DCLogic {
   componentDidMount() {
     this.last = Date.now();
@@ -303,38 +324,63 @@ class Component extends DCLogic {
       doneSize: land ? 40 : 46
     };
   }
-  scale(total) {
-    // The picture's full size: the smallest of 1 minute, 12 minutes, 1 hour,
-    // 2 hours and 12 hours that holds the time that was set. Each keeps whole
-    // numbers on the labels; n() turns seconds into the labels' unit.
-    const C = [60, 720, 3600, 7200, 43200].find((x) => total <= x) || 43200;
-    const u = C === 60 ? 1 : C === 43200 ? 3600 : 60;
-    return { C: C, n: (sec) => sec / u };
-  }
-  unitName(v, short) {
-    if (v < 60) return short ? v + ' sec' : v === 1 ? 'second' : v + ' seconds';
-    if (v < 3600) {
-      const m = v / 60;
-      return short ? m + ' min' : m === 1 ? 'minute' : m + ' minutes';
+  parts(total, maxN) {
+    // The picture always starts full: split the set time into at most maxN
+    // equal parts of the shortest round length that fits (5 seconds,
+    // 1 minute, 5 minutes...). An odd time is split into maxN equal parts.
+    const nice = [1, 2, 5, 10, 15, 20, 30, 60, 120, 180, 300, 600, 900, 1200, 1800, 3600, 7200, 10800];
+    const t = Math.max(1, total);
+    for (let i = 0; i < nice.length; i++) {
+      const n = t / nice[i];
+      if (n <= maxN + 1e-9 && Math.abs(n - Math.round(n)) < 1e-9) return { n: Math.max(1, Math.round(n)), u: nice[i], round: true };
     }
-    const h = v / 3600;
-    return short ? (h === 1 ? '1 hour' : h + ' hours') : h === 1 ? 'hour' : h + ' hours';
+    return { n: maxN, u: t / maxN, round: false };
+  }
+  span(v) {
+    // A length of time in words: 5 sec, 7.5 sec, 1 min, 2 hours, 4 min 10 sec.
+    if (v < 60 && Math.abs(v - Math.round(v)) >= 0.05) return Math.round(v * 10) / 10 + ' sec';
+    v = Math.round(v);
+    const h = Math.floor(v / 3600);
+    const m = Math.floor((v % 3600) / 60);
+    const s = v % 60;
+    const out = [];
+    if (h) out.push(h === 1 ? '1 hour' : h + ' hours');
+    if (m) out.push(m + ' min');
+    if (s || !out.length) out.push(s + ' sec');
+    return out.join(' ');
+  }
+  mark(v, u, total) {
+    // A number on the face for v seconds, in the unit the marks step in.
+    if (v === 0) return '0';
+    if (u % 3600 === 0) return String(v / 3600);
+    if (u % 60 === 0) return total > 3600 ? Math.floor(v / 3600) + ':' + String((v % 3600) / 60).padStart(2, '0') : String(v / 60);
+    if (total <= 60) return String(v);
+    return Math.floor(v / 60) + ':' + String(v % 60).padStart(2, '0');
   }
   renderVals() {
     const c = this.cur();
-    const S = this.scale(c.total);
-    const frac = Math.max(0, Math.min(1, c.rem / S.C));
+    // The whole pizza is the set time, cut into round-length slices.
+    const P = this.parts(c.total, 12);
+    const frac = Math.max(0, Math.min(1, c.rem / c.total));
     const F = {};
-    for (let k = 0; k < 12; k++) F['n' + k] = k * S.n(S.C / 12);
+    let cuts = '';
+    for (let k = 0; k < 12; k++) {
+      const a = (k / P.n) * Math.PI * 2;
+      F['x' + k] = (195 + 158 * Math.sin(a)).toFixed(1);
+      F['y' + k] = (355 - 158 * Math.cos(a)).toFixed(1);
+      F['n' + k] = P.round && k < P.n ? this.mark(k * P.u, P.u, c.total) : '';
+      if (k < P.n) cuts += 'M195 355L' + (195 + 140 * Math.sin(a)).toFixed(2) + ' ' + (355 - 140 * Math.cos(a)).toFixed(2);
+    }
     const done = c.rem <= 0;
     const time = this.fmt(c.rem);
-    const slices = Math.min(12, Math.ceil(c.rem / (S.C / 12) - 1e-9));
+    const slices = Math.min(P.n, Math.ceil(c.rem / P.u - 1e-9));
     return {
       L: this.lay(),
       wedge: this.wedge(frac),
       edge: this.edge(frac),
       time: time,
-      slicesLabel: (slices === 1 ? '1 slice left' : slices + ' slices left') + ' · 1 slice = ' + this.unitName(S.C / 12, true),
+      slicesLabel: (slices === 1 ? '1 slice left' : slices + ' slices left') + ' · 1 slice = ' + this.span(P.u),
+      cuts: cuts,
       F: F,
       done: done,
       notDone: !done,
@@ -629,7 +675,7 @@ class Component extends DCLogic {
 }
 return Component;
 })() }),
-  Object.assign({"id":"hearts","name":"Pixel Hearts","tagline":"Screen time, game style","relative":false,"sleep":false,"bars":["#170F31","#170F31"],"lbars":null,"ldir":null,"lsplit":null,"psplit":null,"back":"dark","defaults":{"minutes":30,"speed":"Demo (1 min = 1 s)","bleed":false,"landscape":false},"template":"<div style=\"width: {{ L.w }}px; height: {{ L.h }}px; position: relative; overflow: {{ L.ov }}; background-color: #170F31; background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px); background-size: 12px 12px; font-family: 'Silkscreen', 'Courier New', monospace; color: #EFE6FF\">\n<div aria-hidden=\"true\" style=\"position: absolute; left: -1200px; top: -1200px; right: -1200px; bottom: -1200px; pointer-events: none; display: {{ L.bD }}; background-color: #170F31; background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px); background-size: 12px 12px; background-position: 1200px 1200px\"></div>\n<svg width=\"{{ L.w }}\" height=\"{{ L.h }}\" viewBox=\"{{ L.vb }}\" shape-rendering=\"crispEdges\" aria-hidden=\"true\" style=\"position: absolute; left: 0; top: 0; display: block\">\n<g display=\"{{ L.lD }}\">\n<g fill=\"#4DF0FF\" style=\"animation: ar-blink 1.6s steps(1) infinite\"><rect x=\"66\" y=\"52\" width=\"12\" height=\"4\"></rect><rect x=\"70\" y=\"48\" width=\"4\" height=\"12\"></rect><rect x=\"410\" y=\"334\" width=\"12\" height=\"4\"></rect><rect x=\"414\" y=\"330\" width=\"4\" height=\"12\"></rect></g>\n<g fill=\"#FFE14D\" style=\"animation: ar-blink 2.2s steps(1) -0.7s infinite\"><rect x=\"414\" y=\"44\" width=\"12\" height=\"4\"></rect><rect x=\"418\" y=\"40\" width=\"4\" height=\"12\"></rect><rect x=\"774\" y=\"336\" width=\"12\" height=\"4\"></rect><rect x=\"778\" y=\"332\" width=\"4\" height=\"12\"></rect></g>\n<g fill=\"#FF3B6B\" style=\"animation: ar-blink 1.9s steps(1) -1.1s infinite\"><rect x=\"56\" y=\"322\" width=\"12\" height=\"4\"></rect><rect x=\"60\" y=\"318\" width=\"4\" height=\"12\"></rect><rect x=\"606\" y=\"312\" width=\"12\" height=\"4\"></rect><rect x=\"610\" y=\"308\" width=\"4\" height=\"12\"></rect></g>\n</g>\n<g display=\"{{ L.pD }}\">\n<g fill=\"#4DF0FF\" style=\"animation: ar-blink 1.6s steps(1) infinite\"><rect x=\"38\" y=\"168\" width=\"12\" height=\"4\"></rect><rect x=\"42\" y=\"164\" width=\"4\" height=\"12\"></rect><rect x=\"354\" y=\"558\" width=\"12\" height=\"4\"></rect><rect x=\"358\" y=\"554\" width=\"4\" height=\"12\"></rect></g>\n<g fill=\"#FFE14D\" style=\"animation: ar-blink 2.2s steps(1) -0.7s infinite\"><rect x=\"346\" y=\"174\" width=\"12\" height=\"4\"></rect><rect x=\"350\" y=\"170\" width=\"4\" height=\"12\"></rect><rect x=\"312\" y=\"638\" width=\"12\" height=\"4\"></rect><rect x=\"316\" y=\"634\" width=\"4\" height=\"12\"></rect></g>\n<g fill=\"#FF3B6B\" style=\"animation: ar-blink 1.9s steps(1) -1.1s infinite\"><rect x=\"24\" y=\"590\" width=\"12\" height=\"4\"></rect><rect x=\"28\" y=\"586\" width=\"4\" height=\"12\"></rect></g>\n</g>\n</svg>\n<header style=\"position: absolute; left: {{ L.hL }}px; right: {{ L.hR }}px; top: {{ L.hT }}px; height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 12px\">\n<div style=\"display: flex; align-items: center; gap: 12px\">\n<svg width=\"36\" height=\"24\" viewBox=\"0 0 12 8\" shape-rendering=\"crispEdges\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M2 1h8v1h1v4h-1v1h-2v-1h-4v1h-2v-1h-1v-4h1z\" fill=\"#4DF0FF\"></path><path d=\"M3 3h1v1h1v1h-1v1h-1v-1h-1v-1h1z\" fill=\"#170F31\"></path><path d=\"M8 3h1v1h-1zM9 4h1v1h-1z\" fill=\"#170F31\"></path></svg>\n<h1 style=\"margin: 0; font-family: 'Silkscreen', 'Courier New', monospace; font-weight: 700; font-size: 21px; line-height: 1; color: #4DF0FF; letter-spacing: 0.02em\">Screen time</h1>\n</div>\n</header>\n<div style=\"position: absolute; left: 0; top: 0; width: 390px; height: 844px; pointer-events: none; transform-origin: 0 0; transform: {{ L.cT }}\">\n<sc-for list=\"{{ hearts }}\" as=\"h\" hint-placeholder-count=\"12\">\n<div style=\"position: absolute; left: {{ h.x }}px; top: {{ h.y }}px; width: 54px; height: 48px; animation: {{ h.anim }}\">\n<svg width=\"54\" height=\"48\" viewBox=\"0 0 9 8\" shape-rendering=\"crispEdges\" aria-hidden=\"true\" style=\"position: absolute; left: 0; top: 0; display: block\">\n<path d=\"M2 1h2v1h-2zM5 1h2v1h-2zM1 2h7v2h-7zM2 4h5v1h-5zM3 5h3v1h-3zM4 6h1v1h-1z\" fill=\"#241845\"></path>\n<path d=\"M2 0h2v1h-2zM5 0h2v1h-2zM1 1h1v1h-1zM4 1h1v1h-1zM7 1h1v1h-1zM0 2h1v2h-1zM8 2h1v2h-1zM1 4h1v1h-1zM7 4h1v1h-1zM2 5h1v1h-1zM6 5h1v1h-1zM3 6h1v1h-1zM5 6h1v1h-1zM4 7h1v1h-1z\" fill=\"#8F7FD0\"></path>\n</svg>\n<div style=\"position: absolute; left: 0; bottom: 0; width: 54px; height: {{ h.h }}px; overflow: hidden\">\n<svg width=\"54\" height=\"48\" viewBox=\"0 0 9 8\" shape-rendering=\"crispEdges\" aria-hidden=\"true\" style=\"position: absolute; left: 0; bottom: 0; display: block\">\n<path d=\"M2 1h2v1h-2zM5 1h2v1h-2zM1 2h7v2h-7zM2 4h5v1h-5zM3 5h3v1h-3zM4 6h1v1h-1z\" fill=\"#FF3B6B\"></path>\n<path d=\"M7 2h1v2h-1zM6 4h1v1h-1zM5 5h1v1h-1z\" fill=\"#C2185B\"></path>\n<path d=\"M2 1h1v2h-1z\" fill=\"#FFFFFF\"></path>\n<path d=\"M2 0h2v1h-2zM5 0h2v1h-2zM1 1h1v1h-1zM4 1h1v1h-1zM7 1h1v1h-1zM0 2h1v2h-1zM8 2h1v2h-1zM1 4h1v1h-1zM7 4h1v1h-1zM2 5h1v1h-1zM6 5h1v1h-1zM3 6h1v1h-1zM5 6h1v1h-1zM4 7h1v1h-1z\" fill=\"#FFD6E2\"></path>\n</svg>\n</div>\n</div>\n</sc-for>\n<div role=\"img\" aria-label=\"{{ ariaLabel }}\" style=\"position: absolute; left: 95px; top: 300px; width: 200px; height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center\">\n<sc-if value=\"{{ notDone }}\" hint-placeholder-val=\"{{ true }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 8px\">\n<div style=\"font-family: 'Silkscreen', 'Courier New', monospace; font-size: 13px; color: #A99BE6; letter-spacing: 0.12em\">Time left</div>\n<div style=\"font-family: 'Silkscreen', 'Courier New', monospace; font-weight: 700; font-size: {{ timeSize }}px; line-height: 1; color: #FFFFFF; text-shadow: 4px 4px 0 #FF3B6B; font-variant-numeric: tabular-nums\">{{ time }}</div>\n<div style=\"font-family: 'Silkscreen', 'Courier New', monospace; font-size: 12px; color: #FFE14D; letter-spacing: 0.04em\">{{ heartsLabel }}</div>\n</div>\n</sc-if>\n<sc-if value=\"{{ done }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 12px\">\n<div style=\"display: flex; flex-direction: column; align-items: center; font-family: 'Silkscreen', 'Courier New', monospace; font-weight: 700; font-size: 40px; line-height: 0.95; color: #FFFFFF; text-shadow: 4px 4px 0 #FF3B6B; animation: ar-blink 1s steps(1) infinite\">\n<span>Game</span>\n<span>over</span>\n</div>\n<div style=\"font-family: 'Silkscreen', 'Courier New', monospace; font-size: 13px; color: #FFE14D\">Break time!</div>\n</div>\n</sc-if>\n</div>\n</div>\n<div style=\"position: absolute; left: {{ L.pL }}px; right: {{ L.pR }}px; top: {{ L.kT }}px; transform: {{ L.mid }}; display: flex; align-items: center; justify-content: center; gap: 16px\">\n<button type=\"button\" onClick=\"{{ setTime }}\" aria-label=\"Set the time\" style=\"width: 72px; height: 64px; padding: 0; border: 3px solid #EFE6FF; border-radius: 0; background: #2A1D55; color: #EFE6FF; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 5px 5px 0 #000000\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M10 2h4M12 14l3-3\"></path><circle cx=\"12\" cy=\"14\" r=\"8\"></circle></svg></button>\n<button type=\"button\" onClick=\"{{ toggle }}\" aria-label=\"{{ toggleLabel }}\" style=\"width: 150px; height: 64px; padding: 0 14px; border: 3px solid #EFE6FF; border-radius: 0; background: #FFE14D; color: #170F31; display: flex; align-items: center; justify-content: center; font-family: 'Silkscreen', 'Courier New', monospace; font-size: 20px; font-weight: 700; cursor: pointer; box-shadow: 5px 5px 0 #000000\">\n<sc-if value=\"{{ showPlay }}\" hint-placeholder-val=\"{{ true }}\"><span style=\"display: flex; align-items: center; gap: 12px\"><svg width=\"12\" height=\"21\" viewBox=\"0 0 4 7\" shape-rendering=\"crispEdges\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M0 0h1v7h-1zM1 1h1v5h-1zM2 2h1v3h-1zM3 3h1v1h-1z\" fill=\"currentColor\"></path></svg><span>Start</span></span></sc-if>\n<sc-if value=\"{{ running }}\" hint-placeholder-val=\"{{ false }}\"><span style=\"display: flex; align-items: center; gap: 12px\"><svg width=\"15\" height=\"21\" viewBox=\"0 0 5 7\" shape-rendering=\"crispEdges\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M0 0h2v7h-2zM3 0h2v7h-2z\" fill=\"currentColor\"></path></svg><span>Pause</span></span></sc-if>\n<sc-if value=\"{{ showReplay }}\" hint-placeholder-val=\"{{ false }}\"><span style=\"display: flex; align-items: center; gap: 12px\"><svg width=\"12\" height=\"21\" viewBox=\"0 0 4 7\" shape-rendering=\"crispEdges\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M0 0h1v7h-1zM1 1h1v5h-1zM2 2h1v3h-1zM3 3h1v1h-1z\" fill=\"currentColor\"></path></svg><span>Again</span></span></sc-if>\n</button>\n<button type=\"button\" onClick=\"{{ reset }}\" aria-label=\"Reset timer\" style=\"width: 72px; height: 64px; padding: 0; border: 3px solid #EFE6FF; border-radius: 0; background: #2A1D55; color: #EFE6FF; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 5px 5px 0 #000000\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></button>\n</div>\n<div aria-hidden=\"true\" style=\"position: absolute; left: {{ L.bI }}px; top: {{ L.bI }}px; right: {{ L.bI }}px; bottom: {{ L.bI }}px; pointer-events: none; background-image: repeating-linear-gradient(180deg, rgba(0, 0, 0, 0.16) 0px, rgba(0, 0, 0, 0.16) 1px, transparent 1px, transparent 3px)\"></div>\n<sc-if value=\"{{ picking }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"position: absolute; left: 0; top: 0; width: {{ L.w }}px; height: {{ L.h }}px; z-index: 20\">\n<dc-import name=\"TimePicker\" value=\"{{ pickValue }}\" mode=\"duration\" heading=\"Set time\" accent=\"#FFE14D\" accent-ink=\"#170F31\" dark=\"{{ true }}\" landscape=\"{{ L.land }}\" bleed=\"{{ L.B }}\" on-set=\"{{ applyTime }}\" on-cancel=\"{{ cancelPick }}\" hint-size=\"390px,844px\"></dc-import>\n</div>\n</sc-if>\n</div>"}, { Logic: (function () {
+  Object.assign({"id":"hearts","name":"Pixel Hearts","tagline":"Screen time, game style","relative":false,"sleep":false,"bars":["#170F31","#170F31"],"lbars":null,"ldir":null,"lsplit":null,"psplit":null,"back":"dark","defaults":{"minutes":30,"speed":"Demo (1 min = 1 s)","bleed":false,"landscape":false},"template":"<div style=\"width: {{ L.w }}px; height: {{ L.h }}px; position: relative; overflow: {{ L.ov }}; background-color: #170F31; background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px); background-size: 12px 12px; font-family: 'Silkscreen', 'Courier New', monospace; color: #EFE6FF\">\n<div aria-hidden=\"true\" style=\"position: absolute; left: -1200px; top: -1200px; right: -1200px; bottom: -1200px; pointer-events: none; display: {{ L.bD }}; background-color: #170F31; background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px); background-size: 12px 12px; background-position: 1200px 1200px\"></div>\n<svg width=\"{{ L.w }}\" height=\"{{ L.h }}\" viewBox=\"{{ L.vb }}\" shape-rendering=\"crispEdges\" aria-hidden=\"true\" style=\"position: absolute; left: 0; top: 0; display: block\">\n<g display=\"{{ L.lD }}\">\n<g fill=\"#4DF0FF\" style=\"animation: ar-blink 1.6s steps(1) infinite\"><rect x=\"66\" y=\"52\" width=\"12\" height=\"4\"></rect><rect x=\"70\" y=\"48\" width=\"4\" height=\"12\"></rect><rect x=\"410\" y=\"334\" width=\"12\" height=\"4\"></rect><rect x=\"414\" y=\"330\" width=\"4\" height=\"12\"></rect></g>\n<g fill=\"#FFE14D\" style=\"animation: ar-blink 2.2s steps(1) -0.7s infinite\"><rect x=\"414\" y=\"44\" width=\"12\" height=\"4\"></rect><rect x=\"418\" y=\"40\" width=\"4\" height=\"12\"></rect><rect x=\"774\" y=\"336\" width=\"12\" height=\"4\"></rect><rect x=\"778\" y=\"332\" width=\"4\" height=\"12\"></rect></g>\n<g fill=\"#FF3B6B\" style=\"animation: ar-blink 1.9s steps(1) -1.1s infinite\"><rect x=\"56\" y=\"322\" width=\"12\" height=\"4\"></rect><rect x=\"60\" y=\"318\" width=\"4\" height=\"12\"></rect><rect x=\"606\" y=\"312\" width=\"12\" height=\"4\"></rect><rect x=\"610\" y=\"308\" width=\"4\" height=\"12\"></rect></g>\n</g>\n<g display=\"{{ L.pD }}\">\n<g fill=\"#4DF0FF\" style=\"animation: ar-blink 1.6s steps(1) infinite\"><rect x=\"38\" y=\"168\" width=\"12\" height=\"4\"></rect><rect x=\"42\" y=\"164\" width=\"4\" height=\"12\"></rect><rect x=\"354\" y=\"558\" width=\"12\" height=\"4\"></rect><rect x=\"358\" y=\"554\" width=\"4\" height=\"12\"></rect></g>\n<g fill=\"#FFE14D\" style=\"animation: ar-blink 2.2s steps(1) -0.7s infinite\"><rect x=\"346\" y=\"174\" width=\"12\" height=\"4\"></rect><rect x=\"350\" y=\"170\" width=\"4\" height=\"12\"></rect><rect x=\"312\" y=\"638\" width=\"12\" height=\"4\"></rect><rect x=\"316\" y=\"634\" width=\"4\" height=\"12\"></rect></g>\n<g fill=\"#FF3B6B\" style=\"animation: ar-blink 1.9s steps(1) -1.1s infinite\"><rect x=\"24\" y=\"590\" width=\"12\" height=\"4\"></rect><rect x=\"28\" y=\"586\" width=\"4\" height=\"12\"></rect></g>\n</g>\n</svg>\n<header style=\"position: absolute; left: {{ L.hL }}px; right: {{ L.hR }}px; top: {{ L.hT }}px; height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 12px\">\n<div style=\"display: flex; align-items: center; gap: 12px\">\n<svg width=\"36\" height=\"24\" viewBox=\"0 0 12 8\" shape-rendering=\"crispEdges\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M2 1h8v1h1v4h-1v1h-2v-1h-4v1h-2v-1h-1v-4h1z\" fill=\"#4DF0FF\"></path><path d=\"M3 3h1v1h1v1h-1v1h-1v-1h-1v-1h1z\" fill=\"#170F31\"></path><path d=\"M8 3h1v1h-1zM9 4h1v1h-1z\" fill=\"#170F31\"></path></svg>\n<h1 style=\"margin: 0; font-family: 'Silkscreen', 'Courier New', monospace; font-weight: 700; font-size: 21px; line-height: 1; color: #4DF0FF; letter-spacing: 0.02em\">Screen time</h1>\n</div>\n</header>\n<div style=\"position: absolute; left: 0; top: 0; width: 390px; height: 844px; pointer-events: none; transform-origin: 0 0; transform: {{ L.cT }}\">\n<sc-for list=\"{{ hearts }}\" as=\"h\" hint-placeholder-count=\"12\">\n<div style=\"position: absolute; left: {{ h.x }}px; top: {{ h.y }}px; width: 54px; height: 48px; animation: {{ h.anim }}\">\n<svg width=\"54\" height=\"48\" viewBox=\"0 0 9 8\" shape-rendering=\"crispEdges\" aria-hidden=\"true\" style=\"position: absolute; left: 0; top: 0; display: block\">\n<path d=\"M2 1h2v1h-2zM5 1h2v1h-2zM1 2h7v2h-7zM2 4h5v1h-5zM3 5h3v1h-3zM4 6h1v1h-1z\" fill=\"#241845\"></path>\n<path d=\"M2 0h2v1h-2zM5 0h2v1h-2zM1 1h1v1h-1zM4 1h1v1h-1zM7 1h1v1h-1zM0 2h1v2h-1zM8 2h1v2h-1zM1 4h1v1h-1zM7 4h1v1h-1zM2 5h1v1h-1zM6 5h1v1h-1zM3 6h1v1h-1zM5 6h1v1h-1zM4 7h1v1h-1z\" fill=\"#8F7FD0\"></path>\n</svg>\n<div style=\"position: absolute; left: 0; bottom: 0; width: 54px; height: {{ h.h }}px; overflow: hidden\">\n<svg width=\"54\" height=\"48\" viewBox=\"0 0 9 8\" shape-rendering=\"crispEdges\" aria-hidden=\"true\" style=\"position: absolute; left: 0; bottom: 0; display: block\">\n<path d=\"M2 1h2v1h-2zM5 1h2v1h-2zM1 2h7v2h-7zM2 4h5v1h-5zM3 5h3v1h-3zM4 6h1v1h-1z\" fill=\"#FF3B6B\"></path>\n<path d=\"M7 2h1v2h-1zM6 4h1v1h-1zM5 5h1v1h-1z\" fill=\"#C2185B\"></path>\n<path d=\"M2 1h1v2h-1z\" fill=\"#FFFFFF\"></path>\n<path d=\"M2 0h2v1h-2zM5 0h2v1h-2zM1 1h1v1h-1zM4 1h1v1h-1zM7 1h1v1h-1zM0 2h1v2h-1zM8 2h1v2h-1zM1 4h1v1h-1zM7 4h1v1h-1zM2 5h1v1h-1zM6 5h1v1h-1zM3 6h1v1h-1zM5 6h1v1h-1zM4 7h1v1h-1z\" fill=\"#FFD6E2\"></path>\n</svg>\n</div>\n</div>\n</sc-for>\n<div role=\"img\" aria-label=\"{{ ariaLabel }}\" style=\"position: absolute; left: 95px; top: 300px; width: 200px; height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center\">\n<sc-if value=\"{{ notDone }}\" hint-placeholder-val=\"{{ true }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 8px\">\n<div style=\"font-family: 'Silkscreen', 'Courier New', monospace; font-size: 13px; color: #A99BE6; letter-spacing: 0.12em\">Time left</div>\n<div style=\"font-family: 'Silkscreen', 'Courier New', monospace; font-weight: 700; font-size: {{ timeSize }}px; line-height: 1; color: #FFFFFF; text-shadow: 4px 4px 0 #FF3B6B; font-variant-numeric: tabular-nums\">{{ time }}</div>\n<div style=\"max-width: 176px; font-family: 'Silkscreen', 'Courier New', monospace; font-size: 12px; line-height: 1.35; color: #FFE14D; letter-spacing: 0.04em; text-wrap: balance\">{{ heartsLabel }}</div>\n</div>\n</sc-if>\n<sc-if value=\"{{ done }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 12px\">\n<div style=\"display: flex; flex-direction: column; align-items: center; font-family: 'Silkscreen', 'Courier New', monospace; font-weight: 700; font-size: 40px; line-height: 0.95; color: #FFFFFF; text-shadow: 4px 4px 0 #FF3B6B; animation: ar-blink 1s steps(1) infinite\">\n<span>Game</span>\n<span>over</span>\n</div>\n<div style=\"font-family: 'Silkscreen', 'Courier New', monospace; font-size: 13px; color: #FFE14D\">Break time!</div>\n</div>\n</sc-if>\n</div>\n</div>\n<div style=\"position: absolute; left: {{ L.pL }}px; right: {{ L.pR }}px; top: {{ L.kT }}px; transform: {{ L.mid }}; display: flex; align-items: center; justify-content: center; gap: 16px\">\n<button type=\"button\" onClick=\"{{ setTime }}\" aria-label=\"Set the time\" style=\"width: 72px; height: 64px; padding: 0; border: 3px solid #EFE6FF; border-radius: 0; background: #2A1D55; color: #EFE6FF; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 5px 5px 0 #000000\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M10 2h4M12 14l3-3\"></path><circle cx=\"12\" cy=\"14\" r=\"8\"></circle></svg></button>\n<button type=\"button\" onClick=\"{{ toggle }}\" aria-label=\"{{ toggleLabel }}\" style=\"width: 150px; height: 64px; padding: 0 14px; border: 3px solid #EFE6FF; border-radius: 0; background: #FFE14D; color: #170F31; display: flex; align-items: center; justify-content: center; font-family: 'Silkscreen', 'Courier New', monospace; font-size: 20px; font-weight: 700; cursor: pointer; box-shadow: 5px 5px 0 #000000\">\n<sc-if value=\"{{ showPlay }}\" hint-placeholder-val=\"{{ true }}\"><span style=\"display: flex; align-items: center; gap: 12px\"><svg width=\"12\" height=\"21\" viewBox=\"0 0 4 7\" shape-rendering=\"crispEdges\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M0 0h1v7h-1zM1 1h1v5h-1zM2 2h1v3h-1zM3 3h1v1h-1z\" fill=\"currentColor\"></path></svg><span>Start</span></span></sc-if>\n<sc-if value=\"{{ running }}\" hint-placeholder-val=\"{{ false }}\"><span style=\"display: flex; align-items: center; gap: 12px\"><svg width=\"15\" height=\"21\" viewBox=\"0 0 5 7\" shape-rendering=\"crispEdges\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M0 0h2v7h-2zM3 0h2v7h-2z\" fill=\"currentColor\"></path></svg><span>Pause</span></span></sc-if>\n<sc-if value=\"{{ showReplay }}\" hint-placeholder-val=\"{{ false }}\"><span style=\"display: flex; align-items: center; gap: 12px\"><svg width=\"12\" height=\"21\" viewBox=\"0 0 4 7\" shape-rendering=\"crispEdges\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M0 0h1v7h-1zM1 1h1v5h-1zM2 2h1v3h-1zM3 3h1v1h-1z\" fill=\"currentColor\"></path></svg><span>Again</span></span></sc-if>\n</button>\n<button type=\"button\" onClick=\"{{ reset }}\" aria-label=\"Reset timer\" style=\"width: 72px; height: 64px; padding: 0; border: 3px solid #EFE6FF; border-radius: 0; background: #2A1D55; color: #EFE6FF; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 5px 5px 0 #000000\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></button>\n</div>\n<div aria-hidden=\"true\" style=\"position: absolute; left: {{ L.bI }}px; top: {{ L.bI }}px; right: {{ L.bI }}px; bottom: {{ L.bI }}px; pointer-events: none; background-image: repeating-linear-gradient(180deg, rgba(0, 0, 0, 0.16) 0px, rgba(0, 0, 0, 0.16) 1px, transparent 1px, transparent 3px)\"></div>\n<sc-if value=\"{{ picking }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"position: absolute; left: 0; top: 0; width: {{ L.w }}px; height: {{ L.h }}px; z-index: 20\">\n<dc-import name=\"TimePicker\" value=\"{{ pickValue }}\" mode=\"duration\" heading=\"Set time\" accent=\"#FFE14D\" accent-ink=\"#170F31\" dark=\"{{ true }}\" landscape=\"{{ L.land }}\" bleed=\"{{ L.B }}\" on-set=\"{{ applyTime }}\" on-cancel=\"{{ cancelPick }}\" hint-size=\"390px,844px\"></dc-import>\n</div>\n</sc-if>\n</div>"}, { Logic: (function () {
 class Component extends DCLogic {
   componentDidMount() {
     this.last = Date.now();
@@ -735,35 +781,61 @@ class Component extends DCLogic {
       kT: land ? 214 : 708
     };
   }
-  scale(total) {
-    // The picture's full size: the smallest of 1 minute, 12 minutes, 1 hour,
-    // 2 hours and 12 hours that holds the time that was set. Each keeps whole
-    // numbers on the labels; n() turns seconds into the labels' unit.
-    const C = [60, 720, 3600, 7200, 43200].find((x) => total <= x) || 43200;
-    const u = C === 60 ? 1 : C === 43200 ? 3600 : 60;
-    return { C: C, n: (sec) => sec / u };
-  }
-  unitName(v, short) {
-    if (v < 60) return short ? v + ' sec' : v === 1 ? 'second' : v + ' seconds';
-    if (v < 3600) {
-      const m = v / 60;
-      return short ? m + ' min' : m === 1 ? 'minute' : m + ' minutes';
+  parts(total, maxN) {
+    // The picture always starts full: split the set time into at most maxN
+    // equal parts of the shortest round length that fits (5 seconds,
+    // 1 minute, 5 minutes...). An odd time is split into maxN equal parts.
+    const nice = [1, 2, 5, 10, 15, 20, 30, 60, 120, 180, 300, 600, 900, 1200, 1800, 3600, 7200, 10800];
+    const t = Math.max(1, total);
+    for (let i = 0; i < nice.length; i++) {
+      const n = t / nice[i];
+      if (n <= maxN + 1e-9 && Math.abs(n - Math.round(n)) < 1e-9) return { n: Math.max(1, Math.round(n)), u: nice[i], round: true };
     }
-    const h = v / 3600;
-    return short ? (h === 1 ? '1 hour' : h + ' hours') : h === 1 ? 'hour' : h + ' hours';
+    return { n: maxN, u: t / maxN, round: false };
+  }
+  span(v) {
+    // A length of time in words: 5 sec, 7.5 sec, 1 min, 2 hours, 4 min 10 sec.
+    if (v < 60 && Math.abs(v - Math.round(v)) >= 0.05) return Math.round(v * 10) / 10 + ' sec';
+    v = Math.round(v);
+    const h = Math.floor(v / 3600);
+    const m = Math.floor((v % 3600) / 60);
+    const s = v % 60;
+    const out = [];
+    if (h) out.push(h === 1 ? '1 hour' : h + ' hours');
+    if (m) out.push(m + ' min');
+    if (s || !out.length) out.push(s + ' sec');
+    return out.join(' ');
+  }
+  mark(v, u, total) {
+    // A number on the face for v seconds, in the unit the marks step in.
+    if (v === 0) return '0';
+    if (u % 3600 === 0) return String(v / 3600);
+    if (u % 60 === 0) return total > 3600 ? Math.floor(v / 3600) + ':' + String((v % 3600) / 60).padStart(2, '0') : String(v / 60);
+    if (total <= 60) return String(v);
+    return Math.floor(v / 60) + ':' + String(v % 60).padStart(2, '0');
+  }
+  short(v) {
+    // An uneven length kept short enough for the ring: 3.9 sec, 6:43, 1:02:03.
+    if (v < 60) return this.span(v);
+    v = Math.round(v);
+    const h = Math.floor(v / 3600);
+    const m = Math.floor((v % 3600) / 60);
+    const s = String(v % 60).padStart(2, '0');
+    return h ? h + ':' + String(m).padStart(2, '0') + ':' + s : m + ':' + s;
   }
   renderVals() {
     const c = this.cur();
-    const S = this.scale(c.total);
-    const remMin = c.rem / S.C * 60;
+    // Every heart starts full: the set time is shared out in round lengths.
+    const P = this.parts(c.total, 12);
+    const per = P.u;
     const cum = [0, 1, 4, 9, 16, 23, 27];
     let active = -1;
-    for (let k = 0; k < 12; k++) {
-      if (remMin - 5 * k > 0) active = k;
+    for (let k = 0; k < P.n; k++) {
+      if (c.rem - per * k > 0) active = k;
     }
     const hearts = [];
-    for (let k = 0; k < 12; k++) {
-      const f = Math.max(0, Math.min(1, (remMin - 5 * k) / 5));
+    for (let k = 0; k < P.n; k++) {
+      const f = Math.max(0, Math.min(1, (c.rem - per * k) / per));
       let rows = 0;
       if (f > 0) {
         rows = 6;
@@ -772,7 +844,7 @@ class Component extends DCLogic {
           if (cum[j] >= need) { rows = j; break; }
         }
       }
-      const a = (k + 0.5) * Math.PI / 6;
+      const a = ((k + 0.5) * Math.PI * 2) / P.n;
       hearts.push({
         x: (195 + 128 * Math.sin(a) - 27).toFixed(1),
         y: (370 - 128 * Math.cos(a) - 24).toFixed(1),
@@ -780,15 +852,15 @@ class Component extends DCLogic {
         anim: c.running && k === active ? 'ar-beat 0.9s steps(1) infinite' : 'none'
       });
     }
-    const n = Math.min(12, Math.max(0, Math.ceil(c.rem / (S.C / 12) - 1e-9)));
+    const n = Math.min(P.n, Math.max(0, Math.ceil(c.rem / per - 1e-9)));
     const done = c.rem <= 0;
     const time = this.fmt(c.rem);
     return {
       L: this.lay(),
       hearts: hearts,
-      heartsLabel: (n === 1 ? '1 heart' : n + ' hearts') + ' · ' + this.unitName(S.C / 12, true) + ' each',
+      heartsLabel: (n === 1 ? '1 heart' : n + ' hearts') + ' · ' + (P.round ? this.span(per) : this.short(per)) + ' each',
       time: time,
-      timeSize: time.length > 5 ? 34 : 48,
+      timeSize: time.length > 7 ? 28 : time.length > 5 ? 34 : 48,
       done: done,
       notDone: !done,
       running: c.running,
@@ -1139,7 +1211,7 @@ class Component extends DCLogic {
       const b = this.rnd(k * 3 + 2);
       const c = this.rnd(k * 3 + 3);
       out.push({
-        ang: k * 6 + 3 + (a - 0.5) * 3.4,
+        j: (a - 0.5) * 0.57,
         len: Math.round(74 + b * 32),
         dx: Math.round(120 + c * 160),
         dy: Math.round(-150 - a * 190),
@@ -1179,37 +1251,59 @@ class Component extends DCLogic {
       kT: land ? 290 : 728
     };
   }
-  scale(total) {
-    // The picture's full size: the smallest of 1 minute, 12 minutes, 1 hour,
-    // 2 hours and 12 hours that holds the time that was set. Each keeps whole
-    // numbers on the labels; n() turns seconds into the labels' unit.
-    const C = [60, 720, 3600, 7200, 43200].find((x) => total <= x) || 43200;
-    const u = C === 60 ? 1 : C === 43200 ? 3600 : 60;
-    return { C: C, n: (sec) => sec / u };
-  }
-  unitName(v, short) {
-    if (v < 60) return short ? v + ' sec' : v === 1 ? 'second' : v + ' seconds';
-    if (v < 3600) {
-      const m = v / 60;
-      return short ? m + ' min' : m === 1 ? 'minute' : m + ' minutes';
+  parts(total, maxN) {
+    // The picture always starts full: split the set time into at most maxN
+    // equal parts of the shortest round length that fits (5 seconds,
+    // 1 minute, 5 minutes...). An odd time is split into maxN equal parts.
+    const nice = [1, 2, 5, 10, 15, 20, 30, 60, 120, 180, 300, 600, 900, 1200, 1800, 3600, 7200, 10800];
+    const t = Math.max(1, total);
+    for (let i = 0; i < nice.length; i++) {
+      const n = t / nice[i];
+      if (n <= maxN + 1e-9 && Math.abs(n - Math.round(n)) < 1e-9) return { n: Math.max(1, Math.round(n)), u: nice[i], round: true };
     }
-    const h = v / 3600;
-    return short ? (h === 1 ? '1 hour' : h + ' hours') : h === 1 ? 'hour' : h + ' hours';
+    return { n: maxN, u: t / maxN, round: false };
+  }
+  span(v) {
+    // A length of time in words: 5 sec, 7.5 sec, 1 min, 2 hours, 4 min 10 sec.
+    if (v < 60 && Math.abs(v - Math.round(v)) >= 0.05) return Math.round(v * 10) / 10 + ' sec';
+    v = Math.round(v);
+    const h = Math.floor(v / 3600);
+    const m = Math.floor((v % 3600) / 60);
+    const s = v % 60;
+    const out = [];
+    if (h) out.push(h === 1 ? '1 hour' : h + ' hours');
+    if (m) out.push(m + ' min');
+    if (s || !out.length) out.push(s + ' sec');
+    return out.join(' ');
+  }
+  mark(v, u, total) {
+    // A number on the face for v seconds, in the unit the marks step in.
+    if (v === 0) return '0';
+    if (u % 3600 === 0) return String(v / 3600);
+    if (u % 60 === 0) return total > 3600 ? Math.floor(v / 3600) + ':' + String((v % 3600) / 60).padStart(2, '0') : String(v / 60);
+    if (total <= 60) return String(v);
+    return Math.floor(v / 60) + ':' + String(v % 60).padStart(2, '0');
   }
   renderVals() {
     const c = this.cur();
-    const S = this.scale(c.total);
-    const left = Math.max(0, Math.min(60, Math.ceil(c.rem / (S.C / 60) - 1e-9)));
-    const qv = S.n(S.C / 4);
-    const q = [4 * qv, qv, 2 * qv, 3 * qv];
-    const seeds = this.seedData().map((s, k) => {
+    // A full head of seeds for any time, one seed for each round length.
+    const P = this.parts(c.total, 60);
+    const left = Math.max(0, Math.min(P.n, Math.ceil(c.rem / P.u - 1e-9)));
+    const q4 = c.total / 4;
+    // Quarter marks when they land on whole minutes (or whole seconds up to an
+    // hour), written like the other faces: 40 · 10 · 20 · 30, 5:00 · 1:15 · 2:30 · 3:45.
+    const qRound = q4 % 60 === 0 || (Number.isInteger(q4) && c.total <= 3600);
+    const q = qRound ? [c.total, q4, 2 * q4, 3 * q4].map((v) => this.mark(v, q4, c.total)) : ['', '', '', ''];
+    const step = 360 / P.n;
+    const seeds = this.seedData().slice(0, P.n).map((s, k) => {
       const on = k < left;
+      const ang = (k + 0.5) * step + s.j * Math.min(step, 6);
       return {
         len: s.len,
         top: 290 - s.len,
         ach: s.len - 9,
         stem: 'M15 ' + s.len + 'L15 12',
-        tf: on ? 'translate(0px, 0px) rotate(' + s.ang.toFixed(1) + 'deg)' : 'translate(' + s.dx + 'px, ' + s.dy + 'px) rotate(' + (s.ang + s.spin).toFixed(1) + 'deg)',
+        tf: on ? 'translate(0px, 0px) rotate(' + ang.toFixed(1) + 'deg)' : 'translate(' + s.dx + 'px, ' + s.dy + 'px) rotate(' + (ang + s.spin).toFixed(1) + 'deg)',
         op: on ? s.op : 0
       };
     });
@@ -1218,7 +1312,7 @@ class Component extends DCLogic {
     return {
       L: this.lay(),
       seeds: seeds,
-      seedsLabel: (left === 1 ? '1 seed left' : left + ' seeds left') + ' · one for every ' + this.unitName(S.C / 60, false),
+      seedsLabel: (left === 1 ? '1 seed left' : left + ' seeds left') + ' · one for every ' + (P.round && [1, 60, 3600].indexOf(P.u) >= 0 ? ({ 1: 'second', 60: 'minute', 3600: 'hour' })[P.u] : this.span(P.u)),
       F: { a: q[0], b: q[1], c: q[2], d: q[3] },
       windOp: c.running ? 1 : 0,
       time: time,
@@ -1433,7 +1527,7 @@ class Component extends DCLogic {
 }
 return Component;
 })() }),
-  Object.assign({"id":"classic","name":"Classic Glow","tagline":"Drag the dial to set it","relative":false,"sleep":false,"bars":["#111215","#111215"],"lbars":null,"ldir":null,"lsplit":null,"psplit":null,"back":"dark","defaults":{"minutes":25,"accent":"#FF5A3C","speed":"Demo (1 min = 1 s)","bleed":false,"landscape":false},"template":"<div style=\"width: {{ L.w }}px; height: {{ L.h }}px; position: relative; overflow: {{ L.ov }}; background: #111215; font-family: 'Inter', system-ui, sans-serif; color: #F2F2F4\">\n<div aria-hidden=\"true\" style=\"position: absolute; left: -1200px; top: -1200px; right: -1200px; bottom: -1200px; pointer-events: none; display: {{ L.bD }}; background: #111215\"></div>\n<header style=\"position: absolute; left: {{ L.hL }}px; right: {{ L.hR }}px; top: {{ L.hT }}px; height: 52px; display: flex; align-items: center; gap: 12px\">\n<h1 style=\"margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 24px; font-weight: 600; line-height: 1.15; letter-spacing: -0.01em\">Piano practice</h1>\n</header>\n<svg width=\"340\" height=\"340\" viewBox=\"0 0 340 340\" role=\"img\" aria-label=\"{{ ariaLabel }}\" onPointerDown=\"{{ dragStart }}\" onPointerMove=\"{{ dragMove }}\" onPointerUp=\"{{ dragEnd }}\" onPointerCancel=\"{{ dragEnd }}\" style=\"position: absolute; left: {{ L.dX }}px; top: {{ L.dY }}px; display: block; touch-action: none; cursor: grab\">\n<circle cx=\"170\" cy=\"170\" r=\"168\" fill=\"#1A1B20\"></circle>\n<circle cx=\"170\" cy=\"170\" r=\"167\" fill=\"none\" stroke=\"{{ bezel }}\" stroke-width=\"2\" style=\"transition: stroke 0.6s ease\"></circle>\n<path d=\"M32.3 90.5A159 159 0 0 1 307.7 90.5\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.05\" stroke-width=\"8\" stroke-linecap=\"round\"></path>\n<circle cx=\"170\" cy=\"170\" r=\"150\" fill=\"#16171B\"></circle>\n<circle cx=\"170\" cy=\"170\" r=\"147\" fill=\"none\" stroke=\"#0B0C0E\" stroke-width=\"6\" stroke-opacity=\"0.7\"></circle>\n<path d=\"{{ ticksMinor }}\" fill=\"none\" stroke=\"#4A4D57\" stroke-width=\"1.6\" stroke-linecap=\"round\"></path>\n<path d=\"{{ ticksMajor }}\" fill=\"none\" stroke=\"#C9CCD4\" stroke-width=\"2.6\" stroke-linecap=\"round\"></path>\n<g fill=\"#9EA1AA\" font-family=\"'Space Grotesk', system-ui, sans-serif\" font-size=\"15\" font-weight=\"500\" text-anchor=\"middle\" dominant-baseline=\"central\">\n<text x=\"170\" y=\"49\">{{ F.n0 }}</text>\n<text x=\"230.5\" y=\"65.2\">{{ F.n1 }}</text>\n<text x=\"274.8\" y=\"109.5\">{{ F.n2 }}</text>\n<text x=\"291\" y=\"170\">{{ F.n3 }}</text>\n<text x=\"274.8\" y=\"230.5\">{{ F.n4 }}</text>\n<text x=\"230.5\" y=\"274.8\">{{ F.n5 }}</text>\n<text x=\"170\" y=\"291\">{{ F.n6 }}</text>\n<text x=\"109.5\" y=\"274.8\">{{ F.n7 }}</text>\n<text x=\"65.2\" y=\"230.5\">{{ F.n8 }}</text>\n<text x=\"49\" y=\"170\">{{ F.n9 }}</text>\n<text x=\"65.2\" y=\"109.5\">{{ F.n10 }}</text>\n<text x=\"109.5\" y=\"65.2\">{{ F.n11 }}</text>\n</g>\n<circle cx=\"170\" cy=\"170\" r=\"104\" fill=\"#1E2025\"></circle>\n<path d=\"{{ wedge }}\" fill=\"{{ accent }}\" style=\"filter: drop-shadow(0 0 18px {{ glow }}); animation: {{ pulse }}\"></path>\n<path d=\"{{ hand }}\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"3\" stroke-linecap=\"round\" opacity=\"0.92\"></path>\n<circle cx=\"170\" cy=\"170\" r=\"24\" fill=\"#2A2C33\"></circle>\n<circle cx=\"170\" cy=\"170\" r=\"23.5\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.08\"></circle>\n<circle cx=\"170\" cy=\"170\" r=\"7\" fill=\"{{ accent }}\"></circle>\n</svg>\n<div style=\"position: absolute; left: {{ L.pL }}px; right: {{ L.pR }}px; top: {{ L.hintT }}px; display: flex; justify-content: center; height: 18px\">\n<sc-if value=\"{{ showHint }}\" hint-placeholder-val=\"{{ true }}\">\n<div style=\"font-size: 13px; font-weight: 500; line-height: 18px; color: #8B8E98\">Drag the dial to set the time</div>\n</sc-if>\n</div>\n<div style=\"position: absolute; left: {{ L.pL }}px; right: {{ L.pR }}px; top: {{ L.rT }}px; transform: {{ L.mid }}; display: flex; flex-direction: column; align-items: center\">\n<sc-if value=\"{{ notDone }}\" hint-placeholder-val=\"{{ true }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 6px\">\n<div style=\"font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 68px; font-weight: 300; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums\">{{ time }}</div>\n<div style=\"font-size: 15px; font-weight: 500; color: #A3A6AF\">{{ endsAt }}</div>\n</div>\n</sc-if>\n<sc-if value=\"{{ done }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 8px\">\n<div style=\"font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 54px; font-weight: 400; line-height: 1\">Time's up</div>\n<div style=\"font-size: 15px; font-weight: 500; color: #A3A6AF\">Nicely done.</div>\n</div>\n</sc-if>\n</div>\n<div style=\"position: absolute; left: {{ L.pL }}px; right: {{ L.pR }}px; top: {{ L.kT }}px; transform: {{ L.mid }}; display: flex; align-items: center; justify-content: center; gap: 30px\">\n<button type=\"button\" onClick=\"{{ setTime }}\" aria-label=\"Set the time\" style=\"width: 60px; height: 60px; padding: 0; border: 1px solid #2C2E35; border-radius: 999px; background: #1C1D22; color: #D6D8DE; display: flex; align-items: center; justify-content: center; cursor: pointer\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M10 2h4M12 14l3-3\"></path><circle cx=\"12\" cy=\"14\" r=\"8\"></circle></svg></button>\n<button type=\"button\" onClick=\"{{ toggle }}\" aria-label=\"{{ toggleLabel }}\" style=\"width: 88px; height: 88px; padding: 0; border: none; border-radius: 999px; background: {{ accent }}; color: #111215; display: flex; align-items: center; justify-content: center; cursor: pointer\">\n<sc-if value=\"{{ showPlay }}\" hint-placeholder-val=\"{{ true }}\"><svg width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block; margin-left: 3px\"><path d=\"M8 5.14v13.72a1 1 0 0 0 1.52.85l10.79-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14z\" fill=\"currentColor\"></path></svg></sc-if>\n<sc-if value=\"{{ running }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block\"><rect x=\"6\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect><rect x=\"13.5\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect></svg></sc-if>\n<sc-if value=\"{{ showReplay }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></sc-if>\n</button>\n<button type=\"button\" onClick=\"{{ reset }}\" aria-label=\"Reset timer\" style=\"width: 60px; height: 60px; padding: 0; border: 1px solid #2C2E35; border-radius: 999px; background: #1C1D22; color: #D6D8DE; display: flex; align-items: center; justify-content: center; cursor: pointer\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></button>\n</div>\n<sc-if value=\"{{ picking }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"position: absolute; left: 0; top: 0; width: {{ L.w }}px; height: {{ L.h }}px; z-index: 20\">\n<dc-import name=\"TimePicker\" value=\"{{ pickValue }}\" mode=\"duration\" heading=\"Set time\" accent=\"{{ accent }}\" accent-ink=\"#111215\" dark=\"{{ true }}\" landscape=\"{{ L.land }}\" bleed=\"{{ L.B }}\" on-set=\"{{ applyTime }}\" on-cancel=\"{{ cancelPick }}\" hint-size=\"390px,844px\"></dc-import>\n</div>\n</sc-if>\n</div>"}, { Logic: (function () {
+  Object.assign({"id":"classic","name":"Classic Glow","tagline":"Drag the dial to set it","relative":false,"sleep":false,"bars":["#111215","#111215"],"lbars":null,"ldir":null,"lsplit":null,"psplit":null,"back":"dark","defaults":{"minutes":25,"accent":"#FF5A3C","speed":"Demo (1 min = 1 s)","bleed":false,"landscape":false},"template":"<div style=\"width: {{ L.w }}px; height: {{ L.h }}px; position: relative; overflow: {{ L.ov }}; background: #111215; font-family: 'Inter', system-ui, sans-serif; color: #F2F2F4\">\n<div aria-hidden=\"true\" style=\"position: absolute; left: -1200px; top: -1200px; right: -1200px; bottom: -1200px; pointer-events: none; display: {{ L.bD }}; background: #111215\"></div>\n<header style=\"position: absolute; left: {{ L.hL }}px; right: {{ L.hR }}px; top: {{ L.hT }}px; height: 52px; display: flex; align-items: center; gap: 12px\">\n<h1 style=\"margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 24px; font-weight: 600; line-height: 1.15; letter-spacing: -0.01em\">Piano practice</h1>\n</header>\n<svg width=\"340\" height=\"340\" viewBox=\"0 0 340 340\" role=\"img\" aria-label=\"{{ ariaLabel }}\" onPointerDown=\"{{ dragStart }}\" onPointerMove=\"{{ dragMove }}\" onPointerUp=\"{{ dragEnd }}\" onPointerCancel=\"{{ dragEnd }}\" style=\"position: absolute; left: {{ L.dX }}px; top: {{ L.dY }}px; display: block; touch-action: none; cursor: grab\">\n<circle cx=\"170\" cy=\"170\" r=\"168\" fill=\"#1A1B20\"></circle>\n<circle cx=\"170\" cy=\"170\" r=\"167\" fill=\"none\" stroke=\"{{ bezel }}\" stroke-width=\"2\" style=\"transition: stroke 0.6s ease\"></circle>\n<path d=\"M32.3 90.5A159 159 0 0 1 307.7 90.5\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.05\" stroke-width=\"8\" stroke-linecap=\"round\"></path>\n<circle cx=\"170\" cy=\"170\" r=\"150\" fill=\"#16171B\"></circle>\n<circle cx=\"170\" cy=\"170\" r=\"147\" fill=\"none\" stroke=\"#0B0C0E\" stroke-width=\"6\" stroke-opacity=\"0.7\"></circle>\n<path d=\"{{ ticksMinor }}\" fill=\"none\" stroke=\"#4A4D57\" stroke-width=\"1.6\" stroke-linecap=\"round\"></path>\n<path d=\"{{ ticksMajor }}\" fill=\"none\" stroke=\"#C9CCD4\" stroke-width=\"2.6\" stroke-linecap=\"round\"></path>\n<g fill=\"#9EA1AA\" font-family=\"'Space Grotesk', system-ui, sans-serif\" font-size=\"15\" font-weight=\"500\" text-anchor=\"middle\" dominant-baseline=\"central\">\n<text x=\"{{ F.x0 }}\" y=\"{{ F.y0 }}\">{{ F.n0 }}</text>\n<text x=\"{{ F.x1 }}\" y=\"{{ F.y1 }}\">{{ F.n1 }}</text>\n<text x=\"{{ F.x2 }}\" y=\"{{ F.y2 }}\">{{ F.n2 }}</text>\n<text x=\"{{ F.x3 }}\" y=\"{{ F.y3 }}\">{{ F.n3 }}</text>\n<text x=\"{{ F.x4 }}\" y=\"{{ F.y4 }}\">{{ F.n4 }}</text>\n<text x=\"{{ F.x5 }}\" y=\"{{ F.y5 }}\">{{ F.n5 }}</text>\n<text x=\"{{ F.x6 }}\" y=\"{{ F.y6 }}\">{{ F.n6 }}</text>\n<text x=\"{{ F.x7 }}\" y=\"{{ F.y7 }}\">{{ F.n7 }}</text>\n<text x=\"{{ F.x8 }}\" y=\"{{ F.y8 }}\">{{ F.n8 }}</text>\n<text x=\"{{ F.x9 }}\" y=\"{{ F.y9 }}\">{{ F.n9 }}</text>\n<text x=\"{{ F.x10 }}\" y=\"{{ F.y10 }}\">{{ F.n10 }}</text>\n<text x=\"{{ F.x11 }}\" y=\"{{ F.y11 }}\">{{ F.n11 }}</text>\n</g>\n<circle cx=\"170\" cy=\"170\" r=\"104\" fill=\"#1E2025\"></circle>\n<path d=\"{{ wedge }}\" fill=\"{{ accent }}\" style=\"filter: drop-shadow(0 0 18px {{ glow }}); animation: {{ pulse }}\"></path>\n<path d=\"{{ hand }}\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"3\" stroke-linecap=\"round\" opacity=\"0.92\"></path>\n<circle cx=\"170\" cy=\"170\" r=\"24\" fill=\"#2A2C33\"></circle>\n<circle cx=\"170\" cy=\"170\" r=\"23.5\" fill=\"none\" stroke=\"#FFFFFF\" stroke-opacity=\"0.08\"></circle>\n<circle cx=\"170\" cy=\"170\" r=\"7\" fill=\"{{ accent }}\"></circle>\n</svg>\n<div style=\"position: absolute; left: {{ L.pL }}px; right: {{ L.pR }}px; top: {{ L.hintT }}px; display: flex; justify-content: center; height: 18px\">\n<sc-if value=\"{{ showHint }}\" hint-placeholder-val=\"{{ true }}\">\n<div style=\"font-size: 13px; font-weight: 500; line-height: 18px; color: #8B8E98\">Drag the dial to set the time</div>\n</sc-if>\n</div>\n<div style=\"position: absolute; left: {{ L.pL }}px; right: {{ L.pR }}px; top: {{ L.rT }}px; transform: {{ L.mid }}; display: flex; flex-direction: column; align-items: center\">\n<sc-if value=\"{{ notDone }}\" hint-placeholder-val=\"{{ true }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 6px\">\n<div style=\"font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 68px; font-weight: 300; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums\">{{ time }}</div>\n<div style=\"font-size: 15px; font-weight: 500; color: #A3A6AF\">{{ endsAt }}</div>\n</div>\n</sc-if>\n<sc-if value=\"{{ done }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"display: flex; flex-direction: column; align-items: center; gap: 8px\">\n<div style=\"font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 54px; font-weight: 400; line-height: 1\">Time's up</div>\n<div style=\"font-size: 15px; font-weight: 500; color: #A3A6AF\">Nicely done.</div>\n</div>\n</sc-if>\n</div>\n<div style=\"position: absolute; left: {{ L.pL }}px; right: {{ L.pR }}px; top: {{ L.kT }}px; transform: {{ L.mid }}; display: flex; align-items: center; justify-content: center; gap: 30px\">\n<button type=\"button\" onClick=\"{{ setTime }}\" aria-label=\"Set the time\" style=\"width: 60px; height: 60px; padding: 0; border: 1px solid #2C2E35; border-radius: 999px; background: #1C1D22; color: #D6D8DE; display: flex; align-items: center; justify-content: center; cursor: pointer\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M10 2h4M12 14l3-3\"></path><circle cx=\"12\" cy=\"14\" r=\"8\"></circle></svg></button>\n<button type=\"button\" onClick=\"{{ toggle }}\" aria-label=\"{{ toggleLabel }}\" style=\"width: 88px; height: 88px; padding: 0; border: none; border-radius: 999px; background: {{ accent }}; color: #111215; display: flex; align-items: center; justify-content: center; cursor: pointer\">\n<sc-if value=\"{{ showPlay }}\" hint-placeholder-val=\"{{ true }}\"><svg width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block; margin-left: 3px\"><path d=\"M8 5.14v13.72a1 1 0 0 0 1.52.85l10.79-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14z\" fill=\"currentColor\"></path></svg></sc-if>\n<sc-if value=\"{{ running }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" style=\"display: block\"><rect x=\"6\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect><rect x=\"13.5\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.4\" fill=\"currentColor\"></rect></svg></sc-if>\n<sc-if value=\"{{ showReplay }}\" hint-placeholder-val=\"{{ false }}\"><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></sc-if>\n</button>\n<button type=\"button\" onClick=\"{{ reset }}\" aria-label=\"Reset timer\" style=\"width: 60px; height: 60px; padding: 0; border: 1px solid #2C2E35; border-radius: 999px; background: #1C1D22; color: #D6D8DE; display: flex; align-items: center; justify-content: center; cursor: pointer\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" style=\"display: block\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></button>\n</div>\n<sc-if value=\"{{ picking }}\" hint-placeholder-val=\"{{ false }}\">\n<div style=\"position: absolute; left: 0; top: 0; width: {{ L.w }}px; height: {{ L.h }}px; z-index: 20\">\n<dc-import name=\"TimePicker\" value=\"{{ pickValue }}\" mode=\"duration\" heading=\"Set time\" accent=\"{{ accent }}\" accent-ink=\"#111215\" dark=\"{{ true }}\" landscape=\"{{ L.land }}\" bleed=\"{{ L.B }}\" on-set=\"{{ applyTime }}\" on-cancel=\"{{ cancelPick }}\" hint-size=\"390px,844px\"></dc-import>\n</div>\n</sc-if>\n</div>"}, { Logic: (function () {
 class Component extends DCLogic {
   componentDidMount() {
     this.last = Date.now();
@@ -1545,7 +1639,9 @@ class Component extends DCLogic {
   dragStart(e) {
     this.dragging = true;
     this.dragC = this.dial();
-    this.setState({ C: this.dragC });
+    // While turning, the dial shows a fixed round scale; let go and it fills
+    // up for the time that was set.
+    this.setState({ C: this.dragC, setting: true });
     this.dragPrev = null;
     try {
       if (e.currentTarget && e.currentTarget.setPointerCapture) e.currentTarget.setPointerCapture(e.pointerId);
@@ -1556,6 +1652,7 @@ class Component extends DCLogic {
     if (this.dragging) this.fromEvent(e);
   }
   dragEnd() {
+    if (this.dragging) this.setState({ setting: false });
     this.dragC = null;
     this.dragging = false;
   }
@@ -1635,30 +1732,124 @@ class Component extends DCLogic {
     const u = C === 60 ? 1 : C === 43200 ? 3600 : 60;
     return { C: C, n: (sec) => sec / u };
   }
-  unitName(v, short) {
-    if (v < 60) return short ? v + ' sec' : v === 1 ? 'second' : v + ' seconds';
-    if (v < 3600) {
-      const m = v / 60;
-      return short ? m + ' min' : m === 1 ? 'minute' : m + ' minutes';
+  parts(total, maxN) {
+    // The picture always starts full: split the set time into at most maxN
+    // equal parts of the shortest round length that fits (5 seconds,
+    // 1 minute, 5 minutes...). An odd time is split into maxN equal parts.
+    const nice = [1, 2, 5, 10, 15, 20, 30, 60, 120, 180, 300, 600, 900, 1200, 1800, 3600, 7200, 10800];
+    const t = Math.max(1, total);
+    for (let i = 0; i < nice.length; i++) {
+      const n = t / nice[i];
+      if (n <= maxN + 1e-9 && Math.abs(n - Math.round(n)) < 1e-9) return { n: Math.max(1, Math.round(n)), u: nice[i], round: true };
     }
-    const h = v / 3600;
-    return short ? (h === 1 ? '1 hour' : h + ' hours') : h === 1 ? 'hour' : h + ' hours';
+    return { n: maxN, u: t / maxN, round: false };
+  }
+  span(v) {
+    // A length of time in words: 5 sec, 7.5 sec, 1 min, 2 hours, 4 min 10 sec.
+    if (v < 60 && Math.abs(v - Math.round(v)) >= 0.05) return Math.round(v * 10) / 10 + ' sec';
+    v = Math.round(v);
+    const h = Math.floor(v / 3600);
+    const m = Math.floor((v % 3600) / 60);
+    const s = v % 60;
+    const out = [];
+    if (h) out.push(h === 1 ? '1 hour' : h + ' hours');
+    if (m) out.push(m + ' min');
+    if (s || !out.length) out.push(s + ' sec');
+    return out.join(' ');
+  }
+  mark(v, u, total) {
+    // A number on the face for v seconds, in the unit the marks step in.
+    if (v === 0) return '0';
+    if (u % 3600 === 0) return String(v / 3600);
+    if (u % 60 === 0) return total > 3600 ? Math.floor(v / 3600) + ':' + String((v % 3600) / 60).padStart(2, '0') : String(v / 60);
+    if (total <= 60) return String(v);
+    return Math.floor(v / 60) + ':' + String(v % 60).padStart(2, '0');
+  }
+  dialMarks(total) {
+    // Round marks for a dial that always starts full: at most 12 numbered
+    // marks at their true places, with small ticks between them.
+    const nice = [1, 2, 5, 10, 15, 20, 30, 60, 120, 300, 600, 900, 1200, 1800, 3600, 7200, 10800, 21600];
+    const t = Math.max(1, total);
+    let s = 43200;
+    for (let i = 0; i < nice.length; i++) {
+      if (Math.ceil(t / nice[i] - 1e-9) <= 12) {
+        s = nice[i];
+        break;
+      }
+    }
+    let m = s;
+    for (const d of [5, 4, 2]) {
+      const c = s / d;
+      if (Number.isInteger(c) && c >= 1 && t / c <= 72) {
+        m = c;
+        break;
+      }
+    }
+    const key = t + '|' + s;
+    if (this._dm && this._dm.key === key) return this._dm;
+    const F = {};
+    let minor = '';
+    let major = '';
+    const seg = (a, r1) => {
+      const sn = Math.sin(a);
+      const cs = Math.cos(a);
+      return 'M' + (170 + r1 * sn).toFixed(2) + ' ' + (170 - r1 * cs).toFixed(2) + 'L' + (170 + 146 * sn).toFixed(2) + ' ' + (170 - 146 * cs).toFixed(2);
+    };
+    for (let v = 0; v < t - 1e-9; v += m) {
+      const deg = (v / t) * 360;
+      if (v > 0 && 360 - deg < 3) break;
+      if (v % s === 0) major += seg((deg * Math.PI) / 180, 132);
+      else minor += seg((deg * Math.PI) / 180, 139);
+    }
+    let k = 0;
+    for (let v = 0; v < t - 1e-9 && k < 12; v += s) {
+      const deg = (v / t) * 360;
+      if (v > 0 && 360 - deg < 16) break;
+      const a = (deg * Math.PI) / 180;
+      F['x' + k] = (170 + 121 * Math.sin(a)).toFixed(1);
+      F['y' + k] = (170 - 121 * Math.cos(a)).toFixed(1);
+      F['n' + k] = this.mark(v, s, t);
+      k += 1;
+    }
+    for (; k < 12; k++) {
+      F['x' + k] = '170';
+      F['y' + k] = '170';
+      F['n' + k] = '';
+    }
+    this._dm = { key: key, F: F, minor: minor, major: major, step: s };
+    return this._dm;
   }
   renderVals() {
     const c = this.cur();
-    const C = this.dial();
-    const S = this.scale(C);
+    const setting = !!(this.state && this.state.setting);
+    const C = setting ? this.dragC || this.dial() : c.total;
     const frac = Math.max(0, Math.min(1, c.rem / C));
-    const F = {};
-    for (let k = 0; k < 12; k++) F['n' + k] = k * S.n(C / 12);
-    const dialName = { 60: '1-minute dial', 720: '12-minute dial', 7200: '2-hour dial', 43200: '12-hour dial' }[C];
+    let F;
+    let tp;
+    let lead;
+    if (setting) {
+      const S = this.scale(C);
+      F = {};
+      for (let k = 0; k < 12; k++) {
+        const a = (k * Math.PI) / 6;
+        F['x' + k] = (170 + 121 * Math.sin(a)).toFixed(1);
+        F['y' + k] = (170 - 121 * Math.cos(a)).toFixed(1);
+        F['n' + k] = k * S.n(C / 12);
+      }
+      tp = this.tickPaths();
+      lead = ({ 60: '1-minute dial', 720: '12-minute dial', 3600: '1-hour dial', 7200: '2-hour dial', 43200: '12-hour dial' })[C] || '';
+    } else {
+      const dm = this.dialMarks(c.total);
+      F = dm.F;
+      tp = dm;
+      lead = this.span(dm.step) + ' marks';
+    }
     const accent = this.props.accent ?? '#FF5A3C';
     const glow = /^#[0-9a-fA-F]{6}$/.test(accent) ? accent + '73' : accent;
     const done = c.rem <= 0;
     const time = this.fmt(c.rem);
     const end = new Date(Date.now() + (c.rem / this.rate()) * 1000);
-    const endsAt = (dialName ? dialName + ' · ends at ' : 'Ends at ') + end.getHours() + ':' + String(end.getMinutes()).padStart(2, '0');
-    const tp = this.tickPaths();
+    const endsAt = (lead ? lead + ' · ends at ' : 'Ends at ') + end.getHours() + ':' + String(end.getMinutes()).padStart(2, '0');
     const chips = [5, 10, 15, 25, 45, 60].map((m, i) => {
       const on = Math.round(c.total) === m * 60;
       return {
