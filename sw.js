@@ -1,5 +1,5 @@
 // Offline cache for Visual Timers (generated)
-const VERSION = 'bda92d4bde';
+const VERSION = '951db2664f';
 const CACHE = 'visual-timers-' + VERSION;
 const ASSETS = [
   "./",
